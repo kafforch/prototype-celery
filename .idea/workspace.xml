@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3cea264b-8e20-45ad-8f3c-a2a9c08fb4c1" name="Default" comment="" />
+    <list default="true" id="3cea264b-8e20-45ad-8f3c-a2a9c08fb4c1" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$USER_HOME$/work/kafforch/prototype-celery/.idea/workspace.xml" afterPath="$USER_HOME$/work/kafforch/prototype-celery/.idea/workspace.xml" />
+    </list>
     <ignored path="untitled.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,15 +32,15 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$USER_HOME$/work/kafforch/prototype-celery" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.idea/.name" />
-        <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/../prototype-celery/requirements.txt" />
-        <option value="$PROJECT_DIR$/../prototype-celery/workers/plan_submitter.py" />
+        <option value="$USER_HOME$/work/kafforch/prototype-celery/untitled/.idea/.name" />
+        <option value="$USER_HOME$/work/kafforch/prototype-celery/untitled/requirements.txt" />
+        <option value="$USER_HOME$/work/kafforch/prototype-celery/prototype-celery/requirements.txt" />
+        <option value="$USER_HOME$/work/kafforch/prototype-celery/prototype-celery/workers/plan_submitter.py" />
       </list>
     </option>
   </component>
@@ -79,12 +81,6 @@
               <option name="myItemId" value="prototype-celery" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype-celery" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="prototype-celery" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -113,13 +109,13 @@
     <property name="settings.editor.selected.configurable" value="settings.github" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="FullScreen" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$USER_HOME$/work/kafforch/prototype-celery" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/../.." />
-      <recent name="$PROJECT_DIR$/../../../kafforch1" />
-      <recent name="$PROJECT_DIR$/.." />
+      <recent name="$USER_HOME$/work/kafforch" />
+      <recent name="$USER_HOME$/work/kafforch1" />
+      <recent name="$USER_HOME$/work/kafforch/prototype-celery" />
     </key>
   </component>
   <component name="RunManager">
@@ -310,7 +306,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../requirements.txt">
+    <entry file="file://$USER_HOME$/work/kafforch/prototype-celery/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.062068965">
           <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
@@ -318,7 +314,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../workers/__init__.py">
+    <entry file="file://$USER_HOME$/work/kafforch/prototype-celery/workers/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -326,7 +322,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../.idea/prototype-celery.iml">
+    <entry file="file://$USER_HOME$/work/kafforch/prototype-celery/.idea/prototype-celery.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -334,7 +330,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../.idea/workspace.xml">
+    <entry file="file://$USER_HOME$/work/kafforch/prototype-celery/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -342,7 +338,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../.idea/encodings.xml">
+    <entry file="file://$USER_HOME$/work/kafforch/prototype-celery/.idea/encodings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -350,7 +346,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../.idea/modules.xml">
+    <entry file="file://$USER_HOME$/work/kafforch/prototype-celery/.idea/modules.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -358,7 +354,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../.idea/misc.xml">
+    <entry file="file://$USER_HOME$/work/kafforch/prototype-celery/.idea/misc.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -366,7 +362,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../.idea/.name">
+    <entry file="file://$USER_HOME$/work/kafforch/prototype-celery/.idea/.name">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
@@ -374,7 +370,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../workers/plan_submitter.py">
+    <entry file="file://$USER_HOME$/work/kafforch/prototype-celery/workers/plan_submitter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20689656">
           <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
