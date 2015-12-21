@@ -1,7 +1,7 @@
 import unittest
 from model import plan_repo
 import mock
-from celery_cfg import celery_config
+from cfg import celery_config
 
 
 class DummyPlan:
@@ -40,7 +40,10 @@ class CeleryPlanRepoTests(unittest.TestCase):
 
         plan1 = DummyPlan(1)
 
-        with mock.patch('celery_cfg.celery_config.CELERY_ALWAYS_EAGER', True, create=True):
+        with mock.patch('cfg.celery_config.CELERY_ALWAYS_EAGER', True, create=True):
+            self.assertEqual(plan_repo.get_number_of_plans(), 0)
             plan_repo.save(plan1)
             self.assertIsInstance(plan_repo.get_by_id(1), DummyPlan)
+            self.assertIsNone(plan_repo.get_by_id(999), DummyPlan)
+            self.assertEqual(plan_repo.get_number_of_plans(), 1)
 

@@ -1,4 +1,4 @@
-from celery_cfg.celery_config import app
+from cfg.celery_config import app
 from model import plan_repo, task_repo
 
 
