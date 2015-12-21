@@ -7,7 +7,7 @@ def save(plan):
 
 def get_by_id(id):
     try:
-        return filter(lambda p: p.get_id() == id, _plans)[0]
+        return filter(lambda p: id == p.get_id(), _plans)[0]
     except IndexError:
         return None
 
