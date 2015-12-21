@@ -23,12 +23,9 @@ class TaskRepoTests(unittest.TestCase):
         task4 = DummyTask(2,1)
         task5 = DummyTask(2,2)
         task6 = DummyTask(3,1)
-        task_repo.save(2, task5)
-        task_repo.save(1, task3)
-        task_repo.save(1, task1)
-        task_repo.save(1, task2)
-        task_repo.save(2, task4)
-        task_repo.save(3, task6)
+        task_repo.save(1, [task1, task2, task3])
+        task_repo.save(2, [task4, task5])
+        task_repo.save(3, [task6])
 
     def test_get_by_id_success(self):
         self.assertIsInstance(task_repo.get_by_id(1,2), DummyTask)
