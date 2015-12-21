@@ -7,10 +7,10 @@ def parse_plan_json(plan_json):
         def __init__(self, dependency):
             self.__dependency = dependency
 
-        def get_dependency_from(self):
+        def get_from(self):
             return self.__dependency["from"]
 
-        def get_dependency_to(self):
+        def get_to(self):
             return self.__dependency["to"]
 
     class TaskParserDeco:

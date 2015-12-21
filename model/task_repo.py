@@ -37,7 +37,9 @@ def get_task_by_id(plan_id, task_id):
     try:
         tasks = __t.tasks[plan_id]
         return filter(lambda t: t.get_task_id() == task_id, tasks)[0]
-    except KeyError or IndexError:
+    except KeyError:
+        return None
+    except IndexError:
         return None
 
 
@@ -45,7 +47,9 @@ def get_dependency(plan_id, _from, _to):
     try:
         dependencies = __t.dependencies[plan_id]
         return filter(lambda t: t.get_from() == _from and t.get_to() == _to, dependencies)[0]
-    except KeyError or IndexError:
+    except KeyError:
+        return None
+    except IndexError:
         return None
 
 def get_number_of_tasks():
