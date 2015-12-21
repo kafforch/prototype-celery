@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3cea264b-8e20-45ad-8f3c-a2a9c08fb4c1" name="Default" comment="">
-      <change type="DELETED" beforePath="$USER_HOME$/work/kafforch/prototype-celery/cfg/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/work/kafforch/prototype-celery/tests/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/work/kafforch/prototype-celery/tests/model_tests/__init__.py" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$USER_HOME$/work/kafforch/prototype-celery/cfg/__init__.py" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/work/kafforch/prototype-celery/.idea/workspace.xml" afterPath="$USER_HOME$/work/kafforch/prototype-celery/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/work/kafforch/prototype-celery/workers/plan_submitter.py" afterPath="$USER_HOME$/work/kafforch/prototype-celery/workers/plan_submitter.py" />
     </list>
     <ignored path="untitled.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,7 +24,20 @@
     <favorites_list name="untitled" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="plan_submitter.py" pinned="false" current-in-tab="true">
+        <entry file="file://$USER_HOME$/work/kafforch/prototype-celery/workers/plan_submitter.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.12578617">
+              <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+              <folding>
+                <element signature="e#0#33#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -50,9 +63,10 @@
         <option value="$USER_HOME$/work/kafforch/prototype-celery/model/task_repo.py" />
         <option value="$USER_HOME$/work/kafforch/prototype-celery/celery/celery_config.py" />
         <option value="$USER_HOME$/work/kafforch/prototype-celery/requirements.txt" />
-        <option value="$USER_HOME$/work/kafforch/prototype-celery/workers/plan_submitter.py" />
         <option value="$USER_HOME$/work/kafforch/prototype-celery/tests/model_tests/plan_repo_tests.py" />
         <option value="$USER_HOME$/work/kafforch/prototype-celery/tests/model_tests/task_repo_tests.py" />
+        <option value="$USER_HOME$/work/kafforch/prototype-celery/workers/plan_submitter.py" />
+        <option value="$USER_HOME$/work/kafforch/prototype-celery/cfg/__init__.py" />
       </list>
     </option>
   </component>
@@ -452,7 +466,13 @@
       <option name="project" value="LOCAL" />
       <updated>1450684963970</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Cleaning up some unused files">
+      <created>1450685035370</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1450685035370</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -489,9 +509,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.390625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.390625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.503125" order="7" side_tool="true" content_ui="tabs" />
@@ -526,7 +546,8 @@
     <MESSAGE value="Initial" />
     <MESSAGE value="Added celery unit tests" />
     <MESSAGE value="Fixing some naming" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixing some naming" />
+    <MESSAGE value="Cleaning up some unused files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaning up some unused files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -597,14 +618,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/work/kafforch/prototype-celery/tests/model_tests/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/work/kafforch/prototype-celery/model/task_repo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -645,16 +658,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/work/kafforch/prototype-celery/workers/plan_submitter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/work/kafforch/prototype-celery/tests/model_tests/plan_repo_tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6226415">
@@ -671,6 +674,24 @@
           <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/work/kafforch/prototype-celery/cfg/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/work/kafforch/prototype-celery/workers/plan_submitter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12578617">
+          <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
           </folding>
         </state>
       </provider>

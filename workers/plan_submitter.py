@@ -1,5 +1,5 @@
 from cfg.celery_config import app
-from model import plan_repo, task_repo
+from model import plan_repo
 
 
 @app.task
