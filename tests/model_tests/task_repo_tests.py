@@ -14,7 +14,7 @@ class DummyTask:
         return self.task_id
 
 
-class PlanRepoTests(unittest.TestCase):
+class TaskRepoTests(unittest.TestCase):
     def setUp(self):
         task_repo.purge_all_tasks()
         task1 = DummyTask(1,1)

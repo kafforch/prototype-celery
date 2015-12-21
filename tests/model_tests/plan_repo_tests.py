@@ -1,7 +1,6 @@
 import unittest
 from model import plan_repo
 import mock
-from cfg import celery_config
 
 
 class DummyPlan:
