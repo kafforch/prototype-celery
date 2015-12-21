@@ -10,6 +10,7 @@ __t = Tasks()
 __t.tasks = {}
 __t.dependencies = {}
 
+
 def save_tasks(plan_id, tasks):
     try:
         __t.tasks[plan_id].update(tasks)
