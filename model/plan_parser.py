@@ -56,7 +56,7 @@ def parse_plan_json(plan_json):
         def set_plan_id(self, plan_id):
             self.__plan["plan_id"] = plan_id
 
-        def get_plan_id(self):
+        def get_id(self):
             return self.__plan["plan_id"]
 
         def set_plan_as_new(self):
