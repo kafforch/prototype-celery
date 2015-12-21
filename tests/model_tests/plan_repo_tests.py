@@ -3,8 +3,8 @@ from model import plan_repo
 
 
 class DummyPlan:
-    def __init__(self, id):
-        self.plan_id = id
+    def __init__(self, plan_id):
+        self.plan_id = plan_id
 
     def get_id(self):
         return self.plan_id
