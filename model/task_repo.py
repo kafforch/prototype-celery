@@ -2,7 +2,9 @@
 #   key: plan_id
 #   value: list of associated tasks
 class Tasks:
-    pass
+    def __init__(self):
+        pass
+
 
 __t = Tasks()
 __t.tasks = {}
