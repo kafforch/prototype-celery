@@ -11,7 +11,7 @@ def purge_all_plans():
 
 def get_by_id(plan_id):
     try:
-        return filter(lambda p: plan_id == p.get_id(), _plans)[0]
+        return filter(lambda p: plan_id == p.get_plan_id(), _plans)[0]
     except IndexError:
         return None
 

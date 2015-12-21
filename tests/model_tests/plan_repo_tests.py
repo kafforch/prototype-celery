@@ -10,7 +10,7 @@ class DummyPlan:
         self.tasks = tasks
         self.dependencies = dependencies
 
-    def get_id(self):
+    def get_plan_id(self):
         return self.plan_id
 
     def get_dependencies(self):
@@ -18,6 +18,9 @@ class DummyPlan:
 
     def get_tasks(self):
         return self.tasks
+
+    def set_plan_id(self, plan_id):
+        self.plan_id = plan_id
 
 
 class PlanRepoTests(unittest.TestCase):
@@ -53,9 +56,9 @@ class CeleryPlanRepoTests(unittest.TestCase):
         self.assertEqual(plan_repo.get_number_of_plans(), 0)
 
         with mock.patch('cfg.celery_config.CELERY_ALWAYS_EAGER', True, create=True):
-            plan_submitter.store_plan(plan1)
+            plan_id = plan_submitter.store_plan(plan1)
 
-        self.assertIsInstance(plan_repo.get_by_id(1), DummyPlan)
+        self.assertIsInstance(plan_repo.get_by_id(plan_id), DummyPlan)
         self.assertIsNone(plan_repo.get_by_id(999), DummyPlan)
         self.assertEqual(plan_repo.get_number_of_plans(), 1)
         self.assertEqual(task_repo.get_number_of_tasks(), 2)

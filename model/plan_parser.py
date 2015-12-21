@@ -19,7 +19,7 @@ def parse_plan_json(plan_json):
             self.__task = task
 
         def task_get_id(self):
-            return self.__task["@id"]
+            return self.__task["id"]
 
         def task_get_name(self):
             return self.__task["name"]
@@ -29,6 +29,9 @@ def parse_plan_json(plan_json):
 
         def is_task_initial(self):
             return "INITIAL" == self.__task['task_status']
+
+        def is_task_running(self):
+            return "RUNNING" == self.__task['task_status']
 
         def set_task_as_complete(self):
             self.__task['task_status'] = "COMPLETE"
@@ -40,12 +43,12 @@ def parse_plan_json(plan_json):
             self.__task['task_status'] = "RUNNING"
 
         def get_task_id(self):
-            return self.__task["@id"]
+            return self.__task["id"]
 
         def get_start_on(self):
             try:
                 return self.__task["start_on"]
-            except:
+            except KeyError:
                 return None
 
     class PlanParserDeco:
@@ -56,7 +59,7 @@ def parse_plan_json(plan_json):
         def set_plan_id(self, plan_id):
             self.__plan["plan_id"] = plan_id
 
-        def get_id(self):
+        def get_plan_id(self):
             return self.__plan["plan_id"]
 
         def set_plan_as_new(self):
@@ -85,13 +88,6 @@ def parse_plan_json(plan_json):
 
         def is_plan_complete(self):
             return "COMPLETE" == self.__plan["plan_status"]
-
-        def get_task_ids(self):
-            return map(lambda task: task["@id"], self.__plan["tasks"])
-
-        def get_task_by_id(self, task_id):
-            tasks = self.get_tasks()
-            return filter(lambda t: t.task_id == task_id, tasks)[0]
 
         def get_dependencies(self):
             return map(lambda d: DependencyParserDeco(d), self.__plan["dependencies"])
