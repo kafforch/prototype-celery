@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3cea264b-8e20-45ad-8f3c-a2a9c08fb4c1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/work/kafforch/prototype-celery/cfg/__init__.py" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/work/kafforch/prototype-celery/.idea/workspace.xml" afterPath="$USER_HOME$/work/kafforch/prototype-celery/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/work/kafforch/prototype-celery/model/task_repo.py" afterPath="$USER_HOME$/work/kafforch/prototype-celery/model/task_repo.py" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/work/kafforch/prototype-celery/tests/model_tests/plan_repo_tests.py" afterPath="$USER_HOME$/work/kafforch/prototype-celery/tests/model_tests/plan_repo_tests.py" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/work/kafforch/prototype-celery/tests/model_tests/task_repo_tests.py" afterPath="$USER_HOME$/work/kafforch/prototype-celery/tests/model_tests/task_repo_tests.py" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/work/kafforch/prototype-celery/workers/plan_submitter.py" afterPath="$USER_HOME$/work/kafforch/prototype-celery/workers/plan_submitter.py" />
     </list>
     <ignored path="untitled.iws" />
@@ -25,13 +27,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="plan_submitter.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="plan_submitter.py" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/work/kafforch/prototype-celery/workers/plan_submitter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.12578617">
-              <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="task_repo.py" pinned="false" current-in-tab="true">
+        <entry file="file://$USER_HOME$/work/kafforch/prototype-celery/model/task_repo.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.8679245">
+              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="task_repo_tests.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/work/kafforch/prototype-celery/tests/model_tests/task_repo_tests.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -60,13 +84,13 @@
         <option value="$USER_HOME$/work/kafforch/prototype-celery/model_tests/plan_repo_tests.py" />
         <option value="$USER_HOME$/work/kafforch/prototype-celery/model/plan_parser.py" />
         <option value="$USER_HOME$/work/kafforch/prototype-celery/model/plan_repo.py" />
-        <option value="$USER_HOME$/work/kafforch/prototype-celery/model/task_repo.py" />
         <option value="$USER_HOME$/work/kafforch/prototype-celery/celery/celery_config.py" />
         <option value="$USER_HOME$/work/kafforch/prototype-celery/requirements.txt" />
-        <option value="$USER_HOME$/work/kafforch/prototype-celery/tests/model_tests/plan_repo_tests.py" />
-        <option value="$USER_HOME$/work/kafforch/prototype-celery/tests/model_tests/task_repo_tests.py" />
-        <option value="$USER_HOME$/work/kafforch/prototype-celery/workers/plan_submitter.py" />
         <option value="$USER_HOME$/work/kafforch/prototype-celery/cfg/__init__.py" />
+        <option value="$USER_HOME$/work/kafforch/prototype-celery/tests/model_tests/plan_repo_tests.py" />
+        <option value="$USER_HOME$/work/kafforch/prototype-celery/workers/plan_submitter.py" />
+        <option value="$USER_HOME$/work/kafforch/prototype-celery/tests/model_tests/task_repo_tests.py" />
+        <option value="$USER_HOME$/work/kafforch/prototype-celery/model/task_repo.py" />
       </list>
     </option>
   </component>
@@ -472,38 +496,44 @@
       <option name="project" value="LOCAL" />
       <updated>1450685035370</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Cleaning up some unused files">
+      <created>1450685173604</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1450685173604</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittest_CeleryPlanRepoTests_test_celery_save_plan - 2015.12.21 at 19h 01m 55s.xml">
-      <configuration name="Unittest CeleryPlanRepoTests.test_celery_save_plan" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittest_CeleryPlanRepoTests_test_celery_save_plan - 2015.12.21 at 19h 02m 03s.xml">
-      <configuration name="Unittest CeleryPlanRepoTests.test_celery_save_plan" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittest_CeleryPlanRepoTests_test_celery_save_plan - 2015.12.21 at 19h 02m 09s.xml">
-      <configuration name="Unittest CeleryPlanRepoTests.test_celery_save_plan" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests - 2015.12.21 at 18h 57m 46s.xml">
+    <history-entry file="Unittests - 2015.12.21 at 19h 24m 35s.xml">
       <configuration name="Unittests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests - 2015.12.21 at 18h 59m 29s.xml">
+    <history-entry file="Unittests - 2015.12.21 at 19h 25m 26s.xml">
       <configuration name="Unittests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests - 2015.12.21 at 18h 59m 58s.xml">
+    <history-entry file="Unittests - 2015.12.21 at 19h 25m 49s.xml">
       <configuration name="Unittests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests - 2015.12.21 at 19h 01m 39s.xml">
+    <history-entry file="Unittests - 2015.12.21 at 19h 26m 22s.xml">
       <configuration name="Unittests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests - 2015.12.21 at 19h 01m 46s.xml">
+    <history-entry file="Unittests - 2015.12.21 at 19h 26m 55s.xml">
       <configuration name="Unittests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests - 2015.12.21 at 19h 02m 14s.xml">
+    <history-entry file="Unittests - 2015.12.21 at 19h 29m 12s.xml">
       <configuration name="Unittests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests - 2015.12.21 at 19h 02m 29s.xml">
+    <history-entry file="Unittests - 2015.12.21 at 19h 30m 23s.xml">
+      <configuration name="Unittests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests - 2015.12.21 at 19h 31m 24s.xml">
+      <configuration name="Unittests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests - 2015.12.21 at 19h 31m 32s.xml">
+      <configuration name="Unittests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests - 2015.12.21 at 19h 32m 51s.xml">
       <configuration name="Unittests" configurationId="tests" />
     </history-entry>
   </component>
@@ -518,7 +548,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934928" sideWeight="0.496875" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934928" sideWeight="0.496875" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -618,14 +648,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/work/kafforch/prototype-celery/model/task_repo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/work/kafforch/prototype-celery/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.094339624">
@@ -658,26 +680,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/work/kafforch/prototype-celery/tests/model_tests/plan_repo_tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6226415">
-          <caret line="42" column="63" selection-start-line="42" selection-start-column="63" selection-end-line="42" selection-end-column="63" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/work/kafforch/prototype-celery/tests/model_tests/task_repo_tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.025157232">
-          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/work/kafforch/prototype-celery/cfg/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -686,13 +688,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/work/kafforch/prototype-celery/tests/model_tests/plan_repo_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6540881">
+          <caret line="43" column="36" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$USER_HOME$/work/kafforch/prototype-celery/workers/plan_submitter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12578617">
-          <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/work/kafforch/prototype-celery/tests/model_tests/task_repo_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/work/kafforch/prototype-celery/model/task_repo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8679245">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
