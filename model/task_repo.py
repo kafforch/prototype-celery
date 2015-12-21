@@ -29,6 +29,5 @@ def get_by_id(plan_id, task_id):
         return None
 
 
-
 def get_number_of_tasks():
     return len([item for sublist in __t.tasks.values() for item in sublist])
