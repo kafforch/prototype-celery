@@ -39,8 +39,8 @@
       <file leaf-file-name="plan_parser_tests.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../tests/model_tests/plan_parser_tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8113208">
-              <caret line="55" column="24" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.24528302">
+              <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -545,13 +545,16 @@
       <option name="project" value="LOCAL" />
       <updated>1450694077513</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Added parser tests">
+      <created>1450694655275</created>
+      <option name="number" value="00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1450694655275</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests - 2015.12.21 at 21h 28m 39s.xml">
-      <configuration name="Unittests" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests - 2015.12.21 at 21h 29m 19s.xml">
       <configuration name="Unittests" configurationId="tests" />
     </history-entry>
@@ -577,6 +580,9 @@
       <configuration name="Unittests" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests - 2015.12.21 at 21h 44m 08s.xml">
+      <configuration name="Unittests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests - 2015.12.21 at 21h 44m 41s.xml">
       <configuration name="Unittests" configurationId="tests" />
     </history-entry>
   </component>
@@ -785,8 +791,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../tests/model_tests/plan_parser_tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8113208">
-          <caret line="55" column="24" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.24528302">
+          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
