@@ -32,10 +32,15 @@ class PlanRepoTests(unittest.TestCase):
 
 
 class CeleryPlanRepoTests(unittest.TestCase):
+
+    def setUp(self):
+        plan_repo.purge_all_plans()
+
     def test_celery_save_plan(self):
 
         plan1 = DummyPlan(1)
 
         with mock.patch('celery_cfg.celery_config.CELERY_ALWAYS_EAGER', True, create=True):
             plan_repo.save(plan1)
+            self.assertIsInstance(plan_repo.get_by_id(1), DummyPlan)
 
