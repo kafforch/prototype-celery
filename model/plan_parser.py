@@ -58,7 +58,10 @@ class PlanParserDeco:
         self.__plan["plan_id"] = plan_id
 
     def get_plan_id(self):
-        return self.__plan["plan_id"]
+        try:
+            return self.__plan["plan_id"]
+        except KeyError:
+            return None
 
     def set_plan_as_new(self):
         self.__plan["plan_status"] = "INITIAL"

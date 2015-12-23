@@ -52,11 +52,13 @@ class CeleryPlanRepoTests(unittest.TestCase):
     def test_celery_save_plan(self):
 
         plan1 = DummyPlan(1, [5,6], [7])
+        plan_id = plan_repo.get_id()
+        plan1.set_plan_id(plan_id)
 
         self.assertEqual(plan_repo.get_number_of_plans(), 0)
 
         with mock.patch('cfg.celery_config.CELERY_ALWAYS_EAGER', True, create=True):
-            plan_id = plan_submitter.store_plan(plan1)
+            plan_submitter.store_plan(plan1)
 
         self.assertIsInstance(plan_repo.get_plan_by_id(plan_id), DummyPlan)
         self.assertIsNone(plan_repo.get_plan_by_id(999), DummyPlan)

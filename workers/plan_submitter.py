@@ -1,12 +1,12 @@
 from cfg.celery_config import app
 from model import plan_repo, task_repo
-import uuid
+import logging
 
-@app.task
+@app.task()
 def store_plan(plan):
-    plan_id = uuid.uuid4()
-    plan.set_plan_id(plan_id)
-    plan_repo.save(plan)
+    plan_id = plan_repo.save(plan)
+    logger = logging.getLogger(__name__)
+    logger.debug("Saving plan with id:{}".format(plan_id))
     task_repo.save_tasks(plan_id, plan.get_tasks())
     task_repo.save_dependencies(plan_id, plan.get_dependencies())
     return plan_id
