@@ -4,12 +4,6 @@
     <list default="true" id="3cea264b-8e20-45ad-8f3c-a2a9c08fb4c1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../functional_tests/plan_submitter_tests.py" afterPath="$PROJECT_DIR$/../functional_tests/plan_submitter_tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../model/plan_parser.py" afterPath="$PROJECT_DIR$/../model/plan_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../model/plan_repo.py" afterPath="$PROJECT_DIR$/../model/plan_repo.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../requirements.txt" afterPath="$PROJECT_DIR$/../requirements.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tests/model_tests/plan_parser_tests.py" afterPath="$PROJECT_DIR$/../tests/model_tests/plan_parser_tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tests/model_tests/plan_repo_tests.py" afterPath="$PROJECT_DIR$/../tests/model_tests/plan_repo_tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../workers/plan_submitter.py" afterPath="$PROJECT_DIR$/../workers/plan_submitter.py" />
     </list>
     <ignored path="untitled.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -76,7 +70,7 @@
         <entry file="file://$PROJECT_DIR$/../tests/model_tests/plan_parser_tests.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+              <caret line="67" column="28" selection-start-line="67" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -84,21 +78,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plan_parser.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="plan_parser.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../model/plan_parser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2389937">
+            <state vertical-scroll-proportion="0.0">
               <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plan_submitter_tests.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="plan_submitter_tests.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../functional_tests/plan_submitter_tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="59" column="60" selection-start-line="59" selection-start-column="60" selection-end-line="59" selection-end-column="60" />
+            <state vertical-scroll-proportion="0.7484277">
+              <caret line="61" column="84" selection-start-line="61" selection-start-column="84" selection-end-line="61" selection-end-column="84" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
               </folding>
@@ -149,12 +143,12 @@
         <option value="$PROJECT_DIR$/../tests/model_tests/plan_repo_tests.py" />
         <option value="$PROJECT_DIR$/../cfg/celery_test_config.py" />
         <option value="$USER_HOME$/kafforch-celery/lib/python2.7/site-packages/celerytest-0.1.1-py2.7.egg/celerytest/worker.py" />
-        <option value="$PROJECT_DIR$/../functional_tests/plan_submitter_tests.py" />
         <option value="$PROJECT_DIR$/../workers/plan_submitter.py" />
         <option value="$PROJECT_DIR$/../requirements.txt" />
         <option value="$PROJECT_DIR$/../tests/model_tests/plan_parser_tests.py" />
         <option value="$PROJECT_DIR$/../model/plan_repo.py" />
         <option value="$PROJECT_DIR$/../model/plan_parser.py" />
+        <option value="$PROJECT_DIR$/../functional_tests/plan_submitter_tests.py" />
       </list>
     </option>
   </component>
@@ -303,7 +297,7 @@
       <recent name="$PROJECT_DIR$/.." />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests">
+  <component name="RunManager" selected="Python tests.Functional tests">
     <configuration default="false" name="Unittest CeleryPlanRepoTests.test_celery_save_plan" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -709,15 +703,21 @@
       <option name="project" value="LOCAL" />
       <updated>1450832034144</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Half-working functional tests">
+      <created>1450907483438</created>
+      <option name="number" value="00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1450907483438</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittest_PlanParserTests_test_repo_with_parser2 - 2015.12.24 at 08h 47m 14s.xml">
-      <configuration name="Unittest PlanParserTests.test_repo_with_parser2" configurationId="tests" />
+    <history-entry file="Functional_tests - 2015.12.24 at 08h 51m 35s.xml">
+      <configuration name="Functional tests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_PlanParserTests_test_repo_with_parser2 - 2015.12.24 at 08h 47m 28s.xml">
-      <configuration name="Unittest PlanParserTests.test_repo_with_parser2" configurationId="tests" />
+    <history-entry file="Functional_tests - 2015.12.24 at 08h 52m 18s.xml">
+      <configuration name="Functional tests" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittest_PlanParserTests_test_repo_with_parser2 - 2015.12.24 at 08h 47m 54s.xml">
       <configuration name="Unittest PlanParserTests.test_repo_with_parser2" configurationId="tests" />
@@ -920,16 +920,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../functional_tests/plan_submitter_tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="59" column="60" selection-start-line="59" selection-start-column="60" selection-end-line="59" selection-end-column="60" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -990,21 +980,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../model/plan_parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../tests/model_tests/plan_parser_tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <caret line="67" column="28" selection-start-line="67" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../model/plan_parser.py">
+    <entry file="file://$PROJECT_DIR$/../functional_tests/plan_submitter_tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2389937">
-          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.7484277">
+          <caret line="61" column="84" selection-start-line="61" selection-start-column="84" selection-end-line="61" selection-end-column="84" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

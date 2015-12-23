@@ -59,7 +59,8 @@ class PlanSubmitterTests(unittest.TestCase):
 
         built_plan = plan_parser.parse_plan_json(plan_json1)
 
-        plan_submitter.store_plan(built_plan)
+        with mock.patch('cfg.celery_config.CELERY_ALWAYS_EAGER', True, create=True):
+            plan_id = plan_submitter.store_plan(built_plan)
 
         plan = plan_repo.get_plan_by_id(plan_id)
 
