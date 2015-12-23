@@ -32,11 +32,11 @@ class PlanRepoTests(unittest.TestCase):
         plan_repo.save(plan2)
 
     def test_get_by_id_success(self):
-        self.assertIsInstance(plan_repo.get_by_id(1), DummyPlan)
-        self.assertIsInstance(plan_repo.get_by_id(2), DummyPlan)
+        self.assertIsInstance(plan_repo.get_plan_by_id(1), DummyPlan)
+        self.assertIsInstance(plan_repo.get_plan_by_id(2), DummyPlan)
 
     def test_get_by_id_failure(self):
-        self.assertIsNone(plan_repo.get_by_id(3))
+        self.assertIsNone(plan_repo.get_plan_by_id(3))
 
     def test_get_number_of_plans(self):
         self.assertEqual(plan_repo.get_number_of_plans(), 2)
@@ -58,8 +58,8 @@ class CeleryPlanRepoTests(unittest.TestCase):
         with mock.patch('cfg.celery_config.CELERY_ALWAYS_EAGER', True, create=True):
             plan_id = plan_submitter.store_plan(plan1)
 
-        self.assertIsInstance(plan_repo.get_by_id(plan_id), DummyPlan)
-        self.assertIsNone(plan_repo.get_by_id(999), DummyPlan)
+        self.assertIsInstance(plan_repo.get_plan_by_id(plan_id), DummyPlan)
+        self.assertIsNone(plan_repo.get_plan_by_id(999), DummyPlan)
         self.assertEqual(plan_repo.get_number_of_plans(), 1)
         self.assertEqual(task_repo.get_number_of_tasks(), 2)
         self.assertEqual(task_repo.get_number_of_dependencies(), 1)

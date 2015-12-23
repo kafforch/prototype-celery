@@ -42,7 +42,7 @@ class PlanParserTests(unittest.TestCase):
         with mock.patch('cfg.celery_config.CELERY_ALWAYS_EAGER', True, create=True):
             plan_id = plan_submitter.store_plan(plan)
 
-        saved_plan = plan_repo.get_by_id(plan_id)
+        saved_plan = plan_repo.get_plan_by_id(plan_id)
 
         self.assertTrue(saved_plan.get_plan_id() == plan_id)
         self.assertTrue(saved_plan.get_start_on() == "2015-12-11T23:14:15.554Z")
