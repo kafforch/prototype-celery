@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3cea264b-8e20-45ad-8f3c-a2a9c08fb4c1" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/model/plan_repo_factory.py" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model/task_repo_simple.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/model_tests/task_repo_redis_tests.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/model/task_repo.py" afterPath="$PROJECT_DIR$/model/task_repo_redis.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/model_tests/task_repo_tests.py" afterPath="$PROJECT_DIR$/tests/model_tests/task_repo_simple_tests.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/plan_parser.py" afterPath="$PROJECT_DIR$/model/plan_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/model_tests/plan_repo_redis_tests.py" afterPath="$PROJECT_DIR$/tests/model_tests/plan_repo_redis_tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/model_tests/plan_parser_tests.py" afterPath="$PROJECT_DIR$/tests/model_tests/plan_parser_tests.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/model_tests/plan_repo_simple_tests.py" afterPath="$PROJECT_DIR$/tests/model_tests/plan_repo_simple_tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/worker_tests/plan_submitter_tests.py" afterPath="$PROJECT_DIR$/tests/worker_tests/plan_submitter_tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workers/plan_submitter.py" afterPath="$PROJECT_DIR$/workers/plan_submitter.py" />
     </list>
     <ignored path="untitled.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,21 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="plan_repo_redis_tests.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/model_tests/plan_repo_redis_tests.py">
+      <file leaf-file-name="task_repo_redis_tests.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/model_tests/task_repo_redis_tests.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="plan_repo_simple_tests.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/model_tests/plan_repo_simple_tests.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+              <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -50,13 +43,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plan_submitter_tests.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/worker_tests/plan_submitter_tests.py">
+      <file leaf-file-name="task_repo_redis.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/model/task_repo_redis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28301886">
-              <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+            <state vertical-scroll-proportion="1.100629">
+              <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
               <folding>
-                <element signature="e#0#34#0" expanded="true" />
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plan_parser.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/plan_parser.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="3" column="26" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plan_repo_redis.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/plan_repo_redis.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="34" column="15" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="42" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plan_repo_redis_tests.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/model_tests/plan_repo_redis_tests.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="26" column="22" selection-start-line="26" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -104,10 +131,12 @@
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/model/plan_repo_redis.py" />
-        <option value="$PROJECT_DIR$/model/plan_parser.py" />
         <option value="$PROJECT_DIR$/tests/model_tests/plan_repo_redis_tests.py" />
         <option value="$PROJECT_DIR$/tests/model_tests/plan_repo_simple_tests.py" />
         <option value="$PROJECT_DIR$/tests/worker_tests/plan_submitter_tests.py" />
+        <option value="$PROJECT_DIR$/model/plan_parser.py" />
+        <option value="$PROJECT_DIR$/tests/model_tests/task_repo_redis_tests.py" />
+        <option value="$PROJECT_DIR$/model/task_repo_redis.py" />
       </list>
     </option>
   </component>
@@ -271,34 +300,13 @@
       <recent name="$PROJECT_DIR$/.." />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/model" />
       <recent name="$PROJECT_DIR$/tests/model_tests" />
       <recent name="$PROJECT_DIR$/../cfg" />
       <recent name="$PROJECT_DIR$/../model" />
     </key>
   </component>
   <component name="RunManager" selected="Python tests.Unittests">
-    <configuration default="false" name="Unittest PlanParserTests.test_repo_with_parser2" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../tests/model_tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="prototype-celery" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../tests/model_tests/plan_parser_tests.py" />
-      <option name="CLASS_NAME" value="PlanParserTests" />
-      <option name="METHOD_NAME" value="test_repo_with_parser2" />
-      <option name="FOLDER_NAME" value="$PROJECT_DIR$/../tests" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="*_tests.py" />
-      <option name="USE_PATTERN" value="true" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="Unittest CeleryPlanRepoRedisTests.test_celery_save_plan" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -380,6 +388,28 @@
       <option name="METHOD_NAME" value="test_get_by_id_success" />
       <option name="FOLDER_NAME" value="$PROJECT_DIR$/tests" />
       <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="*_tests.py" />
+      <option name="USE_PATTERN" value="true" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests in TaskRepoTests" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/model_tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="prototype-celery" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/model_tests/task_repo_redis_tests.py" />
+      <option name="CLASS_NAME" value="TaskRepoTests" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="$PROJECT_DIR$/tests" />
+      <option name="TEST_TYPE" value="TEST_CLASS" />
       <option name="PATTERN" value="*_tests.py" />
       <option name="USE_PATTERN" value="true" />
       <option name="PUREUNITTEST" value="true" />
@@ -559,19 +589,19 @@
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests" />
       <item index="1" class="java.lang.String" itemvalue="Python tests.Functional tests" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest PlanParserTests.test_repo_with_parser2" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest CeleryPlanRepoRedisTests.test_celery_save_plan" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in CeleryPlanRepoRedisTests" />
-      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittests in PlanRepoRedisTests" />
-      <item index="6" class="java.lang.String" itemvalue="Python tests.Unittest PlanRepoRedisTests.test_get_by_id_success" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest CeleryPlanRepoRedisTests.test_celery_save_plan" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in CeleryPlanRepoRedisTests" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in PlanRepoRedisTests" />
+      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittest PlanRepoRedisTests.test_get_by_id_success" />
+      <item index="6" class="java.lang.String" itemvalue="Python tests.Unittests in TaskRepoTests" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest PlanRepoRedisTests.test_get_by_id_success" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in PlanRepoRedisTests" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in CeleryPlanRepoRedisTests" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest CeleryPlanRepoRedisTests.test_celery_save_plan" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest PlanParserTests.test_repo_with_parser2" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in TaskRepoTests" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest PlanRepoRedisTests.test_get_by_id_success" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in PlanRepoRedisTests" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in CeleryPlanRepoRedisTests" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest CeleryPlanRepoRedisTests.test_celery_save_plan" />
       </list>
     </recent_temporary>
   </component>
@@ -796,39 +826,45 @@
       <option name="project" value="LOCAL" />
       <updated>1451015542315</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Removed plan_repo_factory&#10;">
+      <created>1451016825938</created>
+      <option name="number" value="00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1451016825938</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittest_PlanRepoRedisTests_test_get_by_id_success - 2015.12.25 at 14h 45m 44s.xml">
-      <configuration name="Unittest PlanRepoRedisTests.test_get_by_id_success" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittest_PlanRepoRedisTests_test_get_by_id_success - 2015.12.25 at 14h 46m 11s.xml">
-      <configuration name="Unittest PlanRepoRedisTests.test_get_by_id_success" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittest_PlanRepoRedisTests_test_get_by_id_success - 2015.12.25 at 14h 46m 36s.xml">
-      <configuration name="Unittest PlanRepoRedisTests.test_get_by_id_success" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittest_PlanRepoRedisTests_test_get_by_id_success - 2015.12.25 at 14h 48m 42s.xml">
-      <configuration name="Unittest PlanRepoRedisTests.test_get_by_id_success" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittest_PlanRepoRedisTests_test_get_by_id_success - 2015.12.25 at 14h 49m 22s.xml">
-      <configuration name="Unittest PlanRepoRedisTests.test_get_by_id_success" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests - 2015.12.25 at 14h 49m 45s.xml">
+    <history-entry file="Unittests - 2015.12.25 at 16h 04m 09s.xml">
       <configuration name="Unittests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests - 2015.12.25 at 14h 52m 08s.xml">
-      <configuration name="Unittests" configurationId="tests" />
+    <history-entry file="Unittests_in_TaskRepoTests - 2015.12.25 at 15h 56m 26s.xml">
+      <configuration name="Unittests in TaskRepoTests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests - 2015.12.25 at 15h 12m 45s.xml">
-      <configuration name="Unittests" configurationId="tests" />
+    <history-entry file="Unittests_in_TaskRepoTests - 2015.12.25 at 15h 58m 18s.xml">
+      <configuration name="Unittests in TaskRepoTests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests - 2015.12.25 at 15h 13m 14s.xml">
-      <configuration name="Unittests" configurationId="tests" />
+    <history-entry file="Unittests_in_TaskRepoTests - 2015.12.25 at 15h 59m 24s.xml">
+      <configuration name="Unittests in TaskRepoTests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests - 2015.12.25 at 15h 13m 31s.xml">
-      <configuration name="Unittests" configurationId="tests" />
+    <history-entry file="Unittests_in_TaskRepoTests - 2015.12.25 at 16h 00m 42s.xml">
+      <configuration name="Unittests in TaskRepoTests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_TaskRepoTests - 2015.12.25 at 16h 01m 28s.xml">
+      <configuration name="Unittests in TaskRepoTests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_TaskRepoTests - 2015.12.25 at 16h 02m 03s.xml">
+      <configuration name="Unittests in TaskRepoTests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_TaskRepoTests - 2015.12.25 at 16h 03m 12s.xml">
+      <configuration name="Unittests in TaskRepoTests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_TaskRepoTests - 2015.12.25 at 16h 03m 35s.xml">
+      <configuration name="Unittests in TaskRepoTests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_TaskRepoTests - 2015.12.25 at 16h 04m 05s.xml">
+      <configuration name="Unittests in TaskRepoTests" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -881,7 +917,8 @@
     <MESSAGE value="Created plan_repo factory to plug in redis" />
     <MESSAGE value="Implementation of plan_repo in redis" />
     <MESSAGE value="Added some more tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some more tests" />
+    <MESSAGE value="Removed plan_repo_factory&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed plan_repo_factory&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -897,7 +934,7 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests/model_tests/task_repo_tests.py">
+    <entry file="file://$PROJECT_DIR$/tests/model_tests/task_repo_simple_tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -941,38 +978,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/plan_repo_redis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7861635">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/plan_parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.062893085">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/model_tests/plan_repo_redis_tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/model_tests/plan_repo_simple_tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.1572327">
           <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -982,7 +993,63 @@
         <state vertical-scroll-proportion="0.28301886">
           <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
           <folding>
-            <element signature="e#0#34#0" expanded="true" />
+            <element signature="e#0#34#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/model_tests/plan_repo_redis_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="22" selection-start-line="26" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="183" column="0" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/plan_repo_redis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="15" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/plan_parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="26" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/model_tests/task_repo_redis_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/task_repo_redis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.100629">
+          <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>

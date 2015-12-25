@@ -2,7 +2,7 @@ import unittest
 import mock
 import logging
 
-from model import plan_parser, plan_repo_simple, task_repo
+from model import plan_parser, plan_repo_simple, task_repo_simple
 from workers import plan_submitter
 
 json_string = '''{
@@ -54,12 +54,12 @@ class PlanParserTests(unittest.TestCase):
         self.assertTrue(len(saved_plan.get_tasks()) == 2)
         self.assertTrue(len(saved_plan.get_dependencies()) == 1)
 
-        self.assertIsNotNone(task_repo.get_dependency(plan_id, "1", "2"))
-        self.assertIsNone(task_repo.get_dependency(plan_id, "5", "6"))
-        self.assertIsNotNone(task_repo.get_task_by_id(plan_id, "23"))
-        self.assertTrue(task_repo.get_task_by_id(plan_id, "23").get_start_on() == \
+        self.assertIsNotNone(task_repo_simple.get_dependency(plan_id, "1", "2"))
+        self.assertIsNone(task_repo_simple.get_dependency(plan_id, "5", "6"))
+        self.assertIsNotNone(task_repo_simple.get_task_by_id(plan_id, "23"))
+        self.assertTrue(task_repo_simple.get_task_by_id(plan_id, "23").get_start_on() == \
                         "2066-12-11T23:14:15.554Z")
-        self.assertIsNone(task_repo.get_task_by_id(plan_id, "215"))
+        self.assertIsNone(task_repo_simple.get_task_by_id(plan_id, "215"))
 
     def test_repo_with_parser2(self):
         plan = plan_parser.parse_plan_json(json_string)
@@ -77,9 +77,9 @@ class PlanParserTests(unittest.TestCase):
         self.assertTrue(len(saved_plan.get_tasks()) == 2)
         self.assertTrue(len(saved_plan.get_dependencies()) == 1)
 
-        self.assertIsNotNone(task_repo.get_dependency(plan_id, "1", "2"))
-        self.assertIsNone(task_repo.get_dependency(plan_id, "5", "6"))
-        self.assertIsNotNone(task_repo.get_task_by_id(plan_id, "23"))
-        self.assertTrue(task_repo.get_task_by_id(plan_id, "23").get_start_on() == \
+        self.assertIsNotNone(task_repo_simple.get_dependency(plan_id, "1", "2"))
+        self.assertIsNone(task_repo_simple.get_dependency(plan_id, "5", "6"))
+        self.assertIsNotNone(task_repo_simple.get_task_by_id(plan_id, "23"))
+        self.assertTrue(task_repo_simple.get_task_by_id(plan_id, "23").get_start_on() == \
                         "2066-12-11T23:14:15.554Z")
-        self.assertIsNone(task_repo.get_task_by_id(plan_id, "215"))
+        self.assertIsNone(task_repo_simple.get_task_by_id(plan_id, "215"))

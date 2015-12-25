@@ -2,7 +2,6 @@ import json
 
 
 class DependencyParserDeco:
-
     def __init__(self, dependency):
         self.__dependency = dependency
 
@@ -12,15 +11,17 @@ class DependencyParserDeco:
     def get_to(self):
         return self.__dependency["to"]
 
-class TaskParserDeco:
+    def to_json(self):
+        return json.dumps(self.__dependency)
 
+class TaskParserDeco:
     def __init__(self, task):
         self.__task = task
 
-    def task_get_id(self):
+    def get_id(self):
         return self.__task["id"]
 
-    def task_get_name(self):
+    def get_name(self):
         return self.__task["name"]
 
     def is_task_complete(self):
@@ -50,8 +51,11 @@ class TaskParserDeco:
         except KeyError:
             return None
 
-class PlanParserDeco:
+    def to_json(self):
+        return json.dumps(self.__task)
 
+
+class PlanParserDeco:
     def __init__(self, _json):
         self.__plan = json.loads(_json)
 

@@ -1,5 +1,5 @@
 import unittest
-from model import plan_repo_simple, task_repo
+from model import plan_repo_simple, task_repo_simple
 import mock
 from workers import plan_submitter
 
@@ -47,8 +47,8 @@ class CeleryPlanRepoTests(unittest.TestCase):
 
     def setUp(self):
         plan_repo.purge_all_plans()
-        task_repo.purge_all_dependencies()
-        task_repo.purge_all_tasks()
+        task_repo_simple.purge_all_dependencies()
+        task_repo_simple.purge_all_tasks()
 
     def test_celery_save_plan(self):
 
@@ -64,6 +64,6 @@ class CeleryPlanRepoTests(unittest.TestCase):
         self.assertIsInstance(plan_repo.get_plan_by_id(plan_id), DummyPlan)
         self.assertIsNone(plan_repo.get_plan_by_id(999), DummyPlan)
         self.assertEqual(plan_repo.get_number_of_plans(), 1)
-        self.assertEqual(task_repo.get_number_of_tasks(), 2)
-        self.assertEqual(task_repo.get_number_of_dependencies(), 1)
+        self.assertEqual(task_repo_simple.get_number_of_tasks(), 2)
+        self.assertEqual(task_repo_simple.get_number_of_dependencies(), 1)
 
