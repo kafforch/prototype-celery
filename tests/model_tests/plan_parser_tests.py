@@ -43,7 +43,8 @@ class PlanParserTests(unittest.TestCase):
     def test_repo_with_parser1(self):
         plan = plan_parser.parse_plan_json(json_string)
 
-        plan_id = plan_submitter.store_plan(plan)
+        with mock.patch('cfg.celery_config.CELERY_ALWAYS_EAGER', True, create=True):
+            plan_id = plan_submitter.store_plan(plan)
 
         saved_plan = plan_repo.get_plan_by_id(plan_id)
 
