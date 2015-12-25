@@ -1,5 +1,6 @@
 import uuid
 
+
 class Plans:
     def __init__(self):
         pass
@@ -30,7 +31,7 @@ def save(plan):
 
 
 def purge_all_plans():
-    del __p.plans [:]
+    del __p.plans[:]
 
 
 def get_plan_by_id(plan_id):

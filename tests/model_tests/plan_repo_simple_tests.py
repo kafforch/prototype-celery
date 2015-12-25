@@ -1,8 +1,9 @@
 import unittest
-from model import plan_repo, task_repo
+from model import plan_repo_factory, task_repo
 import mock
 from workers import plan_submitter
 
+plan_repo = plan_repo_factory.factory("TEST")
 
 class DummyPlan:
     def __init__(self, plan_id, tasks, dependencies):

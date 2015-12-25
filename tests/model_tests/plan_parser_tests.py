@@ -2,7 +2,7 @@ import unittest
 import mock
 import logging
 
-from model import plan_parser, plan_repo, task_repo
+from model import plan_parser, plan_repo_simple, task_repo
 from workers import plan_submitter
 
 json_string = '''{
@@ -30,7 +30,7 @@ json_string = '''{
 
 class PlanParserTests(unittest.TestCase):
     def setUp(self):
-        plan_repo.purge_all_plans()
+        plan_repo_simple.purge_all_plans()
 
     def test_parsing1(self):
         plan = plan_parser.parse_plan_json(json_string)
@@ -46,7 +46,7 @@ class PlanParserTests(unittest.TestCase):
         with mock.patch('cfg.celery_config.CELERY_ALWAYS_EAGER', True, create=True):
             plan_id = plan_submitter.store_plan(plan)
 
-        saved_plan = plan_repo.get_plan_by_id(plan_id)
+        saved_plan = plan_repo_simple.get_plan_by_id(plan_id)
 
         self.assertIsNotNone(saved_plan)
         self.assertTrue(saved_plan.get_plan_id() == plan_id)
@@ -63,13 +63,13 @@ class PlanParserTests(unittest.TestCase):
 
     def test_repo_with_parser2(self):
         plan = plan_parser.parse_plan_json(json_string)
-        plan_id = plan_repo.get_id()
+        plan_id = plan_repo_simple.get_id()
         plan.set_plan_id(plan_id)
 
         with mock.patch('cfg.celery_config.CELERY_ALWAYS_EAGER', True, create=True):
             plan_id = plan_submitter.store_plan(plan)
 
-        saved_plan = plan_repo.get_plan_by_id(plan_id)
+        saved_plan = plan_repo_simple.get_plan_by_id(plan_id)
 
         self.assertIsNotNone(saved_plan)
         self.assertTrue(saved_plan.get_plan_id() == plan_id)
