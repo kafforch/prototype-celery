@@ -3,7 +3,7 @@ import mock
 import logging
 import fakeredis
 from model import plan_parser, plan_repo, task_repo
-from workers import plan_submitter
+from workers.plan_submitter import PlanSubmitter
 
 json_string = '''{
             "start_on": "2015-12-11T23:14:15.554Z",
@@ -27,8 +27,10 @@ json_string = '''{
             ]
             }'''
 
-
 plan_repo = plan_repo.PlanRepo(fakeredis.FakeStrictRedis())
+task_repo = task_repo.TaskRepo(fakeredis.FakeStrictRedis())
+plan_submitter = PlanSubmitter(plan_repo, task_repo)
+
 
 class PlanParserTests(unittest.TestCase):
     def setUp(self):
@@ -42,7 +44,6 @@ class PlanParserTests(unittest.TestCase):
         self.assertTrue(plan.get_tasks()[1].get_task_id() == "23")
         self.assertTrue(plan.get_start_on() == "2015-12-11T23:14:15.554Z")
 
-    @unittest.skip("")
     def test_repo_with_parser1(self):
         plan = plan_parser.parse_plan_json(json_string)
 
@@ -57,14 +58,11 @@ class PlanParserTests(unittest.TestCase):
         self.assertTrue(len(saved_plan.get_tasks()) == 2)
         self.assertTrue(len(saved_plan.get_dependencies()) == 1)
 
-        self.assertIsNotNone(task_repo.get_dependency(plan_id, "1", "2"))
-        self.assertIsNone(task_repo.get_dependency(plan_id, "5", "6"))
-        self.assertIsNotNone(task_repo.get_task_by_id(plan_id, "23"))
-        self.assertTrue(task_repo.get_task_by_id(plan_id, "23").get_start_on() == \
+        self.assertEqual(len(task_repo.get_dependencies(plan_id)), 1)
+        self.assertEqual(len(task_repo.get_tasks(plan_id)), 2)
+        self.assertTrue(task_repo.get_tasks(plan_id)[1].get_start_on() == \
                         "2066-12-11T23:14:15.554Z")
-        self.assertIsNone(task_repo.get_task_by_id(plan_id, "215"))
 
-    @unittest.skip("")
     def test_repo_with_parser2(self):
         plan = plan_parser.parse_plan_json(json_string)
         plan_id = plan_repo.get_id()
@@ -81,9 +79,7 @@ class PlanParserTests(unittest.TestCase):
         self.assertTrue(len(saved_plan.get_tasks()) == 2)
         self.assertTrue(len(saved_plan.get_dependencies()) == 1)
 
-        self.assertIsNotNone(task_repo.get_dependency(plan_id, "1", "2"))
-        self.assertIsNone(task_repo.get_dependency(plan_id, "5", "6"))
-        self.assertIsNotNone(task_repo.get_task_by_id(plan_id, "23"))
-        self.assertTrue(task_repo.get_task_by_id(plan_id, "23").get_start_on() == \
+        self.assertEqual(len(task_repo.get_dependencies(plan_id)), 1)
+        self.assertEqual(len(task_repo.get_tasks(plan_id)), 2)
+        self.assertTrue(task_repo.get_tasks(plan_id)[1].get_start_on() == \
                         "2066-12-11T23:14:15.554Z")
-        self.assertIsNone(task_repo.get_task_by_id(plan_id, "215"))

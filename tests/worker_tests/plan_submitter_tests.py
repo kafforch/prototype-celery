@@ -1,12 +1,12 @@
-from workers import plan_submitter
-from model import plan_parser, plan_repo
-from cfg import celery_config
+from workers.plan_submitter import PlanSubmitter
+from model import plan_parser, plan_repo, task_repo
 import fakeredis
 import unittest
-import uuid
 import mock
 
 plan_repo = plan_repo.PlanRepo(fakeredis.FakeStrictRedis())
+task_repo = task_repo.TaskRepo(fakeredis.FakeStrictRedis())
+plan_submitter = PlanSubmitter(plan_repo, task_repo)
 
 plan_json1 = '''{
             "start_on": "2015-12-11T23:14:15.554Z",
@@ -51,11 +51,9 @@ class PlanRepoLocalTests(unittest.TestCase):
         self.assertIsNotNone(plan)
         self.assertEqual(len(plan.get_tasks()), 2)
 
+
 class PlanSubmitterTests(unittest.TestCase):
-
-    @unittest.skip("")
     def test_plan_submission1(self):
-
         built_plan = plan_parser.parse_plan_json(plan_json1)
 
         with mock.patch('cfg.celery_config.CELERY_ALWAYS_EAGER', True, create=True):
