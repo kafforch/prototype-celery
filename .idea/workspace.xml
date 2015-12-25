@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3cea264b-8e20-45ad-8f3c-a2a9c08fb4c1" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/model/plan_repo_factory.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/plan_parser.py" afterPath="$PROJECT_DIR$/model/plan_parser.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/model_tests/plan_repo_redis_tests.py" afterPath="$PROJECT_DIR$/tests/model_tests/plan_repo_redis_tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/model_tests/plan_repo_simple_tests.py" afterPath="$PROJECT_DIR$/tests/model_tests/plan_repo_simple_tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/worker_tests/plan_submitter_tests.py" afterPath="$PROJECT_DIR$/tests/worker_tests/plan_submitter_tests.py" />
     </list>
     <ignored path="untitled.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,37 +28,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="plan_repo_redis.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/plan_repo_redis.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#29#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="plan_parser.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/plan_parser.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="97" column="37" selection-start-line="97" selection-start-column="37" selection-end-line="97" selection-end-column="37" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="plan_repo_redis_tests.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="plan_repo_redis_tests.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/model_tests/plan_repo_redis_tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7484277">
-              <caret line="58" column="35" selection-start-line="58" selection-start-column="35" selection-end-line="58" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plan_repo_simple_tests.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/model_tests/plan_repo_simple_tests.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plan_submitter_tests.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/worker_tests/plan_submitter_tests.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.28301886">
+              <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#34#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -99,12 +101,13 @@
         <option value="$PROJECT_DIR$/model/plan_repo.py" />
         <option value="$PROJECT_DIR$/model/plan_repo_factory.py" />
         <option value="$PROJECT_DIR$/tests/model_tests/plan_repo_tests.py" />
-        <option value="$PROJECT_DIR$/tests/worker_tests/plan_submitter_tests.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/model/plan_parser.py" />
         <option value="$PROJECT_DIR$/model/plan_repo_redis.py" />
+        <option value="$PROJECT_DIR$/model/plan_parser.py" />
         <option value="$PROJECT_DIR$/tests/model_tests/plan_repo_redis_tests.py" />
+        <option value="$PROJECT_DIR$/tests/model_tests/plan_repo_simple_tests.py" />
+        <option value="$PROJECT_DIR$/tests/worker_tests/plan_submitter_tests.py" />
       </list>
     </option>
   </component>
@@ -787,19 +790,16 @@
       <option name="project" value="LOCAL" />
       <updated>1451015415913</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Added some more tests">
+      <created>1451015542315</created>
+      <option name="number" value="00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1451015542315</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittest_PlanRepoRedisTests_test_get_by_id_success - 2015.12.25 at 14h 36m 11s.xml">
-      <configuration name="Unittest PlanRepoRedisTests.test_get_by_id_success" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittest_PlanRepoRedisTests_test_get_by_id_success - 2015.12.25 at 14h 38m 10s.xml">
-      <configuration name="Unittest PlanRepoRedisTests.test_get_by_id_success" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittest_PlanRepoRedisTests_test_get_by_id_success - 2015.12.25 at 14h 40m 52s.xml">
-      <configuration name="Unittest PlanRepoRedisTests.test_get_by_id_success" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittest_PlanRepoRedisTests_test_get_by_id_success - 2015.12.25 at 14h 45m 44s.xml">
       <configuration name="Unittest PlanRepoRedisTests.test_get_by_id_success" configurationId="tests" />
     </history-entry>
@@ -819,6 +819,15 @@
       <configuration name="Unittests" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests - 2015.12.25 at 14h 52m 08s.xml">
+      <configuration name="Unittests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests - 2015.12.25 at 15h 12m 45s.xml">
+      <configuration name="Unittests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests - 2015.12.25 at 15h 13m 14s.xml">
+      <configuration name="Unittests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests - 2015.12.25 at 15h 13m 31s.xml">
       <configuration name="Unittests" configurationId="tests" />
     </history-entry>
   </component>
@@ -871,7 +880,8 @@
     <MESSAGE value="RE-org" />
     <MESSAGE value="Created plan_repo factory to plug in redis" />
     <MESSAGE value="Implementation of plan_repo in redis" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementation of plan_repo in redis" />
+    <MESSAGE value="Added some more tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some more tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -891,16 +901,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#15#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/model_tests/plan_repo_simple_tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
           <folding>
             <element signature="e#0#15#0" expanded="false" />
           </folding>
@@ -933,32 +933,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/plan_repo_factory.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="40" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/worker_tests/plan_submitter_tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.094339624">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="31" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/plan_parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="97" column="37" selection-start-line="97" selection-start-column="37" selection-end-line="97" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/plan_repo_simple.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3773585">
@@ -969,7 +943,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/plan_repo_redis.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.7861635">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
@@ -977,12 +951,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/model/plan_parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.062893085">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests/model_tests/plan_repo_redis_tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7484277">
-          <caret line="58" column="35" selection-start-line="58" selection-start-column="35" selection-end-line="58" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/model_tests/plan_repo_simple_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/worker_tests/plan_submitter_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28301886">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
           </folding>
         </state>
       </provider>

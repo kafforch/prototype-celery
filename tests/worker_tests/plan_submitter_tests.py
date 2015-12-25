@@ -1,5 +1,5 @@
 from workers import plan_submitter
-from model import plan_parser, plan_repo_factory
+from model import plan_parser, plan_repo_simple
 from cfg import celery_config
 
 import unittest
@@ -7,7 +7,7 @@ import uuid
 import logging
 import mock
 
-plan_repo = plan_repo_factory.factory("TEST")
+plan_repo = plan_repo_simple
 
 plan_json1 = '''{
             "start_on": "2015-12-11T23:14:15.554Z",

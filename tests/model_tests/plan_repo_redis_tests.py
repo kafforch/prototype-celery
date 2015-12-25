@@ -1,5 +1,5 @@
 import unittest
-from model import plan_repo_redis   , plan_parser
+from model import plan_repo_redis, plan_parser
 import fakeredis
 
 plan_json1 = '''{
