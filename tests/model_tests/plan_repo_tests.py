@@ -1,5 +1,5 @@
 import unittest
-from model import plan_repo_redis, plan_parser
+from model import plan_repo, plan_parser
 import fakeredis
 
 plan_json1 = '''{
@@ -24,7 +24,7 @@ plan_json1 = '''{
             ]
             }'''
 
-plan_repo = plan_repo_redis.PlanRepo(fakeredis.FakeStrictRedis())
+plan_repo = plan_repo.PlanRepo(fakeredis.FakeStrictRedis())
 
 
 class PlanRepoRedisTests(unittest.TestCase):

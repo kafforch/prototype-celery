@@ -1,8 +1,8 @@
 import unittest
-from model import task_repo_redis, plan_parser
+from model import task_repo, plan_parser
 import fakeredis
 
-task_repo = task_repo_redis.TaskRepo(fakeredis.FakeStrictRedis())
+task_repo = task_repo.TaskRepo(fakeredis.FakeStrictRedis())
 
 plan_json1 = '''{
             "start_on": "2015-12-11T23:14:15.554Z",
