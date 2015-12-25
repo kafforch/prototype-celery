@@ -31,6 +31,7 @@ class PlanRepoRedisTests(unittest.TestCase):
     def setUp(self):
         plan_repo.purge_all_plans()
         self.plan1 = plan_parser.parse_plan_json(plan_json1)
+        self.plan2 = plan_parser.parse_plan_json(plan_json1)
 
     def test_get_by_id_success(self):
 
@@ -51,3 +52,9 @@ class PlanRepoRedisTests(unittest.TestCase):
 
         self.assertEqual(plan_repo.get_number_of_plans(), 0)
 
+    def test_for_more_than_one_plan(self):
+        plan_repo.save(self.plan1)
+        plan_repo.save(self.plan2)
+        self.assertEqual(plan_repo.get_number_of_plans(), 2)
+        plan_repo.purge_all_plans()
+        self.assertEqual(plan_repo.get_number_of_plans(), 0)
