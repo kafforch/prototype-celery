@@ -1,4 +1,4 @@
-from model import plan_parser
+from model.plan_parser import parse_plan_json
 import hashlib
 
 
@@ -26,7 +26,7 @@ class PlanRepo():
 
     def get_plan_by_id(self, plan_id):
         redis_plan_json = self.__redis.get("plan-{}".format(plan_id))
-        return plan_parser.parse_plan_json(redis_plan_json)
+        return parse_plan_json(redis_plan_json)
 
     def get_number_of_plans(self):
         return len(self.__get_all_redis_keys())

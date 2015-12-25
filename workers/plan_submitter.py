@@ -1,4 +1,6 @@
-from celery.contrib.methods import task
+from celery.contrib.methods import task_method
+from cfg.celery_config import app
+from celery import current_app
 import logging
 
 
@@ -8,7 +10,7 @@ class PlanSubmitter:
         self.__plan_repo = plan_repo
         self.__task_repo = task_repo
 
-    @task()
+    @current_app.task(filter=task_method)
     def store_plan(self, plan):
         plan_id = self.__plan_repo.save(plan)
         logger = logging.getLogger(__name__)
