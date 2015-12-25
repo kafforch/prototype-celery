@@ -1,4 +1,5 @@
 import json
+import ast
 
 class DependencyParserDeco:
 
@@ -93,7 +94,9 @@ class PlanParserDeco:
     def get_dependencies(self):
         return map(lambda d: DependencyParserDeco(d), self.__plan["dependencies"])
 
+    def to_json(self):
+        return json.dumps(self.__plan)
+
 
 def parse_plan_json(plan_json):
-
     return PlanParserDeco(plan_json)
