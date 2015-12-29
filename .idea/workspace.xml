@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3cea264b-8e20-45ad-8f3c-a2a9c08fb4c1" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workers/base_worker.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cfg/kafforch.cfg" afterPath="$PROJECT_DIR$/cfg/kafforch.cfg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workers/config.py" afterPath="$PROJECT_DIR$/workers/config.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workers/plan_submitter.py" afterPath="$PROJECT_DIR$/workers/plan_submitter.py" />
     </list>
     <ignored path="untitled.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,22 +25,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="plan_submitter.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="plan_submitter.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/workers/plan_submitter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.18620689">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="base_worker.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/workers/base_worker.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/workers/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45517242">
+            <state vertical-scroll-proportion="0.0">
               <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
@@ -110,10 +118,10 @@
         <option value="$PROJECT_DIR$/model/task_repo.py" />
         <option value="$PROJECT_DIR$/tests/model_tests/plan_parser_tests.py" />
         <option value="$PROJECT_DIR$/tests/model_tests/task_repo_tests.py" />
-        <option value="$PROJECT_DIR$/workers/plan_submitter.py" />
         <option value="$PROJECT_DIR$/tests/worker_tests/base_worker_tests.py" />
         <option value="$PROJECT_DIR$/workers/config.py" />
         <option value="$PROJECT_DIR$/cfg/kafforch.cfg" />
+        <option value="$PROJECT_DIR$/workers/plan_submitter.py" />
       </list>
     </option>
   </component>
@@ -296,6 +304,7 @@
       <recent name="$PROJECT_DIR$/.." />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/workers" />
       <recent name="$PROJECT_DIR$/model" />
       <recent name="$PROJECT_DIR$/tests/model_tests" />
       <recent name="$PROJECT_DIR$/../cfg" />
@@ -635,12 +644,6 @@
       <option name="number" value="Default" />
       <updated>1450658074359</updated>
     </task>
-    <task id="LOCAL-00004" summary="Initial">
-      <created>1450668023568</created>
-      <option name="number" value="00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1450668023568</updated>
-    </task>
     <task id="LOCAL-00005" summary="Initial">
       <created>1450668075728</created>
       <option name="number" value="00005" />
@@ -929,7 +932,13 @@
       <option name="project" value="LOCAL" />
       <updated>1451429752359</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Config celery app object">
+      <created>1451429976028</created>
+      <option name="number" value="00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1451429976028</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1023,9 +1032,9 @@
     <MESSAGE value="Refactored plan_repo.save into plan_repo.save_new_plan" />
     <MESSAGE value="Refactored task_repo.save_tasks into task_repo.save_new_tasks" />
     <MESSAGE value="Config for redis to return kwargs" />
-    <MESSAGE value="Config celery app object" />
     <MESSAGE value="Explicitly using pickle" />
-    <option name="LAST_COMMIT_MESSAGE" value="Explicitly using pickle" />
+    <MESSAGE value="Config celery app object" />
+    <option name="LAST_COMMIT_MESSAGE" value="Config celery app object" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1126,7 +1135,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="68" column="32" selection-start-line="68" selection-start-column="18" selection-end-line="68" selection-end-column="32" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1143,9 +1152,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="46" column="27" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1175,13 +1182,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/workers/plan_submitter.py">
+    <entry file="file://$PROJECT_DIR$/workers/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1193,10 +1198,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/workers/config.py">
+    <entry file="file://$PROJECT_DIR$/workers/base_worker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45517242">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workers/plan_submitter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18620689">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
