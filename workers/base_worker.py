@@ -6,8 +6,6 @@ from workers.config import WorkerConfigurator
 from celery.signals import celeryd_after_setup
 from celery.utils.log import get_task_logger
 
-logger = get_task_logger(__name__)
-
 config = WorkerConfigurator("cfg/kafforch.cfg")
 
 redis_config = config.get_redis_config_kwargs()
@@ -29,14 +27,6 @@ repo.task_repo = None
 
 @celeryd_after_setup.connect()
 def init(sender, instance, **kwargs):
-    logger.info("Initializing {} worker".format(__name__))
     repo.plan_repo = PlanRepo(redis_inst)
     repo.task_repo = TaskRepo(redis_inst)
 
-
-@app.task()
-def store_plan(plan):
-    plan_id = repo.plan_repo.save_new_plan(plan)
-    repo.task_repo.save_new_tasks(plan_id, plan.get_tasks())
-    repo.task_repo.save_dependencies(plan_id, plan.get_dependencies())
-    return plan_id
