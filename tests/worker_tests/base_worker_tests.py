@@ -1,11 +1,10 @@
 import unittest
-from workers.base import BaseWorker
-import os
+from workers.config import WorkerConfigurator
+
 
 class BaseTest(unittest.TestCase):
-
     def setUp(self):
-        self.base = BaseWorker("../../cfg/kafforch.cfg")
+        self.base = WorkerConfigurator("cfg/kafforch.cfg")
 
     def test_loading_properties(self):
         self.assertIsNotNone(self.base)
@@ -14,4 +13,4 @@ class BaseTest(unittest.TestCase):
         celery_config = self.base.get_celery_config_kwargs()
 
         self.assertIsNotNone(celery_config)
-        self.assertEqual(len(celery_config.keys()),2)
+        self.assertEqual(len(celery_config.keys()), 2)

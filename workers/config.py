@@ -1,7 +1,7 @@
 from ConfigParser import ConfigParser
 
 
-class BaseWorker:
+class WorkerConfigurator:
     def __init__(self, config_file="../../cfg/kafforch.cfg"):
         self.__conf = ConfigParser()
         self.__conf.readfp(open(config_file))

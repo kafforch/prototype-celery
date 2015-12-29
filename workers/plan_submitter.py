@@ -2,11 +2,11 @@ from celery import Celery
 from model.plan_repo import PlanRepo
 from model.task_repo import TaskRepo
 from redis import Redis
-from workers.base import BaseWorker
+from workers.config import WorkerConfigurator
 from celery.signals import celeryd_after_setup
 
 
-config = BaseWorker("cfg/kafforch.cfg")
+config = WorkerConfigurator("cfg/kafforch.cfg")
 
 celery_config = config.get_celery_config_kwargs()
 
