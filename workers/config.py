@@ -6,8 +6,12 @@ class WorkerConfigurator:
         self.__conf = ConfigParser()
         self.__conf.readfp(open(config_file))
 
-    def get_simple_redis_url(self):
-        return self.__conf.get("Redis", "simple_url")
+    def get_redis_config_kwargs(self):
+        return dict(
+                host=self.__conf.get("DEFAULT", "Redis.host"),
+                port=self.__conf.get("DEFAULT", "Redis.port"),
+                db=self.__conf.get("DEFAULT", "Redis.db")
+        )
 
     def get_celery_config_kwargs(self):
         return dict(
