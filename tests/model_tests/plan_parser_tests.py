@@ -29,8 +29,6 @@ json_string = '''{
 
 plan_repo = plan_repo.PlanRepo(fakeredis.FakeStrictRedis())
 task_repo = task_repo.TaskRepo(fakeredis.FakeStrictRedis())
-plan_submitter = PlanSubmitter(plan_repo, task_repo)
-
 
 class PlanParserTests(unittest.TestCase):
     def setUp(self):
@@ -47,8 +45,9 @@ class PlanParserTests(unittest.TestCase):
     def test_repo_with_parser1(self):
         plan = plan_parser.parse_plan_json(json_string)
 
-        with mock.patch('cfg.celery_config.CELERY_ALWAYS_EAGER', True, create=True):
-            plan_id = plan_submitter.store_plan(plan)
+        plan_id = plan_repo.save(plan)
+        task_repo.save_tasks(plan_id, plan.get_tasks())
+        task_repo.save_dependencies(plan_id, plan.get_dependencies())
 
         saved_plan = plan_repo.get_plan_by_id(plan_id)
 
@@ -68,8 +67,9 @@ class PlanParserTests(unittest.TestCase):
         plan_id = plan_repo.get_id()
         plan.set_plan_id(plan_id)
 
-        with mock.patch('cfg.celery_config.CELERY_ALWAYS_EAGER', True, create=True):
-            plan_id = plan_submitter.store_plan(plan)
+        plan_id = plan_repo.save(plan)
+        task_repo.save_tasks(plan_id, plan.get_tasks())
+        task_repo.save_dependencies(plan_id, plan.get_dependencies())
 
         saved_plan = plan_repo.get_plan_by_id(plan_id)
 

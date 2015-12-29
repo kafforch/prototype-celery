@@ -32,8 +32,7 @@ class LiveTest(TestCase):
 
     def setUp(self):
         self.ps = PlanSubmitter(
-            plan_repo=PlanRepo(in_redis=Redis("localhost")),
-            task_repo=TaskRepo(in_redis=Redis("localhost"))
+            "localhost"
         )
 
     def test_live1(self):

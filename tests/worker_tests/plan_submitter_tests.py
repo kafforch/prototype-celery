@@ -6,7 +6,6 @@ import mock
 
 plan_repo = plan_repo.PlanRepo(fakeredis.FakeStrictRedis())
 task_repo = task_repo.TaskRepo(fakeredis.FakeStrictRedis())
-plan_submitter = PlanSubmitter(plan_repo, task_repo)
 
 plan_json1 = '''{
             "start_on": "2015-12-11T23:14:15.554Z",
@@ -56,8 +55,7 @@ class PlanSubmitterTests(unittest.TestCase):
     def test_plan_submission1(self):
         built_plan = plan_parser.parse_plan_json(plan_json1)
 
-        with mock.patch('cfg.celery_config.CELERY_ALWAYS_EAGER', True, create=True):
-            plan_id = plan_submitter.store_plan(built_plan)
+        plan_id = plan_repo.save(built_plan)
 
         plan = plan_repo.get_plan_by_id(plan_id)
 
