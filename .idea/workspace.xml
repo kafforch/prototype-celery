@@ -4,7 +4,6 @@
     <list default="true" id="3cea264b-8e20-45ad-8f3c-a2a9c08fb4c1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cfg/kafforch.cfg" afterPath="$PROJECT_DIR$/cfg/kafforch.cfg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workers/config.py" afterPath="$PROJECT_DIR$/workers/config.py" />
     </list>
     <ignored path="untitled.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,7 +28,7 @@
         <entry file="file://$PROJECT_DIR$/workers/plan_submitter.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -51,7 +50,7 @@
         <entry file="file://$PROJECT_DIR$/cfg/kafforch.cfg">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.25157234">
-              <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+              <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -302,7 +301,7 @@
       <recent name="$PROJECT_DIR$/../model" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests">
+  <component name="RunManager" selected="Python tests.live_test">
     <configuration default="false" name="Unittests in PlanRepoRedisTests" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -635,12 +634,6 @@
       <option name="number" value="Default" />
       <updated>1450658074359</updated>
     </task>
-    <task id="LOCAL-00002" summary="Initial">
-      <created>1450662649341</created>
-      <option name="number" value="00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1450662649341</updated>
-    </task>
     <task id="LOCAL-00003" summary="Initial">
       <created>1450662880646</created>
       <option name="number" value="00003" />
@@ -929,16 +922,16 @@
       <option name="project" value="LOCAL" />
       <updated>1451429497780</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Config celery app object">
+      <created>1451429610615</created>
+      <option name="number" value="00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1451429610615</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests - 2015.12.29 at 23h 21m 48s.xml">
-      <configuration name="Unittests" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests - 2015.12.29 at 23h 22m 16s.xml">
-      <configuration name="Unittests" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests - 2015.12.29 at 23h 29m 50s.xml">
       <configuration name="Unittests" configurationId="tests" />
     </history-entry>
@@ -961,6 +954,12 @@
       <configuration name="Unittests" configurationId="tests" />
     </history-entry>
     <history-entry file="live_test - 2015.12.29 at 23h 34m 27s.xml">
+      <configuration name="live_test" configurationId="tests" />
+    </history-entry>
+    <history-entry file="live_test - 2015.12.30 at 09h 54m 23s.xml">
+      <configuration name="live_test" configurationId="tests" />
+    </history-entry>
+    <history-entry file="live_test - 2015.12.30 at 09h 55m 19s.xml">
       <configuration name="live_test" configurationId="tests" />
     </history-entry>
   </component>
@@ -1186,7 +1185,7 @@
     <entry file="file://$PROJECT_DIR$/workers/plan_submitter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
@@ -1196,7 +1195,7 @@
     <entry file="file://$PROJECT_DIR$/cfg/kafforch.cfg">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.25157234">
-          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
           <folding />
         </state>
       </provider>
