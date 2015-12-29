@@ -17,15 +17,25 @@ plan_json1 = '''{
                     "id": "23",
                     "start_on": "2066-12-11T23:14:15.554Z",
                     "name": "namename"
+                },
+                {
+                    "id": "27",
+                    "start_on": "2026-12-11T23:14:15.554Z",
+                    "name": "namename123"
                 }
             ],
             "dependencies": [
                 {
                     "from": "1",
                     "to": "2"
+                },
+                {
+                    "from": "2",
+                    "to": "3"
                 }
             ]
             }'''
+
 
 
 class LiveTest(TestCase):
@@ -36,5 +46,14 @@ class LiveTest(TestCase):
         )
 
     def test_live1(self):
+        plan_repo = PlanRepo(Redis("localhost"))
+
         plan = parse_plan_json(plan_json1)
         result = self.ps.store_plan.delay(plan)
+
+        plan_id = result.get(5)
+
+        plan = plan_repo.get_plan_by_id(plan_id)
+
+        self.assertIsNotNone(plan)
+        self.assertEqual(len(plan.get_tasks()), 3)

@@ -1,8 +1,6 @@
-from workers.plan_submitter import PlanSubmitter
 from model import plan_parser, plan_repo, task_repo
 import fakeredis
 import unittest
-import mock
 
 plan_repo = plan_repo.PlanRepo(fakeredis.FakeStrictRedis())
 task_repo = task_repo.TaskRepo(fakeredis.FakeStrictRedis())
@@ -50,8 +48,6 @@ class PlanRepoLocalTests(unittest.TestCase):
         self.assertIsNotNone(plan)
         self.assertEqual(len(plan.get_tasks()), 2)
 
-
-class PlanSubmitterTests(unittest.TestCase):
     def test_plan_submission1(self):
         built_plan = plan_parser.parse_plan_json(plan_json1)
 
