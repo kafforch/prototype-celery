@@ -10,8 +10,7 @@ class WorkerConfigurator:
         return self.__conf.get("Redis", "simple_url")
 
     def get_celery_config_kwargs(self):
-        kwargs = dict(
+        return dict(
                 broker=self.__conf.get('Celery', 'broker'),
                 backend=self.__conf.get('Celery', 'backend')
         )
-        return kwargs
