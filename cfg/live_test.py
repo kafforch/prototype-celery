@@ -40,15 +40,22 @@ plan_json1 = '''{
 
 class LiveTest(TestCase):
 
-    def test_live1(self):
-        plan_repo = PlanRepo(Redis("localhost"))
+    def setUp(self):
+        self.plan_repo = PlanRepo(Redis("localhost"))
+        self.plan_repo.purge_all_plans()
+        self.plan_repo.reset_id()
 
+        self.task_repo = TaskRepo(Redis("localhost"))
+        self.task_repo.purge_all_tasks()
+        self.task_repo.purge_all_dependencies()
+
+    def test_live1(self):
         plan = parse_plan_json(plan_json1)
         result = store_plan.delay(plan)
 
         plan_id = result.get(5)
 
-        plan = plan_repo.get_plan_by_id(plan_id)
+        plan = self.plan_repo.get_plan_by_id(plan_id)
 
         self.assertIsNotNone(plan)
         self.assertEqual(len(plan.get_tasks()), 3)

@@ -6,6 +6,9 @@ class PlanRepo():
     def __init__(self, in_redis):
         self.__redis = in_redis
 
+    def reset_id(self):
+        self.__redis.set("global_plan_id", 0)
+
     def get_id(self):
         raw_plan_id = self.__redis.incr("global_plan_id")
         return hashlib.md5(str(raw_plan_id)).hexdigest()
