@@ -15,8 +15,8 @@ class WorkerConfigurator:
 
     def get_celery_config_dict(self):
         return dict(
-                BROKER_URL=self.__conf.get('Celery', 'broker'),
-                CELERY_RESULT_BACKEND=self.__conf.get('Celery', 'backend'),
-                CELERY_TASK_SERIALIZER=self.__conf.get('Celery', 'serializer'),
-                CELERY_ACCEPT_CONTENT=[self.__conf.get('Celery', 'serializer')]
+                BROKER_URL=self.__conf.get('Celery-Connection', 'broker'),
+                CELERY_RESULT_BACKEND=self.__conf.get('Celery-Connection', 'backend'),
+                CELERY_TASK_SERIALIZER=self.__conf.get('Celery-Connection', 'serializer'),
+                CELERY_ACCEPT_CONTENT=[self.__conf.get('Celery-Connection', 'serializer')]
         )
