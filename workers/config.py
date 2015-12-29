@@ -13,8 +13,10 @@ class WorkerConfigurator:
                 db=self.__conf.get("DEFAULT", "Redis.db")
         )
 
-    def get_celery_config_kwargs(self):
+    def get_celery_config_dict(self):
         return dict(
-                broker=self.__conf.get('Celery', 'broker'),
-                backend=self.__conf.get('Celery', 'backend')
+                BROKER_URL=self.__conf.get('Celery', 'broker'),
+                CELERY_RESULT_BACKEND=self.__conf.get('Celery', 'backend'),
+                CELERY_TASK_SERIALIZER='json',
+                CELERY_ACCEPT_CONTENT=['json']
         )

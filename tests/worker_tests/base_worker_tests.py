@@ -10,7 +10,7 @@ class BaseTest(unittest.TestCase):
         self.assertIsNotNone(self.base)
 
     def test_celery_config(self):
-        celery_config = self.base.get_celery_config_kwargs()
+        celery_config = self.base.get_celery_config_dict()
 
         self.assertIsNotNone(celery_config)
         self.assertEqual(len(celery_config.keys()), 2)
