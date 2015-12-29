@@ -1,4 +1,4 @@
-from workers.base_worker import app, repo
+from workers.base import app, repo
 
 
 @app.task()
