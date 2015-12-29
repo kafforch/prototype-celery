@@ -42,7 +42,7 @@ class TaskRepoTests(unittest.TestCase):
         task_repo.purge_all_dependencies()
         plan = plan_parser.parse_plan_json(plan_json1)
         task_repo.save_dependencies('123', plan.get_dependencies())
-        task_repo.save_tasks('123', plan.get_tasks())
+        task_repo.save_new_tasks('123', plan.get_tasks())
 
     def tearDown(self):
         task_repo.purge_all_tasks()

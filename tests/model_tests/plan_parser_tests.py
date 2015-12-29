@@ -43,7 +43,7 @@ class PlanParserTests(unittest.TestCase):
         plan = plan_parser.parse_plan_json(json_string)
 
         plan_id = plan_repo.save_new_plan(plan)
-        task_repo.save_tasks(plan_id, plan.get_tasks())
+        task_repo.save_new_tasks(plan_id, plan.get_tasks())
         task_repo.save_dependencies(plan_id, plan.get_dependencies())
 
         saved_plan = plan_repo.get_plan_by_id(plan_id)
@@ -58,6 +58,7 @@ class PlanParserTests(unittest.TestCase):
         self.assertEqual(len(task_repo.get_tasks(plan_id)), 2)
         self.assertTrue(task_repo.get_tasks(plan_id)[1].get_start_on() == \
                         "2066-12-11T23:14:15.554Z")
+        self.assertTrue(task_repo.get_tasks(plan_id)[1].is_task_initial())
 
     def test_repo_with_parser2(self):
         plan = plan_parser.parse_plan_json(json_string)
@@ -65,7 +66,7 @@ class PlanParserTests(unittest.TestCase):
         plan.set_plan_id(plan_id)
 
         plan_id = plan_repo.save_new_plan(plan)
-        task_repo.save_tasks(plan_id, plan.get_tasks())
+        task_repo.save_new_tasks(plan_id, plan.get_tasks())
         task_repo.save_dependencies(plan_id, plan.get_dependencies())
 
         saved_plan = plan_repo.get_plan_by_id(plan_id)

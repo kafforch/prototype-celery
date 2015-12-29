@@ -5,8 +5,9 @@ class TaskRepo():
     def __init__(self, in_redis):
         self.__redis = in_redis
 
-    def save_tasks(self, plan_id, tasks):
+    def save_new_tasks(self, plan_id, tasks):
         for task in tasks:
+            task.set_task_as_new()
             self.__redis.rpush("tasksof-{}".format(plan_id), task.to_json())
 
     def save_dependencies(self, plan_id, dependencies):
