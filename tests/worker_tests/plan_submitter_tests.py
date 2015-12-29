@@ -41,7 +41,7 @@ class PlanRepoLocalTests(unittest.TestCase):
 
         built_plan.set_plan_id(plan_id)
 
-        plan_repo.save(built_plan)
+        plan_repo.save_new_plan(built_plan)
 
         plan = plan_repo.get_plan_by_id(plan_id)
 
@@ -51,7 +51,7 @@ class PlanRepoLocalTests(unittest.TestCase):
     def test_plan_submission1(self):
         built_plan = plan_parser.parse_plan_json(plan_json1)
 
-        plan_id = plan_repo.save(built_plan)
+        plan_id = plan_repo.save_new_plan(built_plan)
 
         plan = plan_repo.get_plan_by_id(plan_id)
 

@@ -5,7 +5,6 @@ from redis import Redis
 from workers.config import WorkerConfigurator
 from celery.signals import celeryd_after_setup
 
-
 config = WorkerConfigurator("cfg/kafforch.cfg")
 
 celery_config = config.get_celery_config_kwargs()
@@ -13,6 +12,7 @@ celery_config = config.get_celery_config_kwargs()
 redis_config = config.get_simple_redis_url()
 
 app = Celery(**celery_config)
+
 
 class Repo:
     pass
@@ -31,7 +31,7 @@ def init(sender, instance, **kwargs):
 
 @app.task()
 def store_plan(plan):
-    plan_id = repo.plan_repo.save(plan)
+    plan_id = repo.plan_repo.save_new_plan(plan)
     repo.task_repo.save_tasks(plan_id, plan.get_tasks())
     repo.task_repo.save_dependencies(plan_id, plan.get_dependencies())
     return plan_id

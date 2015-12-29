@@ -10,7 +10,9 @@ class PlanRepo():
         raw_plan_id = self.__redis.incr("global_plan_id")
         return hashlib.md5(str(raw_plan_id)).hexdigest()
 
-    def save(self, plan):
+    def save_new_plan(self, plan):
+        plan.set_plan_as_new()
+
         key = plan.get_plan_id()
 
         if key is None:

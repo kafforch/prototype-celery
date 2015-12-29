@@ -42,7 +42,7 @@ class PlanParserTests(unittest.TestCase):
     def test_repo_with_parser1(self):
         plan = plan_parser.parse_plan_json(json_string)
 
-        plan_id = plan_repo.save(plan)
+        plan_id = plan_repo.save_new_plan(plan)
         task_repo.save_tasks(plan_id, plan.get_tasks())
         task_repo.save_dependencies(plan_id, plan.get_dependencies())
 
@@ -64,7 +64,7 @@ class PlanParserTests(unittest.TestCase):
         plan_id = plan_repo.get_id()
         plan.set_plan_id(plan_id)
 
-        plan_id = plan_repo.save(plan)
+        plan_id = plan_repo.save_new_plan(plan)
         task_repo.save_tasks(plan_id, plan.get_tasks())
         task_repo.save_dependencies(plan_id, plan.get_dependencies())
 
