@@ -13,4 +13,4 @@ class BaseTest(unittest.TestCase):
         celery_config = self.base.get_celery_config_dict()
 
         self.assertIsNotNone(celery_config)
-        self.assertEqual(len(celery_config.keys()), 2)
+        self.assertGreater(len(celery_config.keys()), 2)
