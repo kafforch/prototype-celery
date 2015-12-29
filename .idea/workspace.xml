@@ -4,7 +4,6 @@
     <list default="true" id="3cea264b-8e20-45ad-8f3c-a2a9c08fb4c1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cfg/live_test.py" afterPath="$PROJECT_DIR$/cfg/live_test.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/plan_repo.py" afterPath="$PROJECT_DIR$/model/plan_repo.py" />
     </list>
     <ignored path="untitled.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,8 +47,8 @@
       <file leaf-file-name="live_test.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cfg/live_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.591195">
-              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.7169811">
+              <caret line="57" column="67" selection-start-line="57" selection-start-column="67" selection-end-line="57" selection-end-column="67" />
               <folding />
             </state>
           </provider>
@@ -121,8 +120,8 @@
         <option value="$PROJECT_DIR$/cfg/kafforch.cfg" />
         <option value="$PROJECT_DIR$/workers/base_worker.py" />
         <option value="$PROJECT_DIR$/workers/plan_submitter.py" />
-        <option value="$PROJECT_DIR$/cfg/live_test.py" />
         <option value="$PROJECT_DIR$/model/plan_repo.py" />
+        <option value="$PROJECT_DIR$/cfg/live_test.py" />
       </list>
     </option>
   </component>
@@ -645,12 +644,6 @@
       <option name="number" value="Default" />
       <updated>1450658074359</updated>
     </task>
-    <task id="LOCAL-00008" summary="Initial">
-      <created>1450668398990</created>
-      <option name="number" value="00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1450668398990</updated>
-    </task>
     <task id="LOCAL-00009" summary="Initial">
       <created>1450668990103</created>
       <option name="number" value="00009" />
@@ -939,7 +932,13 @@
       <option name="project" value="LOCAL" />
       <updated>1451430563066</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Tidy up the live test">
+      <created>1451430909092</created>
+      <option name="number" value="00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1451430909092</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -948,9 +947,6 @@
     </history-entry>
     <history-entry file="Unittests - 2015.12.30 at 10h 12m 15s.xml">
       <configuration name="Unittests" configurationId="tests" />
-    </history-entry>
-    <history-entry file="live_test - 2015.12.30 at 10h 05m 20s.xml">
-      <configuration name="live_test" configurationId="tests" />
     </history-entry>
     <history-entry file="live_test - 2015.12.30 at 10h 09m 06s.xml">
       <configuration name="live_test" configurationId="tests" />
@@ -971,6 +967,9 @@
       <configuration name="live_test" configurationId="tests" />
     </history-entry>
     <history-entry file="live_test - 2015.12.30 at 10h 14m 46s.xml">
+      <configuration name="live_test" configurationId="tests" />
+    </history-entry>
+    <history-entry file="live_test - 2015.12.30 at 10h 15m 59s.xml">
       <configuration name="live_test" configurationId="tests" />
     </history-entry>
   </component>
@@ -1010,7 +1009,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Cleaning up some unused files" />
     <MESSAGE value="Tasks stored in dictionary of lists&#10;" />
     <MESSAGE value="Added dependencies handling" />
     <MESSAGE value="Fixed celery test" />
@@ -1035,7 +1033,8 @@
     <MESSAGE value="Explicitly using pickle" />
     <MESSAGE value="Config celery app object" />
     <MESSAGE value="Tucking the worker boilerplate into base_worker" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tucking the worker boilerplate into base_worker" />
+    <MESSAGE value="Tidy up the live test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tidy up the live test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1209,8 +1208,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cfg/live_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.591195">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.7169811">
+          <caret line="57" column="67" selection-start-line="57" selection-start-column="67" selection-end-line="57" selection-end-column="67" />
           <folding />
         </state>
       </provider>
