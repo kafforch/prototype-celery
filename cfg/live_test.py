@@ -1,4 +1,4 @@
-from workers.plan_submitter import PlanSubmitter
+from workers.plan_submitter import store_plan
 from unittest import TestCase
 from model.plan_parser import parse_plan_json
 from model.plan_repo import PlanRepo
@@ -40,16 +40,11 @@ plan_json1 = '''{
 
 class LiveTest(TestCase):
 
-    def setUp(self):
-        self.ps = PlanSubmitter(
-            "localhost"
-        )
-
     def test_live1(self):
         plan_repo = PlanRepo(Redis("localhost"))
 
         plan = parse_plan_json(plan_json1)
-        result = self.ps.store_plan.delay(plan)
+        result = store_plan.delay(plan)
 
         plan_id = result.get(5)
 

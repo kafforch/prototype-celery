@@ -1,9 +1,6 @@
 import unittest
-import mock
-import logging
 import fakeredis
 from model import plan_parser, plan_repo, task_repo
-from workers.plan_submitter import PlanSubmitter
 
 json_string = '''{
             "start_on": "2015-12-11T23:14:15.554Z",
