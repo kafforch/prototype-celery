@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3cea264b-8e20-45ad-8f3c-a2a9c08fb4c1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/worker_tests/base_worker_tests.py" afterPath="$PROJECT_DIR$/tests/worker_tests/base_worker_tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cfg/kafforch.cfg" afterPath="$PROJECT_DIR$/cfg/kafforch.cfg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workers/config.py" afterPath="$PROJECT_DIR$/workers/config.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workers/plan_submitter.py" afterPath="$PROJECT_DIR$/workers/plan_submitter.py" />
     </list>
     <ignored path="untitled.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,11 +37,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/workers/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.31034482">
-              <caret line="15" column="24" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="20" column="76" selection-start-line="20" selection-start-column="76" selection-end-line="20" selection-end-column="76" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="kafforch.cfg" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cfg/kafforch.cfg">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.25157234">
+              <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -95,16 +104,16 @@
         <option value="$PROJECT_DIR$/tests/worker_tests/base_tests.py" />
         <option value="$PROJECT_DIR$/cfg/live_test.py" />
         <option value="$PROJECT_DIR$/workers/base.py" />
-        <option value="$PROJECT_DIR$/tests/worker_tests/base_worker_tests.py" />
         <option value="$PROJECT_DIR$/model/plan_repo.py" />
         <option value="$PROJECT_DIR$/tests/worker_tests/plan_submitter_tests.py" />
         <option value="$PROJECT_DIR$/tests/model_tests/plan_repo_tests.py" />
         <option value="$PROJECT_DIR$/model/task_repo.py" />
         <option value="$PROJECT_DIR$/tests/model_tests/plan_parser_tests.py" />
         <option value="$PROJECT_DIR$/tests/model_tests/task_repo_tests.py" />
-        <option value="$PROJECT_DIR$/cfg/kafforch.cfg" />
         <option value="$PROJECT_DIR$/workers/plan_submitter.py" />
+        <option value="$PROJECT_DIR$/tests/worker_tests/base_worker_tests.py" />
         <option value="$PROJECT_DIR$/workers/config.py" />
+        <option value="$PROJECT_DIR$/cfg/kafforch.cfg" />
       </list>
     </option>
   </component>
@@ -293,7 +302,7 @@
       <recent name="$PROJECT_DIR$/../model" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.live_test">
+  <component name="RunManager" selected="Python tests.Unittests">
     <configuration default="false" name="Unittests in PlanRepoRedisTests" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -626,12 +635,6 @@
       <option name="number" value="Default" />
       <updated>1450658074359</updated>
     </task>
-    <task id="LOCAL-00001" summary="Initial">
-      <created>1450661397076</created>
-      <option name="number" value="00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1450661397077</updated>
-    </task>
     <task id="LOCAL-00002" summary="Initial">
       <created>1450662649341</created>
       <option name="number" value="00002" />
@@ -914,19 +917,22 @@
       <option name="project" value="LOCAL" />
       <updated>1451392531672</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Config celery app object">
+      <created>1451429455213</created>
+      <option name="number" value="00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1451429455213</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Config celery app object">
+      <created>1451429497775</created>
+      <option name="number" value="00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1451429497780</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests - 2015.12.29 at 23h 17m 58s.xml">
-      <configuration name="Unittests" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests - 2015.12.29 at 23h 20m 35s.xml">
-      <configuration name="Unittests" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests - 2015.12.29 at 23h 21m 31s.xml">
-      <configuration name="Unittests" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests - 2015.12.29 at 23h 21m 48s.xml">
       <configuration name="Unittests" configurationId="tests" />
     </history-entry>
@@ -945,6 +951,15 @@
     <history-entry file="Unittests - 2015.12.29 at 23h 34m 08s.xml">
       <configuration name="Unittests" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests - 2015.12.30 at 09h 51m 10s.xml">
+      <configuration name="Unittests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests - 2015.12.30 at 09h 51m 30s.xml">
+      <configuration name="Unittests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests - 2015.12.30 at 09h 53m 10s.xml">
+      <configuration name="Unittests" configurationId="tests" />
+    </history-entry>
     <history-entry file="live_test - 2015.12.29 at 23h 34m 27s.xml">
       <configuration name="live_test" configurationId="tests" />
     </history-entry>
@@ -960,7 +975,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.496875" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934928" sideWeight="0.496875" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -985,7 +1000,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Initial" />
     <MESSAGE value="Added celery unit tests" />
     <MESSAGE value="Fixing some naming" />
     <MESSAGE value="Cleaning up some unused files" />
@@ -1010,7 +1024,8 @@
     <MESSAGE value="Refactored plan_repo.save into plan_repo.save_new_plan" />
     <MESSAGE value="Refactored task_repo.save_tasks into task_repo.save_new_tasks" />
     <MESSAGE value="Config for redis to return kwargs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Config for redis to return kwargs" />
+    <MESSAGE value="Config celery app object" />
+    <option name="LAST_COMMIT_MESSAGE" value="Config celery app object" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1152,18 +1167,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/worker_tests/base_worker_tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.4716981">
+          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cfg/kafforch.cfg">
+    <entry file="file://$PROJECT_DIR$/workers/config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12578617">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="76" selection-start-line="20" selection-start-column="76" selection-end-line="20" selection-end-column="76" />
           <folding />
         </state>
       </provider>
@@ -1178,10 +1193,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/workers/config.py">
+    <entry file="file://$PROJECT_DIR$/cfg/kafforch.cfg">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31034482">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.25157234">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
           <folding />
         </state>
       </provider>

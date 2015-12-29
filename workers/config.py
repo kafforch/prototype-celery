@@ -17,6 +17,6 @@ class WorkerConfigurator:
         return dict(
                 BROKER_URL=self.__conf.get('Celery', 'broker'),
                 CELERY_RESULT_BACKEND=self.__conf.get('Celery', 'backend'),
-                CELERY_TASK_SERIALIZER='json',
-                CELERY_ACCEPT_CONTENT=['json']
+                CELERY_TASK_SERIALIZER=self.__conf.get('Celery', 'serializer'),
+                CELERY_ACCEPT_CONTENT=[self.__conf.get('Celery', 'serializer')]
         )
