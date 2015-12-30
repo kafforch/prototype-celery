@@ -20,3 +20,6 @@ class WorkerConfigurator:
                 CELERY_TASK_SERIALIZER=self.__conf.get('Celery-Connection', 'serializer'),
                 CELERY_ACCEPT_CONTENT=[self.__conf.get('Celery-Connection', 'serializer')]
         )
+
+    def get_plan_starter_cycle_time(self):
+        return int(self.__conf.get("Plan-Starter", "cycle_time_secs"))

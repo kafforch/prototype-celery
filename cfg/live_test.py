@@ -1,4 +1,4 @@
-from workers.plan_submitter import store_plan
+from workers.plan_submitter import store_new_plan
 from unittest import TestCase
 from model.plan_parser import parse_plan_json
 from model.plan_repo import PlanRepo
@@ -51,7 +51,7 @@ class LiveTest(TestCase):
 
     def test_live1(self):
         plan = parse_plan_json(plan_json1)
-        result = store_plan.delay(plan)
+        result = store_new_plan.delay(plan)
 
         plan_id = result.get(5)
 

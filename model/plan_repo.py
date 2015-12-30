@@ -22,8 +22,11 @@ class PlanRepo():
             key = self.get_id()
             plan.set_plan_id(key)
 
-        self.__redis.set("plan-{}".format(key), plan.to_json())
+        self.save_plan(key, plan)
         return key
+
+    def save_plan(self, key, plan):
+        self.__redis.set("plan-{}".format(key), plan.to_json())
 
     def purge_all_plans(self):
         keys = self.__get_all_redis_keys()
@@ -38,3 +41,6 @@ class PlanRepo():
 
     def __get_all_redis_keys(self):
         return self.__redis.keys("plan-*")
+
+    def get_all_plan_ids(self):
+        return map(lambda s: s.split("plan-")[1], self.__get_all_redis_keys())
