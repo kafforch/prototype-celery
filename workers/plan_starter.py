@@ -3,14 +3,14 @@ from celery.utils.log import get_task_logger
 from celery.schedules import timedelta
 from utils.time_utils import utcnow, to_utc
 
-TASK_NAME = '{}.start_plans'.format(__name__)
+START_PLANS_TASK_NAME = '{}.start_plans'.format(__name__)
 
 logger = get_task_logger(__name__)
 
 app.conf.CELERYBEAT_SCHEDULE.update(
         dict(
                 start_plans=dict(
-                        task=TASK_NAME,
+                        task=START_PLANS_TASK_NAME,
                         schedule=timedelta(seconds=repo.config.get_plan_starter_cycle_time())
                 )
         )
