@@ -7,13 +7,14 @@ TASK_NAME = '{}.start_plans'.format(__name__)
 logger = get_task_logger(__name__)
 
 app.conf.CELERYBEAT_SCHEDULE.update(
-    dict(
-        start_plans=dict(
-            task=TASK_NAME,
-            schedule=timedelta(seconds=repo.config.get_plan_starter_cycle_time())
+        dict(
+                start_plans=dict(
+                        task=TASK_NAME,
+                        schedule=timedelta(seconds=repo.config.get_plan_starter_cycle_time())
+                )
         )
-    )
 )
+
 
 @app.task()
 def start_plans():
