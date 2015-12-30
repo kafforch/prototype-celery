@@ -21,6 +21,8 @@ sleep 5
 
 # Run tests
 cd $PROJECT_DIR
+source $VIRTUALENV_PATH/bin/activate
+export PYTHONPATH=$PYTHONPATH:$PROJECT_DIR
 $VIRTUALENV_PATH/bin/python "$UTRUNNER" $PROJECT_DIR/cfg/_args_separator_live_test.py true
 sleep 2
 
