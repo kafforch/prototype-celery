@@ -30,6 +30,6 @@ app.conf.update(**celery_config)
 def init(sender, instance, **kwargs):
     repo.plan_repo = PlanRepo(redis_inst)
     repo.task_repo = TaskRepo(redis_inst)
-    repo.dlm = RedLock([redis_config])
+    repo.lock_manager = RedLock([redis_config])
 
 

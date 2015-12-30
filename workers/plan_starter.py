@@ -22,7 +22,7 @@ def start_plans():
     for plan_id in repo.plan_repo.get_all_plan_ids():
         plan = repo.plan_repo.get_plan_by_id(plan_id)
         if plan.is_plan_initial():
-            with repo.dlm:
+            with repo.lock_manager:
                 logger.info("Starting plan {}".format(plan_id))
                 plan.set_plan_as_running()
                 repo.plan_repo.save_plan(plan_id, plan)

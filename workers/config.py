@@ -18,7 +18,8 @@ class WorkerConfigurator:
                 BROKER_URL=self.__conf.get('Celery-Connection', 'broker'),
                 CELERY_RESULT_BACKEND=self.__conf.get('Celery-Connection', 'backend'),
                 CELERY_TASK_SERIALIZER=self.__conf.get('Celery-Connection', 'serializer'),
-                CELERY_ACCEPT_CONTENT=[self.__conf.get('Celery-Connection', 'serializer')]
+                CELERY_ACCEPT_CONTENT=[self.__conf.get('Celery-Connection', 'serializer')],
+                CELERY_IMPORTS=self.__conf.get('Celery-Connection', 'imports').split(',')
         )
 
     def get_plan_starter_cycle_time(self):
