@@ -1,10 +1,11 @@
-from integration_tests.base_class import BaseFunctionalTestCase
+from integration_tests.base_class import BaseIntegrationTestCase
 from workers.plan_submitter import store_new_plan
 from model.plan_parser import parse_plan_json
 from model.plan_repo import PlanRepo
 from model.task_repo import TaskRepo
 from redis import Redis
 import time
+
 
 plan_json1 = '''{
             "start_on": "2015-12-11T23:14:15.554Z",
@@ -38,7 +39,7 @@ plan_json1 = '''{
             }'''
 
 
-class PlanSubmitterTests(BaseFunctionalTestCase):
+class PlanSubmitterTests(BaseIntegrationTestCase):
     def setUp(self):
         self.plan_repo = PlanRepo(Redis("localhost"))
         self.plan_repo.purge_all_plans()
@@ -72,3 +73,5 @@ class PlanSubmitterTests(BaseFunctionalTestCase):
         time.sleep(11)
 
         self.assertTrue(self.plan_repo.get_plan_by_id(plan_id).is_plan_running())
+
+

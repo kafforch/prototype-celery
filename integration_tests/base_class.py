@@ -1,6 +1,6 @@
 from unittest import TestCase, TestLoader
-from utils.config import KafforchConfigurator
 import os
+from utils.config import KafforchConfigurator
 
 # Ensuring ordered execution of tests
 TestLoader.sortTestMethodsUsing = None
@@ -8,7 +8,8 @@ TestLoader.sortTestMethodsUsing = None
 func_test_config = KafforchConfigurator("integration_tests/kafforch_test.cfg")
 
 
-class BaseFunctionalTestCase(TestCase):
+class BaseIntegrationTestCase(TestCase):
+
     @classmethod
     def setUpClass(cls):
         start_cmd = '''
