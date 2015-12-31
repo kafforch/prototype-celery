@@ -1,6 +1,6 @@
 import unittest
 
-from cfg.config import KafforchConfigurator
+from utils.config import KafforchConfigurator
 
 
 class BaseTest(unittest.TestCase):

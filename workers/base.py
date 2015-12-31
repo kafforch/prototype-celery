@@ -3,7 +3,7 @@ from celery.signals import celeryd_after_setup
 from redis import StrictRedis
 from redlock import RedLock
 
-from cfg.config import KafforchConfigurator
+from utils.config import KafforchConfigurator
 from model.plan_repo import PlanRepo
 from model.task_repo import TaskRepo
 

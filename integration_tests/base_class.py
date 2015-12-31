@@ -1,5 +1,5 @@
 from unittest import TestCase, TestLoader
-from cfg.config import KafforchConfigurator
+from utils.config import KafforchConfigurator
 import os
 
 # Ensuring ordered execution of tests
