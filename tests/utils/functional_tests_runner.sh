@@ -23,7 +23,7 @@ sleep 5
 cd $PROJECT_DIR
 source $VIRTUALENV_PATH/bin/activate
 export PYTHONPATH=$PYTHONPATH:$PROJECT_DIR
-$VIRTUALENV_PATH/bin/python "$UTRUNNER" $PROJECT_DIR/cfg/_args_separator_live_test.py true
+$VIRTUALENV_PATH/bin/python "$UTRUNNER" $PROJECT_DIR/functional_tests/_args_separator_*_tests.py true
 sleep 2
 
 # Stop celery worker

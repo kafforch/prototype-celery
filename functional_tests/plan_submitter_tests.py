@@ -4,6 +4,7 @@ from model.plan_parser import parse_plan_json
 from model.plan_repo import PlanRepo
 from model.task_repo import TaskRepo
 from redis import Redis
+import time
 
 plan_json1 = '''{
             "start_on": "2015-12-11T23:14:15.554Z",
@@ -38,7 +39,7 @@ plan_json1 = '''{
 
 
 
-class LiveTest(TestCase):
+class PlanSubmitterTests(TestCase):
 
     def setUp(self):
         self.plan_repo = PlanRepo(Redis("localhost"))
@@ -49,7 +50,7 @@ class LiveTest(TestCase):
         self.task_repo.purge_all_tasks()
         self.task_repo.purge_all_dependencies()
 
-    def test_live1(self):
+    def test_submit_plan(self):
         plan = parse_plan_json(plan_json1)
         result = store_new_plan.delay(plan)
 
@@ -61,3 +62,8 @@ class LiveTest(TestCase):
 
         self.assertIsNotNone(plan)
         self.assertEqual(len(plan.get_tasks()), 3)
+
+        time.sleep(15)
+
+        self.assertTrue(self.plan_repo.get_plan_by_id(plan_id).is_plan_running())
+
