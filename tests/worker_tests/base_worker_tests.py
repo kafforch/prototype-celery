@@ -1,10 +1,11 @@
 import unittest
-from workers.config import WorkerConfigurator
+
+from cfg.config import KafforchConfigurator
 
 
 class BaseTest(unittest.TestCase):
     def setUp(self):
-        self.base = WorkerConfigurator("cfg/kafforch.cfg")
+        self.base = KafforchConfigurator("cfg/kafforch.cfg")
 
     def test_loading_properties(self):
         self.assertIsNotNone(self.base)

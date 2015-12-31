@@ -1,10 +1,11 @@
 from celery import Celery
+from celery.signals import celeryd_after_setup
+from redis import StrictRedis
+from redlock import RedLock
+
+from cfg.config import KafforchConfigurator
 from model.plan_repo import PlanRepo
 from model.task_repo import TaskRepo
-from redis import StrictRedis
-from workers.config import WorkerConfigurator
-from celery.signals import celeryd_after_setup
-from redlock import RedLock
 
 
 class Repo:
@@ -16,7 +17,7 @@ repo.plan_repo = None
 repo.task_repo = None
 
 
-repo.config = WorkerConfigurator("cfg/kafforch.cfg")
+repo.config = KafforchConfigurator("cfg/kafforch.cfg")
 
 redis_config = repo.config.get_redis_config_kwargs()
 redis_inst = StrictRedis(**redis_config)

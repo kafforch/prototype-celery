@@ -1,7 +1,7 @@
 from ConfigParser import ConfigParser
 
 
-class WorkerConfigurator:
+class KafforchConfigurator:
     def __init__(self, config_file="../../cfg/kafforch.cfg"):
         self.__conf = ConfigParser()
         self.__conf.readfp(open(config_file))
@@ -24,3 +24,6 @@ class WorkerConfigurator:
 
     def get_plan_starter_cycle_time(self):
         return int(self.__conf.get("Plan-Starter", "cycle_time_secs"))
+
+    def get_value(self, section, key):
+        return self.__conf.get(section, key)
