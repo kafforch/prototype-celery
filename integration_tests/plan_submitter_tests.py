@@ -70,7 +70,10 @@ class PlanSubmitterTests(BaseIntegrationTestCase):
 
         plan = self.plan_repo.get_plan_by_id(plan_id)
 
-        time.sleep(11)
+        for i in xrange(11):
+            time.sleep(1)
+            if self.plan_repo.get_plan_by_id(plan_id).is_plan_running():
+                return
 
         self.assertTrue(self.plan_repo.get_plan_by_id(plan_id).is_plan_running())
 
