@@ -7,10 +7,10 @@ TestLoader.sortTestMethodsUsing = None
 
 func_test_config = KafforchConfigurator("functional_tests/kafforch_test.cfg")
 
+
 class BaseFunctionalTestCase(TestCase):
     @classmethod
     def setUpClass(cls):
-
         start_cmd = '''
             # Start Redis
             res=$(ps auxww | grep 'redis-server' | grep -v grep | awk '{{print $2}}' | xargs kill -9)
@@ -24,15 +24,14 @@ class BaseFunctionalTestCase(TestCase):
             sleep 5
 
         '''.format(
-            func_test_config.get_value("Functional-Tests", "redispath"),
-            func_test_config.get_value("Functional-Tests", "virtualenvpath"),
-            func_test_config.get_value("Functional-Tests", "projectdir")
+                func_test_config.get_value("Functional-Tests", "redispath"),
+                func_test_config.get_value("Functional-Tests", "virtualenvpath"),
+                func_test_config.get_value("Functional-Tests", "projectdir")
         )
         os.system(start_cmd)
 
     @classmethod
     def tearDownClass(cls):
-
         stop_cmd = '''
             # Stop celery worker
             res=$(ps auxww | grep 'celery worker' | grep -v grep | awk '{{print $2}}' | xargs kill -9)
@@ -42,6 +41,6 @@ class BaseFunctionalTestCase(TestCase):
             {0}/src/redis-cli shutdown &
             sleep 5
         '''.format(
-            func_test_config.get_value("Functional-Tests", "redispath")
+                func_test_config.get_value("Functional-Tests", "redispath")
         )
         os.system(stop_cmd)
