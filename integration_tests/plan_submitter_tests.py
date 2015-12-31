@@ -1,4 +1,4 @@
-from functional_tests.base_class import BaseFunctionalTestCase
+from integration_tests.base_class import BaseFunctionalTestCase
 from workers.plan_submitter import store_new_plan
 from model.plan_parser import parse_plan_json
 from model.plan_repo import PlanRepo
