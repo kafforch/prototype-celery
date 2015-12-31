@@ -1,5 +1,5 @@
+from functional_tests.base_class import BaseFunctionalTestCase
 from workers.plan_submitter import store_new_plan
-from unittest import TestCase
 from model.plan_parser import parse_plan_json
 from model.plan_repo import PlanRepo
 from model.task_repo import TaskRepo
@@ -38,9 +38,7 @@ plan_json1 = '''{
             }'''
 
 
-
-class PlanSubmitterTests(TestCase):
-
+class PlanSubmitterTests(BaseFunctionalTestCase):
     def setUp(self):
         self.plan_repo = PlanRepo(Redis("localhost"))
         self.plan_repo.purge_all_plans()
@@ -63,7 +61,6 @@ class PlanSubmitterTests(TestCase):
         self.assertIsNotNone(plan)
         self.assertEqual(len(plan.get_tasks()), 3)
 
-        time.sleep(15)
+        time.sleep(11)
 
         self.assertTrue(self.plan_repo.get_plan_by_id(plan_id).is_plan_running())
-
