@@ -68,8 +68,6 @@ class PlanSubmitterTests(BaseIntegrationTestCase):
 
         plan_id = result.get(5)
 
-        plan = self.plan_repo.get_plan_by_id(plan_id)
-
         for i in xrange(11):
             time.sleep(1)
             if self.plan_repo.get_plan_by_id(plan_id).is_plan_running():
