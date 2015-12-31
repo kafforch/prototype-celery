@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3cea264b-8e20-45ad-8f3c-a2a9c08fb4c1" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/workers/config.py" afterPath="$PROJECT_DIR$/cfg/config.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/functional_tests/kafforch_test.cfg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cfg/kafforch.cfg" afterPath="$PROJECT_DIR$/cfg/kafforch.cfg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functional_tests/base_class.py" afterPath="$PROJECT_DIR$/functional_tests/base_class.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/worker_tests/base_worker_tests.py" afterPath="$PROJECT_DIR$/tests/worker_tests/base_worker_tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workers/base.py" afterPath="$PROJECT_DIR$/workers/base.py" />
     </list>
     <ignored path="untitled.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,34 +38,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base_class.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="base_class.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/functional_tests/base_class.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="37" column="83" selection-start-line="37" selection-start-column="83" selection-end-line="37" selection-end-column="83" />
+            <state vertical-scroll-proportion="0.22012578">
+              <caret line="7" column="71" selection-start-line="7" selection-start-column="71" selection-end-line="7" selection-end-column="71" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cfg/config.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="kafforch.cfg" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cfg/kafforch.cfg">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5345912">
-              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -87,7 +65,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../tests/model_tests/task_repo_tests.py" />
         <option value="$PROJECT_DIR$/../tests/model_tests/__init__.py" />
         <option value="$PROJECT_DIR$/../model/task_repo.py" />
         <option value="$PROJECT_DIR$/../cfg/celery_config.py" />
@@ -135,8 +112,9 @@
         <option value="$PROJECT_DIR$/tests/utils/functional_tests_runner.sh" />
         <option value="$PROJECT_DIR$/functional_tests/plan_submitter_tests.py" />
         <option value="$PROJECT_DIR$/workers/config.py" />
-        <option value="$PROJECT_DIR$/cfg/kafforch.cfg" />
         <option value="$PROJECT_DIR$/cfg/config.py" />
+        <option value="$PROJECT_DIR$/functional_tests/kafforch_test.cfg" />
+        <option value="$PROJECT_DIR$/cfg/kafforch.cfg" />
         <option value="$PROJECT_DIR$/functional_tests/base_class.py" />
       </list>
     </option>
@@ -277,15 +255,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/cfg" />
       <recent name="$PROJECT_DIR$/tests/utils" />
       <recent name="$PROJECT_DIR$/workers" />
       <recent name="$PROJECT_DIR$/model" />
       <recent name="$PROJECT_DIR$/tests/model_tests" />
-      <recent name="$PROJECT_DIR$/../cfg" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/cfg" />
       <recent name="$PROJECT_DIR$/functional_tests" />
+      <recent name="$PROJECT_DIR$/cfg" />
       <recent name="$PROJECT_DIR$/tests/worker_tests" />
       <recent name="$PROJECT_DIR$/../tests" />
       <recent name="$PROJECT_DIR$/../.." />
@@ -528,12 +506,6 @@
       <created>1450658074359</created>
       <option name="number" value="Default" />
       <updated>1450658074359</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Tasks stored in dictionary of lists&#10;">
-      <created>1450687515205</created>
-      <option name="number" value="00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1450687515205</updated>
     </task>
     <task id="LOCAL-00021" summary="Added dependencies handling">
       <created>1450689794115</created>
@@ -823,13 +795,16 @@
       <option name="project" value="LOCAL" />
       <updated>1451521340163</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="Parametrized the functional tests base class">
+      <created>1451523857892</created>
+      <option name="number" value="00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1451523857892</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Functional_tests - 2015.12.31 at 11h 52m 11s.xml">
-      <configuration name="Functional tests" configurationId="tests" />
-    </history-entry>
     <history-entry file="Functional_tests - 2015.12.31 at 11h 54m 46s.xml">
       <configuration name="Functional tests" configurationId="tests" />
     </history-entry>
@@ -840,6 +815,9 @@
       <configuration name="Functional tests" configurationId="tests" />
     </history-entry>
     <history-entry file="Functional_tests - 2015.12.31 at 12h 02m 44s.xml">
+      <configuration name="Functional tests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Functional_tests - 2015.12.31 at 12h 06m 04s.xml">
       <configuration name="Functional tests" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests - 2015.12.31 at 11h 55m 49s.xml">
@@ -868,7 +846,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.503125" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934928" sideWeight="0.496875" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934928" sideWeight="0.496875" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -894,7 +872,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implementation of plan_repo in redis" />
     <MESSAGE value="Added some more tests" />
     <MESSAGE value="Removed plan_repo_factory&#10;" />
     <MESSAGE value="Added task_repo_redis" />
@@ -919,7 +896,8 @@
     <MESSAGE value="Added functional test runner script" />
     <MESSAGE value="Created proper integration/functional test suite + runner" />
     <MESSAGE value="Reworked unit test runner to run functional tests instead of a shell script" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reworked unit test runner to run functional tests instead of a shell script" />
+    <MESSAGE value="Parametrized the functional tests base class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Parametrized the functional tests base class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1177,16 +1155,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functional_tests/base_class.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="83" selection-start-line="37" selection-start-column="83" selection-end-line="37" selection-end-column="83" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/worker_tests/base_worker_tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3144654">
@@ -1195,19 +1163,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cfg/config.py">
+    <entry file="file://$PROJECT_DIR$/functional_tests/kafforch_test.cfg">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cfg/kafforch.cfg">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5345912">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.40880504">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cfg/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.031446543">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functional_tests/base_class.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22012578">
+          <caret line="7" column="71" selection-start-line="7" selection-start-column="71" selection-end-line="7" selection-end-column="71" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

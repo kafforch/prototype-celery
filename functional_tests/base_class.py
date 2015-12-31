@@ -5,7 +5,7 @@ import os
 # Ensuring ordered execution of tests
 TestLoader.sortTestMethodsUsing = None
 
-func_test_config = KafforchConfigurator("cfg/kafforch.cfg")
+func_test_config = KafforchConfigurator("functional_tests/kafforch_test.cfg")
 
 class BaseFunctionalTestCase(TestCase):
     @classmethod
