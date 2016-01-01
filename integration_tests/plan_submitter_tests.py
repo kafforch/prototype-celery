@@ -3,6 +3,7 @@ from workers.plan_submitter import store_new_plan
 from model.plan_parser import parse_plan_json
 from model.plan_repo import PlanRepo
 from model.task_repo import TaskRepo
+from model.task_starter_logic import get_tasks_available_to_start
 from redis import Redis
 import time
 
@@ -16,14 +17,24 @@ plan_json1 = '''{
                     "test": "test123"
                 },
                 {
-                    "id": "23",
+                    "id": "2",
                     "start_on": "2066-12-11T23:14:15.554Z",
                     "name": "namename"
                 },
                 {
-                    "id": "27",
-                    "start_on": "2026-12-11T23:14:15.554Z",
-                    "name": "namename123"
+                    "id": "3",
+                    "start_on": "2066-12-11T23:14:15.554Z",
+                    "name": "namename"
+                },
+                {
+                    "id": "4",
+                    "start_on": "2066-12-11T23:14:15.554Z",
+                    "name": "namename"
+                },
+                {
+                    "id": "5",
+                    "start_on": "2066-12-11T23:14:15.554Z",
+                    "name": "namename"
                 }
             ],
             "dependencies": [
@@ -32,8 +43,20 @@ plan_json1 = '''{
                     "to": "2"
                 },
                 {
-                    "from": "2",
+                    "from": "1",
                     "to": "3"
+                },
+                {
+                    "from": "2",
+                    "to": "5"
+                },
+                {
+                    "from": "3",
+                    "to": "4"
+                },
+                {
+                    "from": "4",
+                    "to": "5"
                 }
             ]
             }'''
@@ -60,7 +83,7 @@ class PlanSubmitterTests(BaseIntegrationTestCase):
         plan = self.plan_repo.get_plan_by_id(plan_id)
 
         self.assertIsNotNone(plan)
-        self.assertEqual(len(plan.get_tasks()), 3)
+        self.assertEqual(len(plan.get_tasks()), 5)
 
     def test_plan_is_running(self):
         plan = parse_plan_json(plan_json1)
@@ -68,11 +91,65 @@ class PlanSubmitterTests(BaseIntegrationTestCase):
 
         plan_id = result.get(5)
 
-        for i in xrange(11):
+        for i in xrange(55):
             time.sleep(1)
             if self.plan_repo.get_plan_by_id(plan_id).is_plan_running():
                 return
 
         self.assertTrue(self.plan_repo.get_plan_by_id(plan_id).is_plan_running())
+
+    def test_run_tasks(self):
+        plan = parse_plan_json(plan_json1)
+        result = store_new_plan.delay(plan)
+
+        plan_id = result.get(5)
+        
+        def assert_task_ids_in_list(actual_tasks_list, assertion_task_id_list):
+            self.assertListEqual(
+                map(lambda t: t.get_task_id(), actual_tasks_list),
+                assertion_task_id_list
+            )
+
+        task_list = self.task_repo.get_tasks(plan_id)
+        dependencies = self.task_repo.get_dependencies(plan_id)
+
+        task1 = task_list[0]
+        task2 = task_list[1]
+        task3 = task_list[2]
+        task4 = task_list[3]
+        task5 = task_list[4]
+
+        task_list_1 = get_tasks_available_to_start(plan_id, task_list, dependencies)
+        assert_task_ids_in_list(task_list_1, ["1"])
+
+        task1.set_task_as_complete()
+        self.task_repo.save_task(plan_id, task1)
+
+        task_list_2 = get_tasks_available_to_start(plan_id, task_list, dependencies)
+        assert_task_ids_in_list(task_list_2, ["2", "3"])
+
+        task2.set_task_as_complete()
+        self.task_repo.save_task(plan_id, task2)
+
+        task_list_3 = get_tasks_available_to_start(plan_id, task_list, dependencies)
+        assert_task_ids_in_list(task_list_3, ["3"])
+
+        task3.set_task_as_complete()
+        self.task_repo.save_task(plan_id, task3)
+
+        task_list_4 = get_tasks_available_to_start(plan_id, task_list, dependencies)
+        assert_task_ids_in_list(task_list_4, ["4"])
+
+        task4.set_task_as_complete()
+        self.task_repo.save_task(plan_id, task4)
+
+        task_list_5 = get_tasks_available_to_start(plan_id, task_list, dependencies)
+        assert_task_ids_in_list(task_list_5, ["5"])
+
+        task5.set_task_as_complete()
+        self.task_repo.save_task(plan_id, task5)
+
+        task_list_6 = get_tasks_available_to_start(plan_id, task_list, dependencies)
+        assert_task_ids_in_list(task_list_6, [])
 
 
