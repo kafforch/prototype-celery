@@ -1,6 +1,7 @@
 import json
 from model.plan_parser import TaskParserDeco, DependencyParserDeco
 
+
 class TaskRepo():
     def __init__(self, in_redis):
         self.__redis = in_redis
@@ -35,3 +36,14 @@ class TaskRepo():
 
     def get_number_of_dependencies(self, plan_id):
         return len(self.get_dependencies(plan_id))
+
+    def save_task(self, plan_id, task):
+        tasks = self.get_tasks(plan_id)
+        task_ids = map(lambda t: t.get_task_id(), tasks)
+
+        try:
+            index = task_ids.index(task.get_task_id())
+        except:
+            return
+
+        self.__redis.lset("tasksof-{}".format(plan_id), index, task.to_json())
