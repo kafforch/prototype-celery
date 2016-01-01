@@ -1,32 +1,31 @@
+from workers.base import app, repo
+from celery.utils.log import get_task_logger
+from celery.schedules import timedelta
+from model.task_starter_logic import get_tasks_available_to_start
+
+START_TASKS_TASK_NAME = '{}.start_tasks'.format(__name__)
+
+logger = get_task_logger(__name__)
+
+app.conf.CELERYBEAT_SCHEDULE.update(
+        dict(
+                start_plans=dict(
+                        task=START_TASKS_TASK_NAME,
+                        schedule=timedelta(seconds=repo.config.get_task_starter_cycle_time())
+                )
+        )
+)
 
 
-class TaskStarter:
-
-    def __init__(self, plan_repo, task_repo):
-        self.__plan_repo = plan_repo
-        self.__task_repo = task_repo
-
-    def get_tasks_available_to_start(self, plan_id):
-
-        dependencies = self.__task_repo.get_dependencies(plan_id)
-        tasks = self.__task_repo.get_tasks(plan_id)
-
-        def is_task_not_complete(task_id):
-            task = filter(lambda t: t.get_task_id() == task_id, tasks)[0]
-            return not task.is_task_complete()
-
-        def outstanding_dependencies_for_task(task, dependencies):
-            preceding_task_ids = map(lambda d1: d1.get_from(),
-                                     filter(lambda d2: d2.get_to() == task.get_task_id(), dependencies)
-                                     )
-            return filter(is_task_not_complete, preceding_task_ids)
-
-        def is_task_ready_to_start(task):
-            if task.is_task_initial():
-                return len(outstanding_dependencies_for_task(task, dependencies)) == 0
-            else:
-                return False
-
-        return filter(is_task_ready_to_start, tasks)
-
-
+@app.task()
+def start_tasks():
+    for plan_id in repo.plan_repo.get_all_plan_ids():
+        plan = repo.plan_repo.get_plan_by_id(plan_id)
+        if plan.is_plan_running():
+            dependencies = repo.task_repo.get_dependencies(plan_id)
+            tasks = repo.task_repo.get_tasks(plan_id)
+            available_tasks = get_tasks_available_to_start(plan_id, tasks, dependencies)
+            logger.info("Tasks to start for plan {0}: {1}".format(
+                plan_id,
+                ", ".join(map(lambda t: t.get_task_id(), available_tasks))
+            ))

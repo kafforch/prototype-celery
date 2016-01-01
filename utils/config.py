@@ -25,5 +25,8 @@ class KafforchConfigurator:
     def get_plan_starter_cycle_time(self):
         return int(self.__conf.get("Plan-Starter", "cycle_time_secs"))
 
+    def get_task_starter_cycle_time(self):
+        return int(self.__conf.get("Task-Starter", "cycle_time_secs"))
+
     def get_value(self, section, key):
         return self.__conf.get(section, key)
