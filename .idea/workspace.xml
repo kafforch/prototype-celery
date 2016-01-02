@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3cea264b-8e20-45ad-8f3c-a2a9c08fb4c1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model/task_starter_logic.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cfg/kafforch.cfg" afterPath="$PROJECT_DIR$/cfg/kafforch.cfg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/model_tests/task_starter_tests.py" afterPath="$PROJECT_DIR$/tests/model_tests/task_starter_tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/config.py" afterPath="$PROJECT_DIR$/utils/config.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/integration_tests/plan_submitter_tests.py" afterPath="$PROJECT_DIR$/integration_tests/plan_submitter_tests.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workers/task_starter.py" afterPath="$PROJECT_DIR$/workers/task_starter.py" />
     </list>
     <ignored path="untitled.iws" />
@@ -32,7 +29,7 @@
         <entry file="file://$PROJECT_DIR$/workers/plan_starter.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="34" selection-start-line="22" selection-start-column="4" selection-end-line="24" selection-end-column="34" />
+              <caret line="27" column="23" selection-start-line="27" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
               </folding>
@@ -40,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="task_starter.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="task_starter.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/workers/task_starter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.7484277">
+              <caret line="35" column="44" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
               </folding>
@@ -52,44 +49,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="kafforch.cfg" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cfg/kafforch.cfg">
+      <file leaf-file-name="plan_parser.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/plan_parser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28301886">
-              <caret line="9" column="73" selection-start-line="9" selection-start-column="73" selection-end-line="9" selection-end-column="73" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="41" column="27" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="task_starter_tests.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/model_tests/task_starter_tests.py">
+      <file leaf-file-name="plan_submitter_tests.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/integration_tests/plan_submitter_tests.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="77" column="38" selection-start-line="77" selection-start-column="38" selection-end-line="77" selection-end-column="38" />
+              <caret line="113" column="25" selection-start-line="113" selection-start-column="25" selection-end-line="113" selection-end-column="25" />
               <folding>
-                <element signature="e#0#29#0" expanded="true" />
+                <element signature="e#0#64#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="task_starter_logic.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/task_starter_logic.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="33" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/workers/base.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="3" column="19" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -153,13 +130,13 @@
         <option value="$PROJECT_DIR$/integration_tests/__init__.py" />
         <option value="$PROJECT_DIR$/integration_tests/plan_submitter_tests1.py" />
         <option value="$PROJECT_DIR$/integration_tests/base_class.py" />
-        <option value="$PROJECT_DIR$/integration_tests/plan_submitter_tests.py" />
         <option value="$PROJECT_DIR$/model/task_repo.py" />
         <option value="$PROJECT_DIR$/utils/config.py" />
-        <option value="$PROJECT_DIR$/workers/task_starter.py" />
-        <option value="$PROJECT_DIR$/model/task_starter_logic.py" />
         <option value="$PROJECT_DIR$/tests/model_tests/task_starter_tests.py" />
         <option value="$PROJECT_DIR$/cfg/kafforch.cfg" />
+        <option value="$PROJECT_DIR$/model/task_starter_logic.py" />
+        <option value="$PROJECT_DIR$/integration_tests/plan_submitter_tests.py" />
+        <option value="$PROJECT_DIR$/workers/task_starter.py" />
       </list>
     </option>
   </component>
@@ -377,7 +354,7 @@
       <recent name="$PROJECT_DIR$/cfg" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittest TaskStarterTests.test_get_tasks">
+  <component name="RunManager" selected="Python tests.Integration tests">
     <configuration default="false" name="functional_tests.sh" type="BashConfigurationType" factoryName="Bash" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="bash" />
       <option name="INTERPRETER_PATH" value="/usr/bin/env" />
@@ -638,18 +615,6 @@
       <created>1450658074359</created>
       <option name="number" value="Default" />
       <updated>1450658074359</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Created plan_repo factory to plug in redis">
-      <created>1451007730489</created>
-      <option name="number" value="00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1451007730489</updated>
-    </task>
-    <task id="LOCAL-00034" summary="Implementation of plan_repo in redis">
-      <created>1451015415913</created>
-      <option name="number" value="00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1451015415913</updated>
     </task>
     <task id="LOCAL-00035" summary="Added some more tests">
       <created>1451015542315</created>
@@ -933,39 +898,51 @@
       <option name="project" value="LOCAL" />
       <updated>1451643709091</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="Added task_starter worker">
+      <created>1451644842130</created>
+      <option name="number" value="00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1451644842130</updated>
+    </task>
+    <task id="LOCAL-00083" summary="Added task_starter worker with integration and unit tests">
+      <created>1451645585913</created>
+      <option name="number" value="00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1451645585913</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittest_TaskStarterTests_test_get_tasks - 2016.01.01 at 21h 20m 08s.xml">
-      <configuration name="Unittest TaskStarterTests.test_get_tasks" configurationId="tests" />
+    <history-entry file="Integration_tests - 2016.01.01 at 21h 41m 35s.xml">
+      <configuration name="Integration tests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_TaskStarterTests_test_get_tasks - 2016.01.01 at 21h 20m 49s.xml">
-      <configuration name="Unittest TaskStarterTests.test_get_tasks" configurationId="tests" />
+    <history-entry file="Integration_tests - 2016.01.01 at 21h 43m 06s.xml">
+      <configuration name="Integration tests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_TaskStarterTests_test_get_tasks - 2016.01.01 at 21h 21m 22s.xml">
-      <configuration name="Unittest TaskStarterTests.test_get_tasks" configurationId="tests" />
+    <history-entry file="Integration_tests - 2016.01.01 at 21h 44m 55s.xml">
+      <configuration name="Integration tests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_TaskStarterTests_test_get_tasks - 2016.01.01 at 21h 34m 38s.xml">
-      <configuration name="Unittest TaskStarterTests.test_get_tasks" configurationId="tests" />
+    <history-entry file="Integration_tests - 2016.01.01 at 21h 45m 32s.xml">
+      <configuration name="Integration tests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_TaskStarterTests_test_get_tasks - 2016.01.01 at 21h 36m 58s.xml">
-      <configuration name="Unittest TaskStarterTests.test_get_tasks" configurationId="tests" />
+    <history-entry file="Integration_tests - 2016.01.01 at 21h 50m 24s.xml">
+      <configuration name="Integration tests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_TaskStarterTests_test_get_tasks - 2016.01.01 at 21h 37m 12s.xml">
-      <configuration name="Unittest TaskStarterTests.test_get_tasks" configurationId="tests" />
+    <history-entry file="Integration_tests - 2016.01.01 at 21h 52m 30s.xml">
+      <configuration name="Integration tests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_TaskStarterTests_test_get_tasks - 2016.01.01 at 21h 38m 01s.xml">
-      <configuration name="Unittest TaskStarterTests.test_get_tasks" configurationId="tests" />
+    <history-entry file="Integration_tests - 2016.01.02 at 12h 35m 31s.xml">
+      <configuration name="Integration tests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_TaskStarterTests_test_get_tasks - 2016.01.01 at 21h 39m 30s.xml">
-      <configuration name="Unittest TaskStarterTests.test_get_tasks" configurationId="tests" />
+    <history-entry file="Integration_tests - 2016.01.02 at 12h 36m 55s.xml">
+      <configuration name="Integration tests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_TaskStarterTests_test_get_tasks - 2016.01.01 at 21h 39m 40s.xml">
-      <configuration name="Unittest TaskStarterTests.test_get_tasks" configurationId="tests" />
+    <history-entry file="Integration_tests - 2016.01.02 at 12h 39m 09s.xml">
+      <configuration name="Integration tests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_TaskStarterTests_test_get_tasks - 2016.01.01 at 21h 39m 51s.xml">
-      <configuration name="Unittest TaskStarterTests.test_get_tasks" configurationId="tests" />
+    <history-entry file="Unittests - 2016.01.01 at 21h 49m 57s.xml">
+      <configuration name="Unittests" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -979,7 +956,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934928" sideWeight="0.496875" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934928" sideWeight="0.496875" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1004,8 +981,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Live test passes with separate redis and celery" />
-    <MESSAGE value="FIrst worker running standalone with passing live tests" />
     <MESSAGE value="Refactored plan_repo.save into plan_repo.save_new_plan" />
     <MESSAGE value="Refactored task_repo.save_tasks into task_repo.save_new_tasks" />
     <MESSAGE value="Config for redis to return kwargs" />
@@ -1029,7 +1004,9 @@
     <MESSAGE value="Tidyied up integration tests" />
     <MESSAGE value="Optimizing the test for running plans" />
     <MESSAGE value="Initial testing for tasks and dependencies ordering" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial testing for tasks and dependencies ordering" />
+    <MESSAGE value="Added task_starter worker" />
+    <MESSAGE value="Added task_starter worker with integration and unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added task_starter worker with integration and unit tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1275,24 +1252,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/integration_tests/plan_submitter_tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/plan_parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="24" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/task_repo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1327,10 +1286,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cfg/kafforch.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28301886">
+          <caret line="9" column="73" selection-start-line="9" selection-start-column="73" selection-end-line="9" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/workers/plan_starter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="34" selection-start-line="22" selection-start-column="4" selection-end-line="24" selection-end-column="34" />
+          <caret line="27" column="23" selection-start-line="27" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
           </folding>
@@ -1347,29 +1314,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/model_tests/task_starter_tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="77" column="38" selection-start-line="77" selection-start-column="38" selection-end-line="77" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.6855346">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="70" selection-end-column="30" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/workers/task_starter.py">
+    <entry file="file://$PROJECT_DIR$/integration_tests/plan_submitter_tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <caret line="113" column="25" selection-start-line="113" selection-start-column="25" selection-end-line="113" selection-end-column="25" />
           <folding>
-            <element signature="e#0#34#0" expanded="true" />
+            <element signature="e#0#64#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cfg/kafforch.cfg">
+    <entry file="file://$PROJECT_DIR$/model/plan_parser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28301886">
-          <caret line="9" column="73" selection-start-line="9" selection-start-column="73" selection-end-line="9" selection-end-column="73" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="27" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="27" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workers/task_starter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7484277">
+          <caret line="35" column="44" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -30,3 +30,8 @@ def start_tasks():
                     plan_id,
                     ", ".join(map(lambda t: t.get_task_id(), available_tasks))
                 ))
+                for task in available_tasks:
+                    # TODO - Send start task
+
+                    task.set_task_as_running()
+                    repo.task_repo.save_task(plan_id, task)

@@ -110,6 +110,11 @@ class PlanSubmitterTests(BaseIntegrationTestCase):
                 assertion_task_id_list
             )
 
+        def get_running_tasks():
+            time.sleep(15)
+            tasks = self.task_repo.get_tasks(plan_id)
+            return filter(lambda t: t.is_task_running(), tasks)
+
         task_list = self.task_repo.get_tasks(plan_id)
         dependencies = self.task_repo.get_dependencies(plan_id)
 
@@ -119,37 +124,37 @@ class PlanSubmitterTests(BaseIntegrationTestCase):
         task4 = task_list[3]
         task5 = task_list[4]
 
-        task_list_1 = get_tasks_available_to_start(plan_id, task_list, dependencies)
+        task_list_1 = get_running_tasks()
         assert_task_ids_in_list(task_list_1, ["1"])
 
         task1.set_task_as_complete()
         self.task_repo.save_task(plan_id, task1)
 
-        task_list_2 = get_tasks_available_to_start(plan_id, task_list, dependencies)
+        task_list_2 = get_running_tasks()
         assert_task_ids_in_list(task_list_2, ["2", "3"])
 
         task2.set_task_as_complete()
         self.task_repo.save_task(plan_id, task2)
 
-        task_list_3 = get_tasks_available_to_start(plan_id, task_list, dependencies)
+        task_list_3 = get_running_tasks()
         assert_task_ids_in_list(task_list_3, ["3"])
 
         task3.set_task_as_complete()
         self.task_repo.save_task(plan_id, task3)
 
-        task_list_4 = get_tasks_available_to_start(plan_id, task_list, dependencies)
+        task_list_4 = get_running_tasks()
         assert_task_ids_in_list(task_list_4, ["4"])
 
         task4.set_task_as_complete()
         self.task_repo.save_task(plan_id, task4)
 
-        task_list_5 = get_tasks_available_to_start(plan_id, task_list, dependencies)
+        task_list_5 = get_running_tasks()
         assert_task_ids_in_list(task_list_5, ["5"])
 
         task5.set_task_as_complete()
         self.task_repo.save_task(plan_id, task5)
 
-        task_list_6 = get_tasks_available_to_start(plan_id, task_list, dependencies)
+        task_list_6 = get_running_tasks()
         assert_task_ids_in_list(task_list_6, [])
 
 
