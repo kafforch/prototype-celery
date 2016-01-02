@@ -40,10 +40,20 @@ class TaskRepo():
     def save_task(self, plan_id, task):
         tasks = self.get_tasks(plan_id)
         task_ids = map(lambda t: t.get_task_id(), tasks)
+        index = None
 
         try:
             index = task_ids.index(task.get_task_id())
         except:
-            return
+            return None
 
         self.__redis.lset("tasksof-{}".format(plan_id), index, task.to_json())
+        return index
+
+    def get_task(self, plan_id, task_id):
+        tasks = self.get_tasks(plan_id)
+        for task in tasks:
+            if task.get_task_id() == task_id:
+                return task
+
+        return None

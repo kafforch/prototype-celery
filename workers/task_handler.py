@@ -36,3 +36,14 @@ def start_tasks():
 
                     task.set_task_as_running()
                     repo.task_repo.save_task(plan_id, task)
+
+
+@app.task()
+def complete_task(plan_id, task_id):
+    logger.info("Completing task {0} for plan {1}".format(task_id, plan_id))
+    with repo.lock_manager:
+        task = repo.task_repo.get_task(plan_id, task_id)
+        task.set_task_as_complete()
+        result = repo.task_repo.save_task(plan_id, task)
+
+    return result
