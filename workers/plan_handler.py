@@ -11,7 +11,7 @@ app.conf.CELERYBEAT_SCHEDULE.update(
         dict(
                 start_plans=dict(
                         task=START_PLANS_TASK_NAME,
-                        schedule=timedelta(seconds=repo.config.get_plan_starter_cycle_time())
+                        schedule=timedelta(seconds=repo.config.get_plan_handler_cycle_time())
                 )
         )
 )

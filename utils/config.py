@@ -22,8 +22,8 @@ class KafforchConfigurator:
                 CELERY_IMPORTS=self.__conf.get('Celery-Connection', 'imports').split(',')
         )
 
-    def get_plan_starter_cycle_time(self):
-        return int(self.__conf.get("Plan-Starter", "cycle_time_secs"))
+    def get_plan_handler_cycle_time(self):
+        return int(self.__conf.get("Plan-Handler", "cycle_time_secs"))
 
     def get_task_starter_cycle_time(self):
         return int(self.__conf.get("Task-Starter", "cycle_time_secs"))

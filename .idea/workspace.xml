@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3cea264b-8e20-45ad-8f3c-a2a9c08fb4c1" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/workers/plan_starter.py" afterPath="$PROJECT_DIR$/workers/plan_handler.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/integration_tests/collection_of_integration_tests.py" afterPath="$PROJECT_DIR$/integration_tests/collection_of_integration_tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cfg/kafforch.cfg" afterPath="$PROJECT_DIR$/cfg/kafforch.cfg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/config.py" afterPath="$PROJECT_DIR$/utils/config.py" />
     </list>
     <ignored path="untitled.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,48 +26,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="plan_starter.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/workers/plan_starter.py">
+      <file leaf-file-name="kafforch.cfg" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cfg/kafforch.cfg">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="63" selection-start-line="26" selection-start-column="63" selection-end-line="26" selection-end-column="63" />
-              <folding>
-                <element signature="e#0#34#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="task_starter_logic.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/task_starter_logic.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.34591195">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="task_starter.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/workers/task_starter.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#34#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="collection_of_integration_tests.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/integration_tests/collection_of_integration_tests.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6226415">
-              <caret line="118" column="65" selection-start-line="118" selection-start-column="65" selection-end-line="118" selection-end-column="65" />
-              <folding>
-                <element signature="e#0#64#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -126,8 +92,6 @@
         <option value="$PROJECT_DIR$/integration_tests/plan_submitter_tests1.py" />
         <option value="$PROJECT_DIR$/integration_tests/base_class.py" />
         <option value="$PROJECT_DIR$/model/task_repo.py" />
-        <option value="$PROJECT_DIR$/utils/config.py" />
-        <option value="$PROJECT_DIR$/cfg/kafforch.cfg" />
         <option value="$PROJECT_DIR$/integration_tests/plan_submitter_tests.py" />
         <option value="$PROJECT_DIR$/workers/task_starter.py" />
         <option value="$PROJECT_DIR$/integration_tests/integration_tests.py" />
@@ -136,6 +100,8 @@
         <option value="$PROJECT_DIR$/workers/plan_starter.py" />
         <option value="$PROJECT_DIR$/model/task_starter_logic.py" />
         <option value="$PROJECT_DIR$/integration_tests/collection_of_integration_tests.py" />
+        <option value="$PROJECT_DIR$/cfg/kafforch.cfg" />
+        <option value="$PROJECT_DIR$/utils/config.py" />
       </list>
     </option>
   </component>
@@ -639,12 +605,6 @@
       <option name="number" value="Default" />
       <updated>1450658074359</updated>
     </task>
-    <task id="LOCAL-00038" summary="Removed old simple repos and tidied up the tests">
-      <created>1451020805895</created>
-      <option name="number" value="00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1451020805895</updated>
-    </task>
     <task id="LOCAL-00039" summary="Cleaned up the tests">
       <created>1451022327225</created>
       <option name="number" value="00039" />
@@ -933,25 +893,16 @@
       <option name="project" value="LOCAL" />
       <updated>1451702416017</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="Optimised somewhat the task_starter test">
+      <created>1451703051353</created>
+      <option name="number" value="00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1451703051353</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Integration_tests - 2016.01.02 at 13h 28m 58s.xml">
-      <configuration name="Integration tests" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Integration_tests - 2016.01.02 at 13h 30m 32s.xml">
-      <configuration name="Integration tests" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Integration_tests - 2016.01.02 at 13h 32m 50s.xml">
-      <configuration name="Integration tests" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Integration_tests - 2016.01.02 at 13h 35m 03s.xml">
-      <configuration name="Integration tests" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Integration_tests - 2016.01.02 at 13h 37m 54s.xml">
-      <configuration name="Integration tests" configurationId="tests" />
-    </history-entry>
     <history-entry file="Integration_tests - 2016.01.02 at 13h 39m 40s.xml">
       <configuration name="Integration tests" configurationId="tests" />
     </history-entry>
@@ -964,15 +915,30 @@
     <history-entry file="Integration_tests - 2016.01.02 at 13h 50m 28s.xml">
       <configuration name="Integration tests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests - 2016.01.02 at 13h 37m 09s.xml">
+    <history-entry file="Integration_tests - 2016.01.02 at 13h 54m 27s.xml">
+      <configuration name="Integration tests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Integration_tests - 2016.01.02 at 13h 58m 56s.xml">
+      <configuration name="Integration tests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Integration_tests - 2016.01.02 at 14h 01m 18s.xml">
+      <configuration name="Integration tests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Integration_tests - 2016.01.02 at 14h 03m 25s.xml">
+      <configuration name="Integration tests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests - 2016.01.02 at 13h 52m 16s.xml">
+      <configuration name="Unittests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests - 2016.01.02 at 13h 56m 42s.xml">
       <configuration name="Unittests" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.390625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.390625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.503125" order="7" side_tool="true" content_ui="tabs" />
@@ -1004,7 +970,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Config for redis to return kwargs" />
     <MESSAGE value="Explicitly using pickle" />
     <MESSAGE value="Config celery app object" />
     <MESSAGE value="Tucking the worker boilerplate into base_worker" />
@@ -1029,7 +994,8 @@
     <MESSAGE value="Added task_starter worker with integration and unit tests" />
     <MESSAGE value="Integration test for task_starter passes" />
     <MESSAGE value="Added time checker for task starter and created a new more readable time comparison utility function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added time checker for task starter and created a new more readable time comparison utility function" />
+    <MESSAGE value="Optimised somewhat the task_starter test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Optimised somewhat the task_starter test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1045,7 +1011,7 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/workers/plan_starter.py">
+    <entry file="file://$PROJECT_DIR$/workers/plan_handler.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1071,7 +1037,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/workers/plan_starter.py">
+    <entry file="file://$PROJECT_DIR$/workers/plan_handler.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="79" selection-start-line="12" selection-start-column="79" selection-end-line="12" selection-end-column="79" />
@@ -1187,14 +1153,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/integration_tests/kafforch_test.cfg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/model_tests/plan_submitter_local_tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.754717">
@@ -1235,16 +1193,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/integration_tests/base_class.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28301886">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/model_tests/task_repo_tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.3207548">
@@ -1279,26 +1227,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8490566">
-          <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/workers/base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="19" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cfg/kafforch.cfg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28301886">
-          <caret line="9" column="73" selection-start-line="9" selection-start-column="73" selection-end-line="9" selection-end-column="73" />
           <folding />
         </state>
       </provider>
@@ -1323,19 +1255,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.094339624">
           <caret line="22" column="55" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workers/task_starter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1347,9 +1267,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/workers/plan_starter.py">
+    <entry file="file://$PROJECT_DIR$/workers/task_starter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="-0.25786164">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#34#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/task_starter_logic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5345912">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/kafforch-celery/lib/python2.7/site-packages/celery/result.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="168" column="0" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.754717">
+          <caret line="24" column="22" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workers/plan_handler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8176101">
           <caret line="26" column="63" selection-start-line="26" selection-start-column="63" selection-end-line="26" selection-end-column="63" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
@@ -1357,21 +1311,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/task_starter_logic.py">
+    <entry file="file://$PROJECT_DIR$/integration_tests/kafforch_test.cfg">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/integration_tests/base_class.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.35220125">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/integration_tests/collection_of_integration_tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6226415">
-          <caret line="118" column="65" selection-start-line="118" selection-start-column="65" selection-end-line="118" selection-end-column="65" />
+        <state vertical-scroll-proportion="0.11320755">
+          <caret line="71" column="8" selection-start-line="71" selection-start-column="8" selection-end-line="71" selection-end-column="8" />
           <folding>
             <element signature="e#0#64#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cfg/kafforch.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34591195">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
