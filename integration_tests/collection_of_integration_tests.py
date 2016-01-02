@@ -8,7 +8,7 @@ import time
 
 
 plan_json1 = '''{
-            "start_on": "2015-12-11T23:14:15.554Z",
+            "start_on": "2007-04-05T12:30-02:00",
             "tasks": [
                 {
                     "id": "1",
@@ -17,22 +17,20 @@ plan_json1 = '''{
                 },
                 {
                     "id": "2",
-                    "start_on": "2066-12-11T23:14:15.554Z",
                     "name": "namename"
                 },
                 {
                     "id": "3",
-                    "start_on": "2066-12-11T23:14:15.554Z",
+                    "start_on": "2007-04-05T12:30-02:00",
                     "name": "namename"
                 },
                 {
                     "id": "4",
-                    "start_on": "2066-12-11T23:14:15.554Z",
                     "name": "namename"
                 },
                 {
                     "id": "5",
-                    "start_on": "2066-12-11T23:14:15.554Z",
+                    "start_on": "2007-04-05T12:30-02:00",
                     "name": "namename"
                 }
             ],
@@ -61,7 +59,7 @@ plan_json1 = '''{
             }'''
 
 
-class PlanSubmitterTests(BaseIntegrationTestCase):
+class IntegrationTests1(BaseIntegrationTestCase):
     def setUp(self):
         self.plan_repo = PlanRepo(Redis("localhost"))
         self.plan_repo.purge_all_plans()
@@ -110,7 +108,7 @@ class PlanSubmitterTests(BaseIntegrationTestCase):
             )
 
         def get_running_tasks():
-            time.sleep(12)
+            time.sleep(15)
             tasks = self.task_repo.get_tasks(plan_id)
             return filter(lambda t: t.is_task_running(), tasks)
 

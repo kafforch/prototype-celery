@@ -27,10 +27,11 @@ def start_tasks():
                 tasks = repo.task_repo.get_tasks(plan_id)
                 available_tasks = get_tasks_available_to_start(plan_id, tasks, dependencies)
                 logger.info("Tasks to start for plan {0}: {1}".format(
-                    plan_id,
-                    ", ".join(map(lambda t: t.get_task_id(), available_tasks))
+                        plan_id,
+                        ", ".join(map(lambda t: t.get_task_id(), available_tasks))
                 ))
                 for task in available_tasks:
+
                     # TODO - Send start task
 
                     task.set_task_as_running()

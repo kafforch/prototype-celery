@@ -1,7 +1,7 @@
 from workers.base import app, repo
 from celery.utils.log import get_task_logger
 from celery.schedules import timedelta
-from utils.time_utils import utcnow, to_utc
+from utils.time_utils import is_time_in_the_past
 
 START_PLANS_TASK_NAME = '{}.start_plans'.format(__name__)
 
@@ -24,7 +24,7 @@ def start_plans():
         plan = repo.plan_repo.get_plan_by_id(plan_id)
         if plan.is_plan_initial():
             if plan.get_start_on() is None \
-                    or to_utc(plan.get_start_on()) <= utcnow():
+                    or is_time_in_the_past(plan.get_start_on()):
                 with repo.lock_manager:
                     logger.info("Starting plan {}".format(plan_id))
                     plan.set_plan_as_running()

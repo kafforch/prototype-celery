@@ -6,7 +6,7 @@ from model.task_starter_logic import get_tasks_available_to_start
 import fakeredis
 
 plan_json1 = '''{
-            "start_on": "2015-12-11T23:14:15.554Z",
+            "start_on": "2007-04-05T12:30-02:00",
             "tasks": [
                 {
                     "id": "1",
@@ -15,22 +15,22 @@ plan_json1 = '''{
                 },
                 {
                     "id": "2",
-                    "start_on": "2066-12-11T23:14:15.554Z",
+                    "start_on": "2007-04-05T12:30-02:00",
                     "name": "namename"
                 },
                 {
                     "id": "3",
-                    "start_on": "2066-12-11T23:14:15.554Z",
+                    "start_on": "2007-04-05T12:30-02:00",
                     "name": "namename"
                 },
                 {
                     "id": "4",
-                    "start_on": "2066-12-11T23:14:15.554Z",
+                    "start_on": "2015-12-11T23:14:15.554Z",
                     "name": "namename"
                 },
                 {
                     "id": "5",
-                    "start_on": "2066-12-11T23:14:15.554Z",
+                    "start_on": "2015-12-11T23:14:15.554Z",
                     "name": "namename"
                 }
             ],

@@ -1,5 +1,7 @@
-def get_tasks_available_to_start(plan_id, tasks, dependencies):
+from utils.time_utils import is_time_in_the_past
 
+
+def get_tasks_available_to_start(plan_id, tasks, dependencies):
     def is_task_not_complete(task_id):
         task = filter(lambda t: t.get_task_id() == task_id, tasks)[0]
         return not task.is_task_complete()
@@ -12,8 +14,9 @@ def get_tasks_available_to_start(plan_id, tasks, dependencies):
 
     def is_task_ready_to_start(task):
         if task.is_task_initial():
-            return len(outstanding_dependencies_for_task(task, dependencies)) == 0
-        else:
-            return False
+            if task.get_start_on() is None or is_time_in_the_past(task.get_start_on()):
+                return len(outstanding_dependencies_for_task(task, dependencies)) == 0
+
+        return False
 
     return filter(is_task_ready_to_start, tasks)
