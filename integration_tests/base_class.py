@@ -21,7 +21,8 @@ class BaseIntegrationTestCase(TestCase):
             # Start celery worker
             cd {2}
             source {1}/bin/activate
-            nohup celery worker -A workers.base -l info -B &
+            nohup celery worker -A workers.base -l info -B -n worker1.%h &
+            nohup celery worker -A workers.base -l info -B -n worker2.%h &
             sleep 5
 
         '''.format(

@@ -1,4 +1,4 @@
-from workers.base import app, repo
+from workers.base import app, repo, lock
 from celery.utils.log import get_task_logger
 from celery.schedules import timedelta
 from model.task_starter_logic import get_tasks_available_to_start
@@ -22,7 +22,7 @@ def start_tasks():
     for plan_id in repo.plan_repo.get_all_plan_ids():
         plan = repo.plan_repo.get_plan_by_id(plan_id)
         if plan.is_plan_running():
-            with repo.lock_manager:
+            with lock("tasks"):
                 dependencies = repo.task_repo.get_dependencies(plan_id)
                 tasks = repo.task_repo.get_tasks(plan_id)
                 available_tasks = get_tasks_available_to_start(plan_id, tasks, dependencies)
@@ -41,9 +41,8 @@ def start_tasks():
 @app.task()
 def complete_task(plan_id, task_id):
     logger.info("Completing task {0} for plan {1}".format(task_id, plan_id))
-    with repo.lock_manager:
+    with lock("tasks"):
         task = repo.task_repo.get_task(plan_id, task_id)
         task.set_task_as_complete()
         result = repo.task_repo.save_task(plan_id, task)
-
-    return result
+        return result

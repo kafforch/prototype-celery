@@ -74,7 +74,7 @@ class IntegrationTests1(BaseIntegrationTestCase):
         plan = parse_plan_json(plan_json1)
         result = store_new_plan.delay(plan)
 
-        plan_id = result.get(5)
+        plan_id = result.get(10)
 
         self.assertEqual(plan_id, 'c4ca4238a0b923820dcc509a6f75849b')
 
@@ -87,7 +87,7 @@ class IntegrationTests1(BaseIntegrationTestCase):
         plan = parse_plan_json(plan_json1)
         result = store_new_plan.delay(plan)
 
-        plan_id = result.get(5)
+        plan_id = result.get(10)
 
         for i in xrange(55):
             time.sleep(1)
@@ -100,7 +100,7 @@ class IntegrationTests1(BaseIntegrationTestCase):
         plan = parse_plan_json(plan_json1)
         result = store_new_plan.delay(plan)
 
-        plan_id = result.get(5)
+        plan_id = result.get(10)
         
         def assert_task_ids_in_list(actual_tasks_list, assertion_task_id_list):
             self.assertListEqual(
@@ -136,31 +136,31 @@ class IntegrationTests1(BaseIntegrationTestCase):
         assert_task_ids_in_list(task_list_1, ["1"])
 
         result = complete_task.delay(plan_id, task1.get_task_id())
-        self.assertIsNotNone(result.get(5))
+        self.assertIsNotNone(result.get(10))
 
         task_list_2 = get_running_tasks(["2", "3"])
         assert_task_ids_in_list(task_list_2, ["2", "3"])
 
         result = complete_task.delay(plan_id, task2.get_task_id())
-        self.assertIsNotNone(result.get(5))
+        self.assertIsNotNone(result.get(10))
 
         task_list_3 = get_running_tasks(["3"])
         assert_task_ids_in_list(task_list_3, ["3"])
 
         result = complete_task.delay(plan_id, task3.get_task_id())
-        self.assertIsNotNone(result.get(5))
+        self.assertIsNotNone(result.get(10))
 
         task_list_4 = get_running_tasks(["4"])
         assert_task_ids_in_list(task_list_4, ["4"])
 
         result = complete_task.delay(plan_id, task4.get_task_id())
-        self.assertIsNotNone(result.get(5))
+        self.assertIsNotNone(result.get(10))
 
         task_list_5 = get_running_tasks(["5"])
         assert_task_ids_in_list(task_list_5, ["5"])
 
         result = complete_task.delay(plan_id, task5.get_task_id())
-        self.assertIsNotNone(result.get(5))
+        self.assertIsNotNone(result.get(10))
 
         task_list_6 = get_running_tasks([])
         assert_task_ids_in_list(task_list_6, [])
