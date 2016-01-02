@@ -19,7 +19,13 @@ class KafforchConfigurator:
                 CELERY_RESULT_BACKEND=self.__conf.get('Celery-Connection', 'backend'),
                 CELERY_TASK_SERIALIZER=self.__conf.get('Celery-Connection', 'serializer'),
                 CELERY_ACCEPT_CONTENT=[self.__conf.get('Celery-Connection', 'serializer')],
-                CELERY_IMPORTS=self.__conf.get('Celery-Connection', 'imports').split(',')
+                CELERY_ROUTES={
+                        'workers.plan_periodic.start_plans': {'queue': 'plans'},
+                        'workers.plan_periodic.complete_plans': {'queue': 'plans'},
+                        'workers.task_periodic.start_tasks': {'queue': 'tasks'},
+                        'workers.application.store_new_plan': {'queue': 'app'},
+                        'workers.application.complete_task': {'queue': 'app'}
+                    }
         )
 
     def get_plan_handler_cycle_time(self):

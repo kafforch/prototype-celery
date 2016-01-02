@@ -1,6 +1,5 @@
 from integration_tests.base_class import BaseIntegrationTestCase
-from workers.plan_handler import store_new_plan
-from workers.task_handler import complete_task
+from workers.application import store_new_plan, complete_task
 from model.plan_parser import parse_plan_json
 from model.plan_repo import PlanRepo
 from model.task_repo import TaskRepo

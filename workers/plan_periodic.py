@@ -1,4 +1,4 @@
-from workers.base import app, repo, lock
+from workers.base import repo, app
 from celery.utils.log import get_task_logger
 from celery.schedules import timedelta
 from utils.time_utils import is_time_in_the_past
@@ -48,11 +48,3 @@ def complete_plans():
                     logger.info("Completing plan {}".format(plan_id))
                     plan.set_plan_as_complete()
                     repo.plan_repo.save_plan(plan_id, plan)
-
-
-@app.task()
-def store_new_plan(plan):
-        plan_id = repo.plan_repo.save_new_plan(plan)
-        repo.task_repo.save_new_tasks(plan_id, plan.get_tasks())
-        repo.task_repo.save_dependencies(plan_id, plan.get_dependencies())
-        return plan_id

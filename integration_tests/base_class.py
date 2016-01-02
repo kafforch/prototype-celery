@@ -15,23 +15,21 @@ class BaseIntegrationTestCase(TestCase):
         start_cmd = '''
             # Start Redis
             res=$(ps auxww | grep 'redis-server' | grep -v grep | awk '{{print $2}}' | xargs kill -9)
+            res=$(ps auxww | grep 'celery worker' | grep -v grep | awk '{{print $2}}' | xargs kill -9)
             nohup {0}/src/redis-server &
-            sleep 5
+            sleep 3
 
             # Start celery worker
             cd {2}
             source {1}/bin/activate
-            nohup celery worker -A workers.base -l info -B -n worker1.%h &
-            nohup celery worker -A workers.base -l info -B -n worker2.%h &
-            nohup celery worker -A workers.base -l info -B -n worker3.%h &
-            nohup celery worker -A workers.base -l info -B -n worker4.%h &
-            nohup celery worker -A workers.base -l info -B -n worker5.%h &
-            nohup celery worker -A workers.base -l info -B -n worker6.%h &
-            nohup celery worker -A workers.base -l info -B -n worker7.%h &
-            nohup celery worker -A workers.base -l info -B -n worker8.%h &
-            nohup celery worker -A workers.base -l info -B -n worker9.%h &
-            nohup celery worker -A workers.base -l info -B -n worker10.%h &
-            sleep 5
+            nohup celery worker -A workers.application -l info -n app1.%h -Q app &
+            nohup celery worker -A workers.application -l info -n app2.%h -Q app &
+            nohup celery worker -A workers.application -l info -n app3.%h -Q app &
+            sleep 1
+            nohup celery worker -A workers.plan_periodic -l info -B -n plan1.%h -Q plans &
+            sleep 1
+            nohup celery worker -A workers.task_periodic -l info -B -n task1.%h -Q tasks &
+            sleep 3
 
         '''.format(
                 func_test_config.get_value("Functional-Tests", "redispath"),

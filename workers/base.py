@@ -1,4 +1,3 @@
-from celery import Celery
 from celery.signals import celeryd_after_setup
 from redis import StrictRedis
 from redlock import RedLockFactory
@@ -6,6 +5,9 @@ from redlock import RedLockFactory
 from utils.config import KafforchConfigurator
 from model.plan_repo import PlanRepo
 from model.task_repo import TaskRepo
+
+from celery import Celery
+from utils.config import KafforchConfigurator
 
 
 class Repo:
@@ -18,7 +20,10 @@ repo.task_repo = None
 
 repo.config = KafforchConfigurator("cfg/kafforch.cfg")
 redis_config = repo.config.get_redis_config_kwargs()
+celery_config = repo.config.get_celery_config_dict()
 
+app = Celery()
+app.conf.update(**celery_config)
 
 def lock(lock_name):
     return RedLockFactory(
@@ -33,10 +38,6 @@ def lock(lock_name):
 
 
 redis_inst = StrictRedis(**redis_config)
-
-celery_config = repo.config.get_celery_config_dict()
-app = Celery()
-app.conf.update(**celery_config)
 
 
 @celeryd_after_setup.connect()
