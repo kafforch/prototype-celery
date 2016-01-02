@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3cea264b-8e20-45ad-8f3c-a2a9c08fb4c1" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/integration_tests/plan_submitter_tests.py" afterPath="$PROJECT_DIR$/integration_tests/collection_of_integration_tests.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/task_starter_logic.py" afterPath="$PROJECT_DIR$/model/task_starter_logic.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/model_tests/task_starter_tests.py" afterPath="$PROJECT_DIR$/tests/model_tests/task_starter_tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/time_utils.py" afterPath="$PROJECT_DIR$/utils/time_utils.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workers/plan_starter.py" afterPath="$PROJECT_DIR$/workers/plan_starter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workers/task_starter.py" afterPath="$PROJECT_DIR$/workers/task_starter.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/integration_tests/collection_of_integration_tests.py" afterPath="$PROJECT_DIR$/integration_tests/collection_of_integration_tests.py" />
     </list>
     <ignored path="untitled.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,10 +36,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="task_starter_logic.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="task_starter_logic.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/task_starter_logic.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5345912">
+            <state vertical-scroll-proportion="0.0">
               <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
               <folding />
             </state>
@@ -63,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="collection_of_integration_tests.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="collection_of_integration_tests.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/integration_tests/collection_of_integration_tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="110" column="25" selection-start-line="110" selection-start-column="25" selection-end-line="110" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.6226415">
+              <caret line="118" column="65" selection-start-line="118" selection-start-column="65" selection-end-line="118" selection-end-column="65" />
               <folding>
                 <element signature="e#0#64#0" expanded="true" />
               </folding>
@@ -137,10 +132,10 @@
         <option value="$PROJECT_DIR$/workers/task_starter.py" />
         <option value="$PROJECT_DIR$/integration_tests/integration_tests.py" />
         <option value="$PROJECT_DIR$/tests/model_tests/task_starter_tests.py" />
-        <option value="$PROJECT_DIR$/integration_tests/collection_of_integration_tests.py" />
         <option value="$PROJECT_DIR$/utils/time_utils.py" />
         <option value="$PROJECT_DIR$/workers/plan_starter.py" />
         <option value="$PROJECT_DIR$/model/task_starter_logic.py" />
+        <option value="$PROJECT_DIR$/integration_tests/collection_of_integration_tests.py" />
       </list>
     </option>
   </component>
@@ -644,12 +639,6 @@
       <option name="number" value="Default" />
       <updated>1450658074359</updated>
     </task>
-    <task id="LOCAL-00037" summary="Added task_repo_redis">
-      <created>1451019870169</created>
-      <option name="number" value="00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1451019870169</updated>
-    </task>
     <task id="LOCAL-00038" summary="Removed old simple repos and tidied up the tests">
       <created>1451020805895</created>
       <option name="number" value="00038" />
@@ -938,13 +927,16 @@
       <option name="project" value="LOCAL" />
       <updated>1451700227652</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="Added time checker for task starter and created a new more readable time comparison utility function">
+      <created>1451702416017</created>
+      <option name="number" value="00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1451702416017</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Integration_tests - 2016.01.02 at 13h 28m 12s.xml">
-      <configuration name="Integration tests" configurationId="tests" />
-    </history-entry>
     <history-entry file="Integration_tests - 2016.01.02 at 13h 28m 58s.xml">
       <configuration name="Integration tests" configurationId="tests" />
     </history-entry>
@@ -963,11 +955,14 @@
     <history-entry file="Integration_tests - 2016.01.02 at 13h 39m 40s.xml">
       <configuration name="Integration tests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_TaskStarterTests_test_get_tasks - 2016.01.02 at 13h 22m 26s.xml">
-      <configuration name="Unittest TaskStarterTests.test_get_tasks" configurationId="tests" />
+    <history-entry file="Integration_tests - 2016.01.02 at 13h 44m 34s.xml">
+      <configuration name="Integration tests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_TaskStarterTests_test_get_tasks - 2016.01.02 at 13h 26m 33s.xml">
-      <configuration name="Unittest TaskStarterTests.test_get_tasks" configurationId="tests" />
+    <history-entry file="Integration_tests - 2016.01.02 at 13h 47m 16s.xml">
+      <configuration name="Integration tests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Integration_tests - 2016.01.02 at 13h 50m 28s.xml">
+      <configuration name="Integration tests" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests - 2016.01.02 at 13h 37m 09s.xml">
       <configuration name="Unittests" configurationId="tests" />
@@ -984,7 +979,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934928" sideWeight="0.496875" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934928" sideWeight="0.496875" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1009,7 +1004,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refactored task_repo.save_tasks into task_repo.save_new_tasks" />
     <MESSAGE value="Config for redis to return kwargs" />
     <MESSAGE value="Explicitly using pickle" />
     <MESSAGE value="Config celery app object" />
@@ -1034,7 +1028,8 @@
     <MESSAGE value="Added task_starter worker" />
     <MESSAGE value="Added task_starter worker with integration and unit tests" />
     <MESSAGE value="Integration test for task_starter passes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Integration test for task_starter passes" />
+    <MESSAGE value="Added time checker for task starter and created a new more readable time comparison utility function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added time checker for task starter and created a new more readable time comparison utility function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1352,16 +1347,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/integration_tests/collection_of_integration_tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="110" column="25" selection-start-line="110" selection-start-column="25" selection-end-line="110" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/workers/plan_starter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1374,9 +1359,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/task_starter_logic.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5345912">
+        <state vertical-scroll-proportion="0.0">
           <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/integration_tests/collection_of_integration_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6226415">
+          <caret line="118" column="65" selection-start-line="118" selection-start-column="65" selection-end-line="118" selection-end-column="65" />
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
