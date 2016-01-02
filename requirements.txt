@@ -7,3 +7,4 @@ redlock>=1.2.0
 python-dateutil>=1.5<2.0
 iso8601>=0.1.11
 django>=1.9
+djangorestframework>=3

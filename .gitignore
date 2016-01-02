@@ -1,4 +1,5 @@
-untitled
-celerybeat-schedule
+/celerybeat-schedule
+/dump.rdb
 .idea
-dump.rdb
+/website/db.sqlite3
+/untitled
