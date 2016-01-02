@@ -163,3 +163,7 @@ class IntegrationTests1(BaseIntegrationTestCase):
 
         task_list_6 = get_running_tasks([])
         assert_task_ids_in_list(task_list_6, [])
+
+        time.sleep(15)
+        completed_plan = self.plan_repo.get_plan_by_id(plan_id)
+        self.assertTrue(completed_plan.is_plan_complete())

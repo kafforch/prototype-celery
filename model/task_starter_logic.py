@@ -20,3 +20,11 @@ def get_tasks_available_to_start(plan_id, tasks, dependencies):
         return False
 
     return filter(is_task_ready_to_start, tasks)
+
+
+def all_tasks_complete(tasks):
+    for task in tasks:
+        if not task.is_task_complete():
+            return False
+
+    return True
