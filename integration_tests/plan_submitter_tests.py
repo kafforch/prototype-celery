@@ -3,7 +3,6 @@ from workers.plan_submitter import store_new_plan
 from model.plan_parser import parse_plan_json
 from model.plan_repo import PlanRepo
 from model.task_repo import TaskRepo
-from model.task_starter_logic import get_tasks_available_to_start
 from redis import Redis
 import time
 
@@ -111,12 +110,11 @@ class PlanSubmitterTests(BaseIntegrationTestCase):
             )
 
         def get_running_tasks():
-            time.sleep(15)
+            time.sleep(12)
             tasks = self.task_repo.get_tasks(plan_id)
             return filter(lambda t: t.is_task_running(), tasks)
 
         task_list = self.task_repo.get_tasks(plan_id)
-        dependencies = self.task_repo.get_dependencies(plan_id)
 
         task1 = task_list[0]
         task2 = task_list[1]
@@ -156,5 +154,3 @@ class PlanSubmitterTests(BaseIntegrationTestCase):
 
         task_list_6 = get_running_tasks()
         assert_task_ids_in_list(task_list_6, [])
-
-
