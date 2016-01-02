@@ -32,7 +32,6 @@ def start_plans():
         if plan.is_plan_initial():
             if plan.get_start_on() is None \
                     or is_time_in_the_past(plan.get_start_on()):
-                with lock("plans"):
                     logger.info("Starting plan {}".format(plan_id))
                     plan.set_plan_as_running()
                     repo.plan_repo.save_plan(plan_id, plan)
@@ -46,7 +45,6 @@ def complete_plans():
         tasks = repo.task_repo.get_tasks(plan_id)
         if plan.is_plan_running():
             if all_tasks_complete(tasks):
-                with lock("plans"):
                     logger.info("Completing plan {}".format(plan_id))
                     plan.set_plan_as_complete()
                     repo.plan_repo.save_plan(plan_id, plan)
@@ -54,7 +52,6 @@ def complete_plans():
 
 @app.task()
 def store_new_plan(plan):
-    with lock("plans"):
         plan_id = repo.plan_repo.save_new_plan(plan)
         repo.task_repo.save_new_tasks(plan_id, plan.get_tasks())
         repo.task_repo.save_dependencies(plan_id, plan.get_dependencies())

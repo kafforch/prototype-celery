@@ -26,9 +26,9 @@ def lock(lock_name):
         .create_lock(lock_name,
                      ttl=int(repo.config.get_value("Redlock", "ttl")),
                      retry_times=int(repo.config.get_value("Redlock",
-                                                       "retry_times")),
+                                                           "retry_times")),
                      retry_delay=int(repo.config.get_value("Redlock",
-                                                       "retry_delay"))
+                                                           "retry_delay"))
                      )
 
 

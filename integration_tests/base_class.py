@@ -23,6 +23,14 @@ class BaseIntegrationTestCase(TestCase):
             source {1}/bin/activate
             nohup celery worker -A workers.base -l info -B -n worker1.%h &
             nohup celery worker -A workers.base -l info -B -n worker2.%h &
+            nohup celery worker -A workers.base -l info -B -n worker3.%h &
+            nohup celery worker -A workers.base -l info -B -n worker4.%h &
+            nohup celery worker -A workers.base -l info -B -n worker5.%h &
+            nohup celery worker -A workers.base -l info -B -n worker6.%h &
+            nohup celery worker -A workers.base -l info -B -n worker7.%h &
+            nohup celery worker -A workers.base -l info -B -n worker8.%h &
+            nohup celery worker -A workers.base -l info -B -n worker9.%h &
+            nohup celery worker -A workers.base -l info -B -n worker10.%h &
             sleep 5
 
         '''.format(
