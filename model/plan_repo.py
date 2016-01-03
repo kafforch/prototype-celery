@@ -1,4 +1,4 @@
-from model.plan_parser import parse_plan_json
+from model.plan_parser import parse_plan_json, TaskParserDeco, DependencyParserDeco
 import hashlib
 
 
@@ -33,8 +33,13 @@ class PlanRepo():
         map(lambda key: self.__redis.delete(key), keys)
 
     def get_plan_by_id(self, plan_id):
-        redis_plan_json = self.__redis.get("plan-{}".format(plan_id))
-        return parse_plan_json(redis_plan_json)
+        plan_json = self.__redis.get("plan-{}".format(plan_id))
+        tasks_list = self.__redis.lrange("tasksof-{}".format(plan_id), 0, -1)
+        dependencies_list = self.__redis.lrange("dependenciesof-{}".format(plan_id), 0, -1)
+        plan = parse_plan_json(plan_json)
+        plan.set_tasks(tasks_list)
+        plan.set_dependencies(dependencies_list)
+        return plan
 
     def get_number_of_plans(self):
         return len(self.__get_all_redis_keys())

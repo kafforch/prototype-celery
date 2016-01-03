@@ -1,17 +1,17 @@
 import unittest
-from model import plan_repo, plan_parser
+from model import plan_repo, plan_parser, task_repo
 import fakeredis
 
 plan_json1 = '''{
             "start_on": "2015-12-11T23:14:15.554Z",
             "tasks": [
                 {
-                    "id": "1",
+                    "task_id": "1",
                     "name": "task1",
                     "test": "test123"
                 },
                 {
-                    "id": "23",
+                    "task_id": "2",
                     "start_on": "2066-12-11T23:14:15.554Z",
                     "name": "namename"
                 }
@@ -25,6 +25,7 @@ plan_json1 = '''{
             }'''
 
 plan_repo = plan_repo.PlanRepo(fakeredis.FakeStrictRedis())
+task_repo = task_repo.TaskRepo(fakeredis.FakeStrictRedis())
 
 
 class PlanRepoRedisTests(unittest.TestCase):
@@ -39,6 +40,8 @@ class PlanRepoRedisTests(unittest.TestCase):
 
         plan_id = plan_repo.save_new_plan(self.plan1)
         self.assertIsNotNone(plan_id)
+        task_repo.save_new_tasks(plan_id, self.plan1.get_tasks())
+        task_repo.save_dependencies(plan_id, self.plan1.get_dependencies())
 
         plan2 = plan_repo.get_plan_by_id(plan_id)
         self.assertIsNotNone(plan2)

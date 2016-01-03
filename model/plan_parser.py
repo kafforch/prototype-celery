@@ -2,8 +2,13 @@ import json
 
 
 class BaseDeco(object):
-    def __init__(self):
-        self.entity = None
+    def __init__(self, payload):
+        if isinstance(payload, dict):
+            self.entity = payload
+        elif isinstance(payload, basestring):
+            self.entity = json.loads(payload)
+        else:
+            raise AttributeError("Unknown argument passed to constructor")
 
     def method_missing(self, attr, *args, **kwargs):
         if attr.startswith("get_"):
@@ -30,18 +35,16 @@ class BaseDeco(object):
 
 
 class DependencyParserDeco(BaseDeco):
-    def __init__(self, dependency):
-        super(BaseDeco, self).__init__()
-        self.entity = dependency
+    def __init__(self, payload):
+        super(DependencyParserDeco, self).__init__(payload)
 
     def to_json(self):
         return json.dumps(self.entity)
 
 
 class TaskParserDeco(BaseDeco):
-    def __init__(self, task):
-        super(BaseDeco, self).__init__()
-        self.entity = task
+    def __init__(self, payload):
+        super(TaskParserDeco, self).__init__(payload)
 
     def is_task_complete(self):
         return "COMPLETE" == self.entity['task_status']
@@ -67,12 +70,7 @@ class TaskParserDeco(BaseDeco):
 
 class PlanParserDeco(BaseDeco):
     def __init__(self, payload):
-        super(BaseDeco, self).__init__()
-
-        if isinstance(payload, dict):
-            self.entity = payload
-        else:
-            self.entity = json.loads(payload)
+        super(PlanParserDeco, self).__init__(payload)
 
     def set_plan_as_new(self):
         self.entity["plan_status"] = "INITIAL"
@@ -89,6 +87,9 @@ class PlanParserDeco(BaseDeco):
     def get_tasks(self):
         return map(lambda task: TaskParserDeco(task), self.entity["tasks"])
 
+    def set_tasks(self, tasks):
+        self.entity["tasks"] = map(lambda t: json.loads(t), tasks)
+
     def set_plan_as_complete(self):
         self.entity["plan_status"] = "COMPLETE"
 
@@ -97,6 +98,9 @@ class PlanParserDeco(BaseDeco):
 
     def get_dependencies(self):
         return map(lambda d: DependencyParserDeco(d), self.entity["dependencies"])
+
+    def set_dependencies(self, dependencies):
+        self.entity["dependencies"] = map(lambda d: json.loads(d), dependencies)
 
     def to_json(self):
         return json.dumps(self.entity)

@@ -9,12 +9,12 @@ plan_json1 = '''{
             "start_on": "2015-12-11T23:14:15.554Z",
             "tasks": [
                 {
-                    "id": "1",
+                    "task_id": "1",
                     "name": "task1",
                     "test": "test123"
                 },
                 {
-                    "id": "23",
+                    "task_id": "2",
                     "start_on": "2066-12-11T23:14:15.554Z",
                     "name": "namename"
                 }
@@ -42,6 +42,8 @@ class PlanRepoLocalTests(unittest.TestCase):
         built_plan.set_plan_id(plan_id)
 
         plan_repo.save_new_plan(built_plan)
+        task_repo.save_new_tasks(plan_id, built_plan.get_tasks())
+        task_repo.save_dependencies(plan_id, built_plan.get_dependencies())
 
         plan = plan_repo.get_plan_by_id(plan_id)
 
@@ -52,6 +54,8 @@ class PlanRepoLocalTests(unittest.TestCase):
         built_plan = plan_parser.parse_plan_json(plan_json1)
 
         plan_id = plan_repo.save_new_plan(built_plan)
+        task_repo.save_new_tasks(plan_id, built_plan.get_tasks())
+        task_repo.save_dependencies(plan_id, built_plan.get_dependencies())
 
         plan = plan_repo.get_plan_by_id(plan_id)
 

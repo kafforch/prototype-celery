@@ -176,3 +176,5 @@ class IntegrationTests1(BaseIntegrationTestCase):
         time.sleep(10)
         completed_plan = self.plan_repo.get_plan_by_id(plan_id)
         self.assertTrue(completed_plan.is_plan_complete())
+
+        print completed_plan.to_json()
