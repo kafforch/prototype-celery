@@ -15,8 +15,8 @@ class BaseDeco(object):
         elif attr.startswith("set_"):
             key = attr[len("set_"):]
             self.entity[key] = args[0]
-#        else:
-#            raise AttributeError("Missing method %s called." % attr)
+        else:
+            raise AttributeError("Missing method %s called." % attr)
 
     def __getattr__(self, attr, *args, **kwargs):
 
