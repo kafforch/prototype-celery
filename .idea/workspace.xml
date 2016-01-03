@@ -2,22 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3cea264b-8e20-45ad-8f3c-a2a9c08fb4c1" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/db.sqlite3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/manage.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/orchestrator/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/orchestrator/admin.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/orchestrator/apps.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/orchestrator/migrations/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/orchestrator/models.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/orchestrator/tests.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/orchestrator/urls.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/orchestrator/views.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/website/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/website/settings.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/website/urls.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/website/wsgi.py" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/restapi/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/restapi/response.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/restapi/web.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/file_utils.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/plan_parser.py" afterPath="$PROJECT_DIR$/model/plan_parser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workers/base.py" afterPath="$PROJECT_DIR$/workers/base.py" />
     </list>
     <ignored path="untitled.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,7 +29,20 @@
     <favorites_list name="untitled" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="web.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/restapi/web.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.591195">
+              <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -52,14 +57,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/tests/model_tests/plan_parser_tests.py" />
-        <option value="$PROJECT_DIR$/tests/model_tests/task_repo_tests.py" />
-        <option value="$PROJECT_DIR$/tests/worker_tests/base_worker_tests.py" />
-        <option value="$PROJECT_DIR$/workers/base_worker.py" />
-        <option value="$PROJECT_DIR$/cfg/live_test.py" />
-        <option value="$PROJECT_DIR$/model/plan_repo.py" />
-        <option value="$PROJECT_DIR$/tests/util_tests/time_utils_tests.py" />
-        <option value="$PROJECT_DIR$/tests/utils/start_redis.sh" />
         <option value="$PROJECT_DIR$/tests/utils/stop_redis.sh" />
         <option value="$PROJECT_DIR$/tests/utils/start_worker.sh" />
         <option value="$PROJECT_DIR$/tests/utils/stop_worker.sh" />
@@ -89,7 +86,6 @@
         <option value="$PROJECT_DIR$/cfg/periodic_plan_worker.py" />
         <option value="$PROJECT_DIR$/cfg/periodic_task_worker.py" />
         <option value="$PROJECT_DIR$/cfg/application_worker.py" />
-        <option value="$PROJECT_DIR$/workers/base.py" />
         <option value="$PROJECT_DIR$/workers/application.py" />
         <option value="$PROJECT_DIR$/workers/plan_periodic.py" />
         <option value="$PROJECT_DIR$/workers/task_periodic.py" />
@@ -103,6 +99,15 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/utils/file_utils.py" />
+        <option value="$PROJECT_DIR$/workers/base.py" />
+        <option value="$PROJECT_DIR$/web/__init__.py" />
+        <option value="$PROJECT_DIR$/web/exception.py" />
+        <option value="$PROJECT_DIR$/web/web.py" />
+        <option value="$PROJECT_DIR$/restapi/exception.py" />
+        <option value="$PROJECT_DIR$/restapi/response.py" />
+        <option value="$PROJECT_DIR$/model/plan_parser.py" />
+        <option value="$PROJECT_DIR$/restapi/web.py" />
       </list>
     </option>
   </component>
@@ -261,6 +266,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="restapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prototype-celery" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prototype-celery" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -302,7 +321,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="FullScreen" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/utils" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/restapi/web.py" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -320,7 +339,24 @@
       <recent name="$PROJECT_DIR$/functional_tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Integration tests">
+  <component name="RunManager" selected="Python.web">
+    <configuration default="false" name="web" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/restapi" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="prototype-celery" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/restapi/web.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
     <configuration default="false" name="Unittests in PlanSubmitterTests" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -567,18 +603,20 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.Integration tests" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in PlanSubmitterTests" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest TaskStarterTests.test_get_tasks" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest PlanSubmitterTests.test_run_tasks" />
+    <list size="6">
+      <item index="0" class="java.lang.String" itemvalue="Python.web" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Integration tests" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in PlanSubmitterTests" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest TaskStarterTests.test_get_tasks" />
+      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittest PlanSubmitterTests.test_run_tasks" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest TaskStarterTests.test_get_tasks" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest PlanSubmitterTests.test_run_tasks" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in PlanSubmitterTests" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Python.web" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest TaskStarterTests.test_get_tasks" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest PlanSubmitterTests.test_run_tasks" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in PlanSubmitterTests" />
       </list>
     </recent_temporary>
   </component>
@@ -592,12 +630,6 @@
       <created>1450658074359</created>
       <option name="number" value="Default" />
       <updated>1450658074359</updated>
-    </task>
-    <task id="LOCAL-00047" summary="Refactored task_repo.save_tasks into task_repo.save_new_tasks">
-      <created>1451391821406</created>
-      <option name="number" value="00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1451391821406</updated>
     </task>
     <task id="LOCAL-00048" summary="Config for redis to return kwargs">
       <created>1451392531672</created>
@@ -887,19 +919,16 @@
       <option name="project" value="LOCAL" />
       <updated>1451729294253</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="Removed django&#10;">
+      <created>1451778958749</created>
+      <option name="number" value="00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1451778958749</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Integration_tests - 2016.01.02 at 18h 59m 16s.xml">
-      <configuration name="Integration tests" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Integration_tests - 2016.01.02 at 19h 00m 51s.xml">
-      <configuration name="Integration tests" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Integration_tests - 2016.01.02 at 19h 04m 39s.xml">
-      <configuration name="Integration tests" configurationId="tests" />
-    </history-entry>
     <history-entry file="Integration_tests - 2016.01.02 at 19h 14m 24s.xml">
       <configuration name="Integration tests" configurationId="tests" />
     </history-entry>
@@ -921,19 +950,28 @@
     <history-entry file="Integration_tests - 2016.01.02 at 19h 30m 36s.xml">
       <configuration name="Integration tests" configurationId="tests" />
     </history-entry>
+    <history-entry file="Integration_tests - 2016.01.03 at 11h 19m 56s.xml">
+      <configuration name="Integration tests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests - 2016.01.03 at 11h 17m 06s.xml">
+      <configuration name="Unittests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests - 2016.01.03 at 12h 22m 18s.xml">
+      <configuration name="Unittests" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.390625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.390625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.503125" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.496875" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934928" sideWeight="0.496875" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -958,7 +996,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added time_utils" />
     <MESSAGE value="Added support for plan level start_on" />
     <MESSAGE value="Added functional test runner script" />
     <MESSAGE value="Created proper integration/functional test suite + runner" />
@@ -983,17 +1020,21 @@
     <MESSAGE value="Removed locking for now" />
     <MESSAGE value="Separated workers to listen to separate queues" />
     <MESSAGE value="Added skeleton django app" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added skeleton django app" />
+    <MESSAGE value="Removed django&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed django&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="19" />
+      <option name="time" value="22" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="tests">
+        <watch expression="self.__conf.get(section, key)" language="Python" />
+      </configuration>
+      <configuration name="PythonConfigurationType">
         <watch expression="self.__conf.get(section, key)" language="Python" />
       </configuration>
     </watches-manager>
@@ -1137,14 +1178,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/plan_parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.495283">
-          <caret line="41" column="27" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/util_tests/time_utils_tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.062893085">
@@ -1237,16 +1270,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/workers/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7861635">
-          <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#46#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/workers/plan_periodic.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.572327">
@@ -1291,50 +1314,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/integration_tests/collection_of_integration_tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.19496855">
-          <caret line="137" column="0" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#64#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/integration_tests/base_class.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.062893085">
-          <caret line="17" column="102" selection-start-line="17" selection-start-column="102" selection-end-line="17" selection-end-column="102" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/website/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/orchestrator/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10344828">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18620689">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.10344828">
@@ -1343,7 +1322,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website/orchestrator/migrations/__init__.py">
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16551724">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/file_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.094339624">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workers/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3144654">
+          <caret line="20" column="59" selection-start-line="20" selection-start-column="59" selection-end-line="20" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1351,11 +1354,95 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website/orchestrator/views.py">
+    <entry file="file://$PROJECT_DIR$/workers/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14482759">
-          <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/restapi/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/BaseHTTPServer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33254716">
+          <caret line="339" column="0" selection-start-line="339" selection-start-column="0" selection-end-line="339" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/kafforch-celery/lib/python2.7/site-packages/werkzeug/serving.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33254716">
+          <caret line="251" column="0" selection-start-line="251" selection-start-column="0" selection-end-line="251" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/kafforch-celery/lib/python2.7/site-packages/werkzeug/debug/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33254716">
+          <caret line="198" column="0" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/kafforch-celery/lib/python2.7/site-packages/flask/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33254716">
+          <caret line="1460" column="0" selection-start-line="1460" selection-start-column="0" selection-end-line="1460" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/integration_tests/collection_of_integration_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5283019">
+          <caret line="58" column="13" selection-start-line="9" selection-start-column="16" selection-end-line="58" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/restapi/response.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="20" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/integration_tests/base_class.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49685535">
+          <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/plan_parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36477986">
+          <caret line="61" column="13" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/restapi/web.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.591195">
+          <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

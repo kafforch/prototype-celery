@@ -56,8 +56,11 @@ class TaskParserDeco:
 
 
 class PlanParserDeco:
-    def __init__(self, _json):
-        self.__plan = json.loads(_json)
+    def __init__(self, payload):
+        if isinstance(payload, dict):
+            self.__plan = payload
+        else:
+            self.__plan = json.loads(payload)
 
     def set_plan_id(self, plan_id):
         self.__plan["plan_id"] = plan_id

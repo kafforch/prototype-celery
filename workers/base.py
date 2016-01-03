@@ -8,7 +8,7 @@ from model.task_repo import TaskRepo
 
 from celery import Celery
 from utils.config import KafforchConfigurator
-
+from utils.file_utils import find
 
 class Repo:
     pass
@@ -18,7 +18,7 @@ repo = Repo()
 repo.plan_repo = None
 repo.task_repo = None
 
-repo.config = KafforchConfigurator("cfg/kafforch.cfg")
+repo.config = KafforchConfigurator(find("kafforch.cfg", ".."))
 redis_config = repo.config.get_redis_config_kwargs()
 celery_config = repo.config.get_celery_config_dict()
 
