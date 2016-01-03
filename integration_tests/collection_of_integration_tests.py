@@ -5,7 +5,7 @@ from model.plan_repo import PlanRepo
 from model.task_repo import TaskRepo
 from redis import Redis
 import time
-
+from restapi.web import app
 
 plan_json1 = '''{
             "start_on": "2007-04-05T12:30-02:00",
@@ -68,6 +68,13 @@ class IntegrationTests1(BaseIntegrationTestCase):
         self.task_repo = TaskRepo(Redis("localhost"))
         self.task_repo.purge_all_tasks()
         self.task_repo.purge_all_dependencies()
+
+    def test_flask_post_get_plan(self):
+        tester = app.test_client(self)
+        response = tester.post('/orchestrate', content_type="application/json", data=plan_json1)
+        self.assertEqual(response.status_code, 200)
+        response = tester.get('/plan/c4ca4238a0b923820dcc509a6f75849b')
+        self.assertEqual(response.status_code, 200)
 
     def test_submit_plan(self):
         plan = parse_plan_json(plan_json1)
