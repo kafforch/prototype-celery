@@ -12,25 +12,25 @@ plan_json1 = '''{
             "start_on": "2007-04-05T12:30-02:00",
             "tasks": [
                 {
-                    "id": "1",
+                    "task_id": "1",
                     "name": "task1",
                     "test": "test123"
                 },
                 {
-                    "id": "2",
+                    "task_id": "2",
                     "name": "namename"
                 },
                 {
-                    "id": "3",
+                    "task_id": "3",
                     "start_on": "2007-04-05T12:30-02:00",
                     "name": "namename"
                 },
                 {
-                    "id": "4",
+                    "task_id": "4",
                     "name": "namename"
                 },
                 {
-                    "id": "5",
+                    "task_id": "5",
                     "start_on": "2007-04-05T12:30-02:00",
                     "name": "namename"
                 }
