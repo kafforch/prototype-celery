@@ -2,9 +2,33 @@ from flask import Flask, request, jsonify
 from workers.application import store_new_plan
 from model.plan_parser import PlanParserDeco
 from restapi.response import response
+from model.plan_repo import PlanRepo
+from utils.config import KafforchConfigurator
+from utils.file_utils import find
+from redis import StrictRedis
 import logging
 
 app = Flask(__name__)
+
+config = KafforchConfigurator(find("kafforch.cfg", ".."))
+redis_config = config.get_redis_config_kwargs()
+plan_repo = PlanRepo(StrictRedis(**redis_config))
+
+
+@app.route('/plan/<plan_id>', methods=['GET'])
+def get_plan(plan_id):
+    plan = plan_repo.get_plan_by_id(plan_id)
+
+    if plan is None:
+        return response(
+            body="Unable to find plan",
+            status=400
+        )
+
+    return response(
+        body=plan.to_json(),
+        status=200
+    )
 
 
 @app.route('/orchestrate', methods=['POST'])
