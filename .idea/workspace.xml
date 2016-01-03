@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3cea264b-8e20-45ad-8f3c-a2a9c08fb4c1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workers/plan_periodic.py" afterPath="$PROJECT_DIR$/workers/plan_periodic.py" />
     </list>
     <ignored path="untitled.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,7 +74,6 @@
         <option value="$PROJECT_DIR$/cfg/periodic_plan_worker.py" />
         <option value="$PROJECT_DIR$/cfg/periodic_task_worker.py" />
         <option value="$PROJECT_DIR$/cfg/application_worker.py" />
-        <option value="$PROJECT_DIR$/workers/plan_periodic.py" />
         <option value="$PROJECT_DIR$/integration_tests/base_class.py" />
         <option value="$PROJECT_DIR$/utils/config.py" />
         <option value="$PROJECT_DIR$/website/orchestrator/migrations/urls.py" />
@@ -99,6 +99,7 @@
         <option value="$PROJECT_DIR$/integration_tests/collection_of_integration_tests.py" />
         <option value="$PROJECT_DIR$/model/plan_parser.py" />
         <option value="$PROJECT_DIR$/workers/application.py" />
+        <option value="$PROJECT_DIR$/workers/plan_periodic.py" />
       </list>
     </option>
   </component>
@@ -646,12 +647,6 @@
       <option name="number" value="Default" />
       <updated>1450658074359</updated>
     </task>
-    <task id="LOCAL-00058" summary="Tidy up the live test">
-      <created>1451430968735</created>
-      <option name="number" value="00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1451430968735</updated>
-    </task>
     <task id="LOCAL-00059" summary="Added plan_starter worker">
       <created>1451460124762</created>
       <option name="number" value="00059" />
@@ -940,7 +935,13 @@
       <option name="project" value="LOCAL" />
       <updated>1451826198830</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="Added plan submitted_on attribute">
+      <created>1451826230246</created>
+      <option name="number" value="00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1451826230246</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1011,7 +1012,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Parametrized the functional tests base class" />
     <MESSAGE value="Separated functional test configuration" />
     <MESSAGE value="Renamed functional into integration tests" />
     <MESSAGE value="Re-arranged unit tests and removed worker tests" />
@@ -1036,7 +1036,8 @@
     <MESSAGE value="Added simple flask integration test" />
     <MESSAGE value="Added started_on and completed_on on tasks" />
     <MESSAGE value="Updated plan parser to handle dynamic setting and getting of JSON attributes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated plan parser to handle dynamic setting and getting of JSON attributes" />
+    <MESSAGE value="Added plan submitted_on attribute" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added plan submitted_on attribute" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1253,16 +1254,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/workers/plan_periodic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.572327">
-          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#34#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/file_utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.094339624">
@@ -1425,16 +1416,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/workers/task_periodic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5283019">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/plan_parser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1460,6 +1441,24 @@
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workers/task_periodic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5283019">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workers/plan_periodic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3081761">
+          <caret line="36" column="52" selection-start-line="36" selection-start-column="52" selection-end-line="36" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>
