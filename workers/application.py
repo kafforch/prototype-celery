@@ -7,6 +7,7 @@ logger = get_task_logger(__name__)
 
 @app.task()
 def store_new_plan(plan):
+    plan.set_submitted_on(utcnow_str())
     plan_id = repo.plan_repo.save_new_plan(plan)
     repo.task_repo.save_new_tasks(plan_id, plan.get_tasks())
     repo.task_repo.save_dependencies(plan_id, plan.get_dependencies())
