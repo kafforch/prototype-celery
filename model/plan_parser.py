@@ -51,6 +51,12 @@ class TaskParserDeco:
         except KeyError:
             return None
 
+    def set_started_on(self, time_started):
+        self.__task['started_on'] = time_started
+
+    def set_completed_on(self, time_completed):
+        self.__task['completed_on'] = time_completed
+
     def to_json(self):
         return json.dumps(self.__task)
 

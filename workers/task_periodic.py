@@ -2,6 +2,7 @@ from workers.base import repo, app
 from celery.utils.log import get_task_logger
 from celery.schedules import timedelta
 from model.task_starter_logic import get_tasks_available_to_start
+from utils.time_utils import utcnow_str
 
 START_TASKS_TASK_NAME = '{}.start_tasks'.format(__name__)
 
@@ -34,4 +35,5 @@ def start_tasks():
                     # TODO - Send start task
 
                     task.set_task_as_running()
+                    task.set_started_on(utcnow_str())
                     repo.task_repo.save_task(plan_id, task)

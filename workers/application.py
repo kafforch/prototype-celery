@@ -1,5 +1,6 @@
 from workers.base import repo, app
 from celery.utils.log import get_task_logger
+from utils.time_utils import utcnow_str
 
 logger = get_task_logger(__name__)
 
@@ -16,6 +17,7 @@ def store_new_plan(plan):
 def complete_task(plan_id, task_id):
     logger.info("Completing task {0} for plan {1}".format(task_id, plan_id))
     task = repo.task_repo.get_task(plan_id, task_id)
+    task.set_completed_on(utcnow_str())
     task.set_task_as_complete()
     result = repo.task_repo.save_task(plan_id, task)
     return result
