@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3cea264b-8e20-45ad-8f3c-a2a9c08fb4c1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/restapi/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/restapi/response.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/restapi/web.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/file_utils.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/plan_parser.py" afterPath="$PROJECT_DIR$/model/plan_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workers/base.py" afterPath="$PROJECT_DIR$/workers/base.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restapi/web.py" afterPath="$PROJECT_DIR$/restapi/web.py" />
     </list>
     <ignored path="untitled.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,8 +27,8 @@
       <file leaf-file-name="web.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/restapi/web.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.591195">
-              <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.5283019">
+              <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -631,12 +625,6 @@
       <option name="number" value="Default" />
       <updated>1450658074359</updated>
     </task>
-    <task id="LOCAL-00048" summary="Config for redis to return kwargs">
-      <created>1451392531672</created>
-      <option name="number" value="00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1451392531672</updated>
-    </task>
     <task id="LOCAL-00049" summary="Config celery app object">
       <created>1451429455213</created>
       <option name="number" value="00049" />
@@ -925,7 +913,13 @@
       <option name="project" value="LOCAL" />
       <updated>1451778958749</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="Added flask restapi">
+      <created>1451785134040</created>
+      <option name="number" value="00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1451785134040</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -996,7 +990,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added support for plan level start_on" />
     <MESSAGE value="Added functional test runner script" />
     <MESSAGE value="Created proper integration/functional test suite + runner" />
     <MESSAGE value="Reworked unit test runner to run functional tests instead of a shell script" />
@@ -1021,7 +1014,8 @@
     <MESSAGE value="Separated workers to listen to separate queues" />
     <MESSAGE value="Added skeleton django app" />
     <MESSAGE value="Removed django&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed django&#10;" />
+    <MESSAGE value="Added flask restapi" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added flask restapi" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1438,8 +1432,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/restapi/web.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.591195">
-          <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.5283019">
+          <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>

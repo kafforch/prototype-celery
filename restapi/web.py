@@ -11,7 +11,8 @@ app = Flask(__name__)
 def orchestrate():
     try:
         json_payload = request.get_json()
-    except:
+    except Exception as ex:
+        logging.exception("Error occurred while parsing request")
         json_payload = None
 
     if json_payload is None:
@@ -24,7 +25,7 @@ def orchestrate():
             if plan_id is None:
                 raise RuntimeError()
         except Exception as ex:
-            logging.exception("Error occured while trying to submit celery task")
+            logging.exception("Error occurred while trying to submit celery task")
             return response(body="Unable to submit plan", status=500)
 
         return response(
