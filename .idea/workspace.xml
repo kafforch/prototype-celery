@@ -39,8 +39,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1572327">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.094339624">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -659,12 +659,6 @@
       <option name="number" value="Default" />
       <updated>1450658074359</updated>
     </task>
-    <task id="LOCAL-00063" summary="Added time_utils">
-      <created>1451483727672</created>
-      <option name="number" value="00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1451483727672</updated>
-    </task>
     <task id="LOCAL-00064" summary="Added support for plan level start_on">
       <created>1451484423707</created>
       <option name="number" value="00064" />
@@ -953,7 +947,13 @@
       <option name="project" value="LOCAL" />
       <updated>1451865947089</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL-00112" summary="Added check for flask test on reconstructed plan json">
+      <created>1451865994169</created>
+      <option name="number" value="00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1451865994169</updated>
+    </task>
+    <option name="localTasksCounter" value="113" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1490,8 +1490,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1572327">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.094339624">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>

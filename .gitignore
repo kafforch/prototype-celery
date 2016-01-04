@@ -1,6 +1,5 @@
 /celerybeat-schedule
 /dump.rdb
 .idea
-/website/db.sqlite3
 /untitled
 /nohup.out
