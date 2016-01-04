@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3cea264b-8e20-45ad-8f3c-a2a9c08fb4c1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model/redis_lookups.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/plan_repo.py" afterPath="$PROJECT_DIR$/model/plan_repo.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/task_repo.py" afterPath="$PROJECT_DIR$/model/task_repo.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/integration_tests/collection_of_integration_tests.py" afterPath="$PROJECT_DIR$/integration_tests/collection_of_integration_tests.py" />
     </list>
     <ignored path="untitled.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,7 +23,20 @@
     <favorites_list name="untitled" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="collection_of_integration_tests.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/integration_tests/collection_of_integration_tests.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.33333334">
+              <caret line="80" column="40" selection-start-line="80" selection-start-column="40" selection-end-line="80" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#64#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -83,7 +94,6 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/workers/application.py" />
         <option value="$PROJECT_DIR$/workers/plan_periodic.py" />
-        <option value="$PROJECT_DIR$/integration_tests/collection_of_integration_tests.py" />
         <option value="$PROJECT_DIR$/tests/model_tests/task_repo_tests.py" />
         <option value="$PROJECT_DIR$/tests/model_tests/plan_repo_tests.py" />
         <option value="$PROJECT_DIR$/tests/model_tests/plan_submitter_local_tests.py" />
@@ -91,6 +101,7 @@
         <option value="$PROJECT_DIR$/model/plan_repo.py" />
         <option value="$PROJECT_DIR$/model/task_repo.py" />
         <option value="$PROJECT_DIR$/model/redis_lookups.py" />
+        <option value="$PROJECT_DIR$/integration_tests/collection_of_integration_tests.py" />
       </list>
     </option>
   </component>
@@ -322,7 +333,7 @@
       <recent name="$PROJECT_DIR$/functional_tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Integration tests">
+  <component name="RunManager" selected="Python tests.Unittest IntegrationTests1.test_flask_post_get_plan">
     <configuration default="false" name="web" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -619,11 +630,11 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest PlanRepoLocalTests.test_plan_repo_locally_first" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest TaskRepoTests.test_load_plan_modify_task_and_save" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in TaskRepoTests" />
-        <item index="3" class="java.lang.String" itemvalue="Python.web" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest IntegrationTests1.test_flask_post_get_plan" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest IntegrationTests1.test_flask_post_get_plan" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest PlanRepoLocalTests.test_plan_repo_locally_first" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest TaskRepoTests.test_load_plan_modify_task_and_save" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in TaskRepoTests" />
+        <item index="4" class="java.lang.String" itemvalue="Python.web" />
       </list>
     </recent_temporary>
   </component>
@@ -637,12 +648,6 @@
       <created>1450658074359</created>
       <option name="number" value="Default" />
       <updated>1450658074359</updated>
-    </task>
-    <task id="LOCAL-00061" summary="Added plan_starter worker">
-      <created>1451460356286</created>
-      <option name="number" value="00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1451460356286</updated>
     </task>
     <task id="LOCAL-00062" summary="Consolidating workers config">
       <created>1451480360246</created>
@@ -932,7 +937,13 @@
       <option name="project" value="LOCAL" />
       <updated>1451863871842</updated>
     </task>
-    <option name="localTasksCounter" value="110" />
+    <task id="LOCAL-00110" summary="Created consts to handle redis lookup strings">
+      <created>1451865434463</created>
+      <option name="number" value="00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1451865434463</updated>
+    </task>
+    <option name="localTasksCounter" value="111" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -945,11 +956,11 @@
     <history-entry file="Integration_tests - 2016.01.04 at 10h 56m 49s.xml">
       <configuration name="Integration tests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests - 2016.01.04 at 10h 01m 49s.xml">
-      <configuration name="Unittests" configurationId="tests" />
+    <history-entry file="Unittest_IntegrationTests1_test_flask_post_get_plan - 2016.01.04 at 11h 00m 24s.xml">
+      <configuration name="Unittest IntegrationTests1.test_flask_post_get_plan" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests - 2016.01.04 at 10h 23m 18s.xml">
-      <configuration name="Unittests" configurationId="tests" />
+    <history-entry file="Unittest_IntegrationTests1_test_flask_post_get_plan - 2016.01.04 at 11h 05m 26s.xml">
+      <configuration name="Unittest IntegrationTests1.test_flask_post_get_plan" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests - 2016.01.04 at 10h 23m 35s.xml">
       <configuration name="Unittests" configurationId="tests" />
@@ -969,7 +980,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.390625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1003,7 +1014,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Re-arranged unit tests and removed worker tests" />
     <MESSAGE value="Moved config into utils" />
     <MESSAGE value="Tidyied up integration tests" />
     <MESSAGE value="Optimizing the test for running plans" />
@@ -1028,7 +1038,8 @@
     <MESSAGE value="Added plan submitted_on attribute" />
     <MESSAGE value="Added plan submitted_on and completed_on attributes" />
     <MESSAGE value="Now plan_repo.get_plan_by_id returns reconstructed updated tasks and dependencies" />
-    <option name="LAST_COMMIT_MESSAGE" value="Now plan_repo.get_plan_by_id returns reconstructed updated tasks and dependencies" />
+    <MESSAGE value="Created consts to handle redis lookup strings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created consts to handle redis lookup strings" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1369,16 +1380,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/integration_tests/collection_of_integration_tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8427673">
-          <caret line="179" column="28" selection-start-line="179" selection-start-column="28" selection-end-line="179" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/workers/application.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.22012578">
@@ -1431,14 +1432,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/redis_lookups.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28301886">
-          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/plan_parser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
@@ -1447,10 +1440,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/model_tests/plan_parser_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/redis_lookups.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5660377">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/model/task_repo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25157234">
-          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.34591195">
+          <caret line="11" column="50" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="50" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
@@ -1459,7 +1468,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/plan_repo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.6037736">
+        <state vertical-scroll-proportion="1.0377358">
           <caret line="51" column="54" selection-start-line="51" selection-start-column="54" selection-end-line="51" selection-end-column="54" />
           <folding>
             <element signature="e#0#83#0" expanded="true" />
@@ -1467,11 +1476,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/model_tests/plan_parser_tests.py">
+    <entry file="file://$PROJECT_DIR$/integration_tests/collection_of_integration_tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
-          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding />
+          <caret line="80" column="40" selection-start-line="80" selection-start-column="40" selection-end-line="80" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

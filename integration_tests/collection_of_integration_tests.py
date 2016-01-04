@@ -77,6 +77,8 @@ class IntegrationTests1(BaseIntegrationTestCase):
         plan_id = json.loads(response.data)['plan_id']
         response = tester.get('/plan/{}'.format(plan_id))
         self.assertEqual(response.status_code, 200)
+        plan = json.loads(response.data)
+        self.assertEqual(len(plan['tasks']), 5)
 
     def test_submit_plan(self):
         plan = parse_plan_json(plan_json1)
